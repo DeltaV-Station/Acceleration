@@ -1,13 +1,14 @@
 using Content.Client.Guidebook;
 using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
+using Content.Shared._DVA.Traits; // DeltaV - Traits
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
-using Content.Shared.Traits;
+// using Content.Shared.Traits; // DeltaV - Traits
 using Robust.Client.Player;
 using Robust.Client.ResourceManagement;
 using Robust.Client.State;
@@ -112,10 +113,14 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                 _profileEditor.RefreshSpecies();
             }
 
-            if (obj.WasModified<TraitPrototype>())
-            {
-                _profileEditor.RefreshTraits();
-            }
+            // BEGING DeltaV - Refreshed in TraitsTab
+            // if (obj.WasModified<TraitPrototype>())
+            // {
+            //     _profileEditor.RefreshTraits();
+            // }
+            // 
+            // //TODO: Refresh DeltaV traits on proto update
+            // END DeltaV
         }
     }
 

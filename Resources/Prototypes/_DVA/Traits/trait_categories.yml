@@ -1,0 +1,25 @@
+- type: dvTraitCategory
+  id: Disabilities
+  name: trait-category-disabilities
+  priority: 0
+  accentColor: "#64748b"  # Slate / muted gray
+
+- type: dvTraitCategory
+  id: Mental
+  name: trait-category-mental
+  priority: 20
+  accentColor: "#a855f7"  # Purple
+
+- type: dvTraitCategory
+  id: Accents
+  name: trait-category-accents
+  priority: 30
+  maxTraits: 3
+  maxPoints: 2
+  accentColor: "#38bdf8"  # Light blue
+
+- type: dvTraitCategory
+  id: Medical
+  name: trait-category-medical
+  priority: 40
+  accentColor: "#ef4444"  # Red

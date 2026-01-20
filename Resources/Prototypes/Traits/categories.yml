@@ -1,3 +1,7 @@
+# DELTA-V
+# Due to the custom trait system, all traits have been moved under \Resources\Prototypes\_DV\Traits
+# If you want to add a new one, do it there
+
 - type: traitCategory
   id: Disabilities
   name: trait-category-disabilities
