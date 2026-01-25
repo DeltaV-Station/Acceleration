@@ -7,7 +7,6 @@ namespace Content.Client.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor : BoxContainer
 {
-    /// <summary>
     /// Called when trait selection changes in the TraitsTab.
     /// Updates the profile with the new trait selection.
     /// </summary>
@@ -54,5 +53,6 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         }
 
         Traits.SetSelectedTraits(selectedTraits);
+        Traits.UpdateConditions(Profile.Species);
     }
 }

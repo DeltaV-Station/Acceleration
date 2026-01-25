@@ -108,9 +108,7 @@
 #  - !type:HasCompCondition
 #    component: BorgChassis
 #    invert: true
-#  - !type:IsSpeciesCondition
-#    species: IPC
-#    invert: true
+#    tooltip: trait-condition-borg-not
 #  effects:
 #  - !type:AddCompsEffect
 #    components:

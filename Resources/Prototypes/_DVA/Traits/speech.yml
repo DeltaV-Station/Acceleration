@@ -60,6 +60,7 @@
   - !type:HasCompCondition
     component: BorgChassis
     invert: true
+    tooltip: trait-condition-borg-not
   effects:
   - !type:AddCompsEffect
     components:
