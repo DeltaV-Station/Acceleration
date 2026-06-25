@@ -24,7 +24,7 @@
     receiveFrequencyId: CrewMonitor
   - type: WirelessNetworkConnection
     range: 500
-  - type: StationLimitedNetwork
+  # - type: StationLimitedNetwork # DeltaV - don't restrict this unnecessarily
   - type: StaticPrice
     price: 500
   # BEGIN DeltaV
