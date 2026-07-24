@@ -1,36 +1,37 @@
-<div class="header" align="center">  
-<img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg">  
+<div class="header" align="center">
+<img alt="Delta-V Logo" width="128" height="128" src="https://raw.githubusercontent.com/DeltaV-Station/Acceleration/master/Resources/Textures/Logo/logo.png" />
 </div>
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
-
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
-
-If you want to host or create content for SS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+Acceleration is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14).
 
 ## Links
 
-<div class="header" align="center">  
+#### DeltaV
+<div class="header" align="center">
 
-[Website](https://spacestation14.com/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.com/) | [Mastodon](https://mastodon.gamedev.place/@spacestation14) | [Patreon](https://www.patreon.com/spacestation14) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.com/about/nightlies/)  
+[Website](https://deltav.gay/) | [Wiki](https://wiki.deltav.gay/view/Main_Page) | [Discord](https://discord.gg/deltav)
+
+</div>
+
+#### Space Station 14
+<div class="header" align="center">
+
+[Website](https://spacestation14.io/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.io/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.io/about/nightlies/)
 
 </div>
 
 ## Documentation/Wiki
 
-Our [docs site](https://docs.spacestation14.com/) has documentation on SS14's content, engine, game design, and more.  
-Additionally, see these resources for license and attribution information:  
-- [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html)  
+The [docs site](https://docs.spacestation14.io/) has documentation on SS14s content, engine, game design and more.
+Additionally, see these resources for license and attribution information:
+- [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html)
 - [Robust Station Image](https://docs.spacestation14.com/en/specifications/robust-station-image.html)
-
-We also have lots of resources for new contributors to the project.
 
 ## Contributing
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/space-wizards/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!  
-Just make sure your changes and pull requests are in accordance with the [contribution guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
+We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/DeltaV-Station/Delta-v/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!
 
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
+Make sure to read [CONTRIBUTING.md](/CONTRIBUTING.md) if you are new to Delta-V!
 
 ## AI-generated contributions disclaimer
 This project does not accept low-effort or wholesale AI-generated contributions. Examples include, but are not limited to:
@@ -45,14 +46,14 @@ Exceptions to this are simple tools like Rider's single-line completion feature.
 
 1. Clone this repo:
 ```shell
-git clone https://github.com/space-wizards/space-station-14.git
+git clone https://github.com/DeltaV-Station/Acceleration.git
 ```
 2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
 ```shell
-cd space-station-14
+cd Acceleration
 python RUN_THIS.py
 ```
-3. Compile the solution:  
+3. Compile the solution:
 
 Build the server using `dotnet build`.
 
@@ -66,3 +67,5 @@ Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licens
 
 > [!NOTE]
 > Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+
+If you find that your work is misattributed or someone elses work is misattributed, please create an issue on this repository's GitHub page.

@@ -1,4 +1,4 @@
-<!-- Guidelines: https://docs.spacestation14.io/en/getting-started/pr-guideline -->
+<!-- If you are new to the Acceleration repository, please read the [Contributing Guidelines](https://github.com/DeltaV-Station/Acceleration/blob/master/CONTRIBUTING.md) -->
 
 ## About the PR
 <!-- What did you change? -->
@@ -20,10 +20,12 @@ Small fixes/refactors are exempt. Media may be used in SS14 progress reports wit
 
 ## Requirements
 <!-- Confirm the following by placing an X in the brackets without spaces inside (for example: [X] ): -->
-- [ ] I have read and am following the [Pull Request and Changelog Guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
 - [ ] I have tested this pull request and written instructions on how to test it
 - [ ] I have added media to this PR or it does not require an in-game showcase.
 <!-- You should understand that not following the above may get your PR closed at maintainer’s discretion -->
+
+## Licensing
+- [ ] I confirm that I sign off on the [Developer Certificate of Origin](https://github.com/DeltaV-Station/Acceleration/blob/master/.github/DCO.md).
 
 ## Breaking changes
 <!-- List any breaking changes, including namespaces, public class/method/field changes, prototype renames; and provide instructions for fixing them.
