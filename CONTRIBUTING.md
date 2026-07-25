@@ -9,21 +9,23 @@ Upstream is the [space-wizards/space-station-14](https://github.com/space-wizard
 
 ## Content specific to Delta-V
 
-In general anything you create from scratch (not modifying something that exists from upstream) should go in a DeltaV subfolder, `_DV`.
+In general anything you create from scratch (not modifying something that exists from upstream) should go in a DeltaV subfolder, `_DVA`.
+
+
 
 Examples:
 
-- `Content.Server/_DV/Chapel/SacrificialAltarSystem.cs`
-- `Resources/Prototypes/_DV/ai_factions.yml`
-- `Resources/Audio/_DV/Items/gavel.ogg`
-- `Resources/Textures/_DV/Icons/cri.rsi`
-- `Resources/Locale/en-US/_DV/shipyard/shipyard-console.ftl`
-- `Resources/ServerInfo/Guidebook/_DV/AlertProcedure.xml`
-  Note that guidebooks go in `ServerInfo/Guidebook/_DV` and not `ServerInfo/_DV`!
+- `Content.Server/_DVA/Chapel/SacrificialAltarSystem.cs`
+- `Resources/Prototypes/_DVA/ai_factions.yml`
+- `Resources/Audio/_DVA/Items/gavel.ogg`
+- `Resources/Textures/_DVA/Icons/cri.rsi`
+- `Resources/Locale/en-US/_DVA/shipyard/shipyard-console.ftl`
+- `Resources/ServerInfo/Guidebook/_DVA/AlertProcedure.xml`
+  Note that guidebooks go in `ServerInfo/Guidebook/_DVA` and not `ServerInfo/_DVA`!
 
 ## Changes to upstream files
 
-Follow a few guidelines when modifying non-DeltaV files, to help us manage our project. (files that are not in `_DV` or `Nyano` folders)
+Follow a few guidelines when modifying non-DeltaV files, to help us manage our project (Files that are not in `_DVA` folders).
 
 Primarily, **add comments on or around all new or changed lines** in upstream files. Explain what was changed to make resolving merge conflicts easier; we regularly merge new upstream changes into our project.
 
@@ -70,7 +72,7 @@ Whereas if you just modify some fields of a component, comment the fields instea
 
 ### Changing Upstream C# .cs files
 
-If you are adding a lot of C# code, then take advantage of partial classes. Put the new code in its own file in the `_DV` folder, if it makes sense.
+If you are adding a lot of C# code, then take advantage of partial classes. Put the new code in its own file in the `_DVA` folder, if it makes sense.
 
 Otherwise, **add comments on or around any changed lines.**
 
@@ -80,7 +82,7 @@ Format should look like this.
 
 ```cs
 /* Importing Namespaces - Include optional comment if its not obvious what its being used for. */
-using Content.Server._DV.Psionics.Glimmer; // DeltaV
+using Content.Server._DVA.Psionics.Glimmer; // DeltaV
 using Content.Shared.Damage.Systems; // DeltaV - Addition of HandHeldArmor
 
 /* Changing an upstream line - Same line as the change */
@@ -93,7 +95,7 @@ if (!TryComp<EyeComponent>(ent, out var eye) || _disabled) // DeltaV - check if 
 // args.StatusIcons.Add(_prototype.Index(component.Icon)); // DeltaV - commented out. status icon now added above
 ```
 
-> * Its pretty obvious in the example above that importing `Content.Server._DV.Psionics.Glimmer` means we'll be interacting with glimmer so putting `// DeltaV - Add Glimmer` is needlessly redundant.
+> * Its pretty obvious in the example above that importing `Content.Server._DVA.Psionics.Glimmer` means we'll be interacting with glimmer so putting `// DeltaV - Add Glimmer` is needlessly redundant.
 > * It's not as obvious what the `Content.Shared.Damage.Systems` namespace is used for, since its so broad, so adding a comment what feature is using it helps.
 > * Actual code changes should almost always include the comment after ``// DeltaV`.
 
@@ -167,21 +169,21 @@ In short:
 
 ### Changing Upstream Localization Fluent .ftl files
 
-**Move all changed locale strings to a new DeltaV file** - use a `.ftl` file in the `_DV` folder. Comment out the old strings in the upstream file, and explain that they were moved.
+**Move all changed locale strings to a new DeltaV file** - use a `.ftl` file in the `_DVA` folder. Comment out the old strings in the upstream file, and explain that they were moved.
 
 Example:
 
 Commented out old string in `Resources\Locale\en-US\xenoarchaeology\artifact-analyzer.ftl`
 
 ```text
-# DeltaV - moved to _DV file
+# DeltaV - moved to _DVA file
 # analysis-console-info-effect-value = [font="Monospace" size=11][color=gray]{ $state ->
 #     [true] {$info}
 #     *[false] Unlock nodes to gain info
 # }[/color][/font]
 ```
 
-The new version of the string in `Resources\Locale\en-US\_DV\xenoarchaeology\artifact-analyzer.ftl`
+The new version of the string in `Resources\Locale\en-US\_DVA\xenoarchaeology\artifact-analyzer.ftl`
 
 ```text
 analysis-console-info-effect-value = [font="Monospace" size=11][color=gray]{ $state ->
