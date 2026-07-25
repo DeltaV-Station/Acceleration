@@ -9,42 +9,42 @@ using Robust.Shared.Utility;
 namespace Content.Server._DVA.Glimmer;
 
 [ToolshedCommand(Name = "glimmer"), AdminCommand(AdminFlags.Query | AdminFlags.Fun)]
-public sealed class GlimmerCommands : ToolshedCommand
+public sealed class DVGlimmerCommands : ToolshedCommand
 {
-    private GlimmerSystem? _glimmer;
+    private DVGlimmerSystem? _glimmer;
 
     [CommandImplementation("get")]
     public int Get()
     {
-        _glimmer ??= GetSys<GlimmerSystem>();
+        _glimmer ??= GetSys<DVGlimmerSystem>();
         return _glimmer.Glimmer;
     }
 
     [CommandImplementation("tier")]
     public GlimmerTier Tier()
     {
-        _glimmer ??= GetSys<GlimmerSystem>();
+        _glimmer ??= GetSys<DVGlimmerSystem>();
         return _glimmer.GlimmerTier;
     }
 
     [CommandImplementation("set")]
     public void Set(int glimmer)
     {
-        _glimmer ??= GetSys<GlimmerSystem>();
+        _glimmer ??= GetSys<DVGlimmerSystem>();
         _glimmer.Glimmer = glimmer;
     }
 
     [CommandImplementation("adjust")]
     public void Adjust(int delta)
     {
-        _glimmer ??= GetSys<GlimmerSystem>();
+        _glimmer ??= GetSys<DVGlimmerSystem>();
         _glimmer.Glimmer += delta;
     }
 
     [CommandImplementation("get_entity")]
     public EntityUid Get(IInvocationContext ctx)
     {
-        _glimmer ??= GetSys<GlimmerSystem>();
+        _glimmer ??= GetSys<DVGlimmerSystem>();
         if (_glimmer.Entity is not { } entity)
         {
             ctx.ReportError(new GlimmerMissingError());

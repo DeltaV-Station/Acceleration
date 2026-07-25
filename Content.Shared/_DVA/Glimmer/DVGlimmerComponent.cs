@@ -9,10 +9,10 @@ namespace Content.Shared._DVA.Glimmer;
 /// <summary>
 /// Component tracking glimmer for a round. Usually on a singleton entity.
 /// </summary>
-/// <seealso cref="GlimmerSystem" />
+/// <seealso cref="DVGlimmerSystem" />
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
-[Access(typeof(GlimmerSystem))]
-public sealed partial class GlimmerComponent : Component
+[Access(typeof(DVGlimmerSystem))]
+public sealed partial class DVGlimmerComponent : Component
 {
     /// <summary>
     /// The current level of glimmer.
@@ -80,11 +80,11 @@ public enum GlimmerTier : byte
 /// and should potentially result in more game logic happening
 /// </summary>
 [ByRefEvent]
-public readonly record struct GlimmerChangedActiveEvent(Entity<GlimmerComponent> Depth);
+public readonly record struct GlimmerChangedActiveEvent(Entity<DVGlimmerComponent> Depth);
 
 /// <summary>
 /// Raised when the glimmer changes passively (i.e. due to networking)
 /// and should only result in cosmetic changes
 /// </summary>
 [ByRefEvent]
-public readonly record struct GlimmerChangedPassiveEvent(Entity<GlimmerComponent> Depth);
+public readonly record struct GlimmerChangedPassiveEvent(Entity<DVGlimmerComponent> Depth);

@@ -7,7 +7,7 @@ namespace Content.Server._DVA.Glimmer;
 /// <summary>
 /// Responsible for spawning the glimmer entity within a round.
 /// </summary>
-public sealed partial class GlimmerSpawningSystem : EntitySystem
+public sealed partial class DVGlimmerSpawningSystem : EntitySystem
 {
     [Dependency] private PvsOverrideSystem _pvsOverride = default!;
 
@@ -21,7 +21,7 @@ public sealed partial class GlimmerSpawningSystem : EntitySystem
     private void OnPostGameMapLoad(PostGameMapLoad ev)
     {
         var ent = Spawn();
-        EnsureComp<GlimmerComponent>(ent);
+        EnsureComp<DVGlimmerComponent>(ent);
         _pvsOverride.AddGlobalOverride(ent);
     }
 }

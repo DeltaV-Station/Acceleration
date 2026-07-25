@@ -5,7 +5,7 @@ namespace Content.Shared._DVA.Glimmer;
 /// <summary>
 /// Oversees the glimmer entity associated with a round.
 /// </summary>
-public sealed class GlimmerSystem : EntitySystem
+public sealed class DVGlimmerSystem : EntitySystem
 {
     /// <summary>
     /// The current glimmer of the round.
@@ -36,11 +36,11 @@ public sealed class GlimmerSystem : EntitySystem
     /// Returns the current glimmer entity for the round, if any.
     /// </summary>
     [PublicAPI]
-    public Entity<GlimmerComponent>? Entity
+    public Entity<DVGlimmerComponent>? Entity
     {
         get
         {
-            var query = EntityQueryEnumerator<GlimmerComponent>();
+            var query = EntityQueryEnumerator<DVGlimmerComponent>();
             while (query.MoveNext(out var uid, out var comp))
             {
                 return (uid, comp);
@@ -57,7 +57,7 @@ public sealed class GlimmerSystem : EntitySystem
     /// There should likely only be one of these, see <see cref="Glimmer" /> and <see cref="GlimmerTier" />
     /// </remarks>
     [PublicAPI]
-    public void SetGlimmer(Entity<GlimmerComponent> ent, int glimmer)
+    public void SetGlimmer(Entity<DVGlimmerComponent> ent, int glimmer)
     {
         if (ent.Comp.Glimmer == glimmer)
             return;
@@ -76,10 +76,10 @@ public sealed class GlimmerSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<GlimmerComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
+        SubscribeLocalEvent<DVGlimmerComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
     }
 
-    private void OnAfterHandleState(Entity<GlimmerComponent> ent, ref AfterAutoHandleStateEvent args)
+    private void OnAfterHandleState(Entity<DVGlimmerComponent> ent, ref AfterAutoHandleStateEvent args)
     {
         var passive = new GlimmerChangedPassiveEvent(ent);
         RaiseLocalEvent(ref passive);
