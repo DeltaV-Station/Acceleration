@@ -11,8 +11,6 @@ Upstream is the [space-wizards/space-station-14](https://github.com/space-wizard
 
 In general anything you create from scratch (not modifying something that exists from upstream) should go in a DeltaV subfolder, `_DVA`.
 
-
-
 Examples:
 
 - `Content.Server/_DVA/Chapel/SacrificialAltarSystem.cs`
@@ -95,9 +93,9 @@ if (!TryComp<EyeComponent>(ent, out var eye) || _disabled) // DeltaV - check if 
 // args.StatusIcons.Add(_prototype.Index(component.Icon)); // DeltaV - commented out. status icon now added above
 ```
 
-> * Its pretty obvious in the example above that importing `Content.Server._DVA.Psionics.Glimmer` means we'll be interacting with glimmer so putting `// DeltaV - Add Glimmer` is needlessly redundant.
-> * It's not as obvious what the `Content.Shared.Damage.Systems` namespace is used for, since its so broad, so adding a comment what feature is using it helps.
-> * Actual code changes should almost always include the comment after ``// DeltaV`.
+> - Its pretty obvious in the example above that importing `Content.Server._DVA.Psionics.Glimmer` means we'll be interacting with glimmer so putting `// DeltaV - Add Glimmer` is needlessly redundant.
+> - It's not as obvious what the `Content.Shared.Damage.Systems` namespace is used for, since its so broad, so adding a comment what feature is using it helps.
+> - Actual code changes should almost always include the comment after ``// DeltaV`.
 
 ### Multi-Line Changes
 
@@ -115,10 +113,10 @@ RemComp<ActiveRadioComponent>(target); // If the zombie has an innate radio, get
 // END DeltaV
 ```
 
-> * Denoting these with a BEGIN and END clearly shows they are block of code without having to read the entire comment. This makes it easier to tell when you're dealing with single-line comments versus a block with merging in conflicts.
->   * Case and order of the first two words is less of a concern. `// DeltaV Begin` or `// Begin DeltaV` will work fine too.
-> * Try to make your blocks as small as possible, but use your discretion.
-> * If you deleting multiple lines, use line comments (``//``) if its a few lines but if its a larger block (like commenting out an entire function), it is preferable to use block comments (`/* */`).
+> - Denoting these with a BEGIN and END clearly shows they are block of code without having to read the entire comment. This makes it easier to tell when you're dealing with single-line comments versus a block with merging in conflicts.
+>   - Case and order of the first two words is less of a concern. `// DeltaV Begin` or `// Begin DeltaV` will work fine too.
+> - Try to make your blocks as small as possible, but use your discretion.
+> - If you deleting multiple lines, use line comments (``//``) if its a few lines but if its a larger block (like commenting out an entire function), it is preferable to use block comments (`/* */`).
 
 #### Soft Exceptions to the Multi-Line "Rules"
 
