@@ -14,7 +14,7 @@
   weights:
     CaptainIDStealObjective: 1
     CMOHyposprayStealObjective: 1
-    CMOCrewMonitorStealObjective: 1
+    # CMOCrewMonitorStealObjective: 1 # DeltaV - Parameds have crew monitor
     RDHardsuitStealObjective: 1
     NukeDiskStealObjective: 1
     MagbootsStealObjective: 1
