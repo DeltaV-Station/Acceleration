@@ -13,7 +13,7 @@ using Robust.Shared.Physics.Components;
 
 namespace Content.Client._DVA.CrewMonitoring;
 
-public sealed partial class CrewMonitoringShuttleControl : BaseShuttleControl
+public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
 {
     [Dependency] private IMapManager _mapManager = default!;
     private readonly SharedShuttleSystem _shuttles;
@@ -24,7 +24,7 @@ public sealed partial class CrewMonitoringShuttleControl : BaseShuttleControl
 
     private List<Entity<MapGridComponent>> _grids = new();
 
-    public CrewMonitoringShuttleControl() : base(64f, 256f, 256f)
+    public DVCrewMonitoringShuttleControl() : base(64f, 256f, 256f)
     {
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _transform = EntManager.System<SharedTransformSystem>();

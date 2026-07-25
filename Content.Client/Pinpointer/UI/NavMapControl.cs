@@ -56,8 +56,8 @@ public partial class NavMapControl : MapGridControl
 
     // Constants
     protected float UpdateTime = 1.0f;
-    public float MaxSelectableDistance = 10f; // DeltaV - accessible to CrewMonitoringShuttleControl
-    public float MinDragDistance = 5f; // DeltaV - accessible to CrewMonitoringShuttleControl
+    public float MaxSelectableDistance = 10f; // DeltaV - accessible to DVCrewMonitoringShuttleControl
+    public float MinDragDistance = 5f; // DeltaV - accessible to DVCrewMonitoringShuttleControl
     protected static float MinDisplayedRange = 8f;
     protected static float MaxDisplayedRange = 128f;
     protected static float DefaultDisplayedRange = 48f;

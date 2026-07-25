@@ -5,7 +5,7 @@ namespace Content.Server._DVA.Medical.CrewMonitoring;
 /// <summary>
 /// Component used for alerts for the crew monitor.
 /// 
-/// Requires CrewMonitoringComponent or this won't do anything.
+/// Requires CrewMonitoringConsoleComponent or this won't do anything.
 /// </summary>
 [RegisterComponent]
 [Access(typeof(DVCrewMonitorAlertsSystem))]
