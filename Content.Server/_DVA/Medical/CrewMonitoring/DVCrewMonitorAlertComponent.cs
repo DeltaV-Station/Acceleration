@@ -1,18 +1,16 @@
 using Robust.Shared.Audio;
 
-namespace Content.Server.Medical.CrewMonitoring;
+namespace Content.Server._DVA.Medical.CrewMonitoring;
 
 /// <summary>
-/// Extends upstream's CrewMonitoringConsoleComponent.
+/// Component used for alerts for the crew monitor.
+/// 
+/// Requires CrewMonitoringComponent or this won't do anything.
 /// </summary>
-public sealed partial class CrewMonitoringConsoleComponent : Component
+[RegisterComponent]
+[Access(typeof(DVCrewMonitorAlertsSystem))]
+public sealed partial class DVCrewMonitorAlertsComponent : Component
 {
-    /// <summary>
-    /// Whether or not alerts are enabled.
-    /// </summary>
-    [DataField]
-    public bool AlertsEnabled = false;
-
     /// <summary>
     /// If an alert goes off, alerts are queued up until the cooldown is up.
     /// </summary>

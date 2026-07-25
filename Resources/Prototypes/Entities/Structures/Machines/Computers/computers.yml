@@ -455,7 +455,7 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: CrewMonitoringConsole
-    alertsEnabled: true # DeltaV - crew monitor alerts
+  - type: DVCrewMonitorAlerts # DeltaV - Crew monitor alerts
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
