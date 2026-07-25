@@ -12,8 +12,8 @@ namespace Content.Server.Medical.CrewMonitoring;
 /// </summary>
 public sealed partial class CrewMonitoringConsoleSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     private void ProcessAlerts(Entity<CrewMonitoringConsoleComponent> monitor, Dictionary<string, SuitSensorStatus> sensors)
     {
