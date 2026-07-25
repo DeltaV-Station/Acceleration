@@ -45,6 +45,8 @@ public sealed partial class CrewMonitoringConsoleSystem : EntitySystem
 
         component.ConnectedSensors = sensorStatus;
         UpdateUserInterface(uid, component);
+
+        ProcessAlerts((uid, component), component.ConnectedSensors); // DeltaV - Crew Monitor Alerts
     }
 
     private void OnUIOpened(EntityUid uid, CrewMonitoringConsoleComponent component, BoundUIOpenedEvent args)
