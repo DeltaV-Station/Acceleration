@@ -20,7 +20,8 @@ public sealed partial class CrewMonitoringConsoleComponent : Component
     public TimeSpan AlertCooldown = TimeSpan.FromSeconds(10);
 
     /// <summary>
-    /// 
+    /// A set of sensors that have already fired an alert. Used to prevent the monitor from
+    /// sounding an alert again after the cooldown is up if the person was dead/crit before.
     /// </summary>
     [DataField]
     public HashSet<string> AlertedSensors = [];

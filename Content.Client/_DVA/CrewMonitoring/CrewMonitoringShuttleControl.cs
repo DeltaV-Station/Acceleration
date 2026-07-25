@@ -11,9 +11,9 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 
-namespace Content.Client._DV.CrewMonitoring;
+namespace Content.Client._DVA.CrewMonitoring;
 
-public sealed class CrewMonitoringShuttleControl : BaseShuttleControl
+public sealed partial class CrewMonitoringShuttleControl : BaseShuttleControl
 {
     [Dependency] private IMapManager _mapManager = default!;
     private readonly SharedShuttleSystem _shuttles;
