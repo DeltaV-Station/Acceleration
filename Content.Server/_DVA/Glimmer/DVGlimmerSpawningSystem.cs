@@ -21,7 +21,7 @@ public sealed partial class DVGlimmerSpawningSystem : EntitySystem
     private void OnPostGameMapLoad(PostGameMapLoad ev)
     {
         var ent = Spawn();
-        EnsureComp<DVGlimmerComponent>(ent);
+        AddComp<DVGlimmerComponent>(ent);
         _pvsOverride.AddGlobalOverride(ent);
     }
 }
