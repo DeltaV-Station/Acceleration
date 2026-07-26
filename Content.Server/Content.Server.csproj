@@ -27,4 +27,6 @@
   <Import Project="..\RobustToolbox\Imports\Server.props" />
   <Import Project="..\RobustToolbox\Imports\Shared.props" />
   <Import Project="..\RobustToolbox\Imports\Packaging.props" />
+
+  <Import Project="..\DeltaV.Analyzers\DeltaV.Analyzers.targets" />
 </Project>

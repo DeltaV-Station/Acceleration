@@ -23,4 +23,6 @@
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\XamlIL.targets" />
+
+  <Import Project="..\DeltaV.Analyzers\DeltaV.Analyzers.targets" />
 </Project>
