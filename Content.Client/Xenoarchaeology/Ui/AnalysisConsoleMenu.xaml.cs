@@ -4,6 +4,7 @@ using Content.Client.Resources;
 using Content.Client.UserInterface.Controls;
 using Content.Client.Xenoarchaeology.Artifact;
 using Content.Client.Xenoarchaeology.Equipment;
+using Content.Shared.Research.Systems; // DeltaV - Glimmer/Artifact interactions
 using Content.Shared.Xenoarchaeology.Artifact.Components;
 using Content.Shared.Xenoarchaeology.Equipment.Components;
 using Robust.Client.Audio;
@@ -111,6 +112,7 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
             var text = Loc.GetString("analysis-console-extract-value", ("id", nodeId), ("value", pointValue));
             extractionMessage.AddMarkupOrThrow(text);
             extractionMessage.PushNewline();
+            _extractionSum += pointValue; // DeltaV - Actually update the extraction sum
         }
 
         if (count == 0)
@@ -121,6 +123,15 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
         ExtractionResearchLabel.SetMessage(extractionMessage);
 
         ExtractionSumLabel.SetMarkup(Loc.GetString("analysis-console-extract-sum", ("value", _extractionSum)));
+
+        // BEGIN DeltaV - Glimmer/Artifact interactions
+        var ev = new GetGlimmerModifiedResearchEvent(_extractionSum, updateGlimmer: false);
+        _ent.EventBus.RaiseLocalEvent(_owner, ref ev);
+
+        ExtractionSumLabel.SetMarkup(Loc.GetString("dv-analysis-console-extract-sum",
+            ("value", _extractionSum + ev.BonusResearch), ("bonus", ev.BonusResearch)));
+        GlimmerSumLabel.SetMarkup(Loc.GetString("dv-analysis-console-extract-sum-glimmer", ("value", ev.GeneratedGlimmer)));
+        // End DeltaV - Glimmer/Artifact interactions
 
         _audio.PlayGlobal(_owner.Comp.ScanFinishedSound, _owner, AudioParams.Default.WithVolume(1f));
         OnExtractButtonPressed?.Invoke();
