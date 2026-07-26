@@ -1,7 +1,7 @@
 - type: entity
   name: handheld crew monitor
-  categories: [ DoNotMap ]
-  parent: [ BaseHandheldComputer, BaseGrandTheftContraband ]
+  #categories: [ DoNotMap ] # DeltaV - mappable
+  parent: [ BaseHandheldComputer ] # DeltaV - Removed BaseGrandTheftContraband
   # CMO-only bud, don't add more.
   id: HandheldCrewMonitor
   description: A hand-held crew monitor displaying the status of suit sensors.
@@ -18,19 +18,22 @@
       enum.CrewMonitoringUIKey.Key:
         type: CrewMonitoringBoundUserInterface
   - type: CrewMonitoringConsole
+  - type: DVCrewMonitorAlerts # DeltaV - Crew monitor alerts
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
   - type: WirelessNetworkConnection
     range: 500
-  - type: StationLimitedNetwork
+  # - type: StationLimitedNetwork # DeltaV - don't restrict this unnecessarily
   - type: StaticPrice
     price: 500
-  - type: Tag
-    tags:
-    - HighRiskItem
-  - type: StealTarget
-    stealGroup: HandheldCrewMonitor
+  # BEGIN DeltaV
+  #- type: Tag # Not an objective
+  #  tags:
+  #  - HighRiskItem
+  #- type: StealTarget
+  #  stealGroup: HandheldCrewMonitor
+  # END DeltaV
 
 - type: entity
   id: HandheldCrewMonitorEmpty
