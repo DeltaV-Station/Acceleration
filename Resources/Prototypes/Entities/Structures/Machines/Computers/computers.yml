@@ -533,6 +533,7 @@
       state: generic_panel_open
   - type: ResearchClient
   - type: AnalysisConsole
+  - type: DVAnalysisConsoleGlimmer
   - type: DeviceList
   - type: DeviceNetwork
     deviceNetId: Wired
