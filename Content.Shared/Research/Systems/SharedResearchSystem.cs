@@ -19,6 +19,8 @@ public abstract partial class SharedResearchSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<TechnologyDatabaseComponent, MapInitEvent>(OnMapInit);
+
+        InitializeGlimmer(); // DeltaV - Glimmer/Artifact interactions
     }
 
     private void OnMapInit(EntityUid uid, TechnologyDatabaseComponent component, MapInitEvent args)
