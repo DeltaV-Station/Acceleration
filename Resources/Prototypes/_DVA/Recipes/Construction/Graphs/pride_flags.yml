@@ -1,0 +1,70 @@
+- type: constructionGraph
+  id: DVPrideFlags
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: LGBTQFlag
+      completed: &completed
+      - !type:SnapToGrid
+      steps: &steps-cloth
+      - &step-cloth
+        material: Cloth
+        amount: 5
+        doAfter: 2
+    - to: LesbianFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: GayFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: BiFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: TransFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: IntersexFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: AceFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: AroFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: EnbyFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: PanFlag
+      completed: *completed
+      steps: *steps-cloth
+    - to: TransRoyalShrimpFlag
+      completed: *completed
+      steps:
+      - *step-cloth
+      - material: Gold
+        amount: 5
+        doAfter: 2
+  - node: LGBTQFlag
+    entity: LGBTQFlag
+  - node: LesbianFlag
+    entity: LesbianFlag
+  - node: GayFlag
+    entity: GayFlag
+  - node: BiFlag
+    entity: BiFlag
+  - node: TransFlag
+    entity: TransFlag
+  - node: IntersexFlag
+    entity: IntersexFlag
+  - node: AceFlag
+    entity: AceFlag
+  - node: AroFlag
+    entity: AroFlag
+  - node: EnbyFlag
+    entity: EnbyFlag
+  - node: PanFlag
+    entity: PanFlag
+  - node: TransRoyalShrimpFlag
+    entity: TransRoyalShrimpFlag

@@ -1,6 +1,6 @@
 - type: construction
   id: LGBTQFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: LGBTQFlag
   category: construction-category-flags
@@ -10,7 +10,7 @@
 
 - type: construction
   id: TransFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: TransFlag
   category: construction-category-flags
@@ -20,7 +20,7 @@
 
 - type: construction
   id: LesbianFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: LesFlag
   category: construction-category-flags
@@ -30,7 +30,7 @@
 
 - type: construction
   id: GayFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: GayFlag
   category: construction-category-flags
@@ -40,7 +40,7 @@
 
 - type: construction
   id: BiFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: BiFlag
   category: construction-category-flags
@@ -50,7 +50,7 @@
 
 - type: construction
   id: EnbyFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: EnbyFlag
   category: construction-category-flags
@@ -60,7 +60,7 @@
 
 - type: construction
   id: AroFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: AroFlag
   category: construction-category-flags
@@ -70,7 +70,7 @@
 
 - type: construction
   id: IntersexFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: IntersexFlag
   category: construction-category-flags
@@ -80,7 +80,7 @@
 
 - type: construction
   id: PanFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: PanFlag
   category: construction-category-flags
@@ -90,7 +90,7 @@
 
 - type: construction
   id: AceFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: AceFlag
   category: construction-category-flags
@@ -100,7 +100,7 @@
 
 - type: construction
   id: TransRoyalShrimpFlag
-  graph: Flags
+  graph: DVPrideFlags
   startNode: start
   targetNode: TransRoyalShrimpFlag
   category: construction-category-flags
