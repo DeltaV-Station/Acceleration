@@ -43,7 +43,7 @@ public abstract partial class SharedResearchSystem
 /// <param name="researchPoints">The incoming number of points.</param>
 /// <param name="updateGlimmer">Whether to update the glimmer from this event.</param>
 [ByRefEvent]
-public sealed class GetGlimmerModifiedResearchEvent(int researchPoints, bool updateGlimmer = false)
+public struct GetGlimmerModifiedResearchEvent(int researchPoints, bool updateGlimmer = false)
 {
     /// <summary>
     /// Whether to update glimmer as a result of this event.
