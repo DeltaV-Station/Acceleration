@@ -1,0 +1,151 @@
+- type: entity
+  id: BaseFlagDV
+  abstract: true
+  components:
+  - type: StaticPrice
+    price: 25
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: Destruction
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: Destruction
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialCloth:
+            min: 5
+            max: 5
+        offset: 0
+
+- type: entity
+  parent:
+  - BaseFlag
+  - BaseFlagDV
+  id: BasePrideFlagDV
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DVA/Structures/Wallmounts/pride_flags.rsi
+  - type: Construction
+    graph: DVPrideFlags
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: AceFlag
+  name: asexual flag
+  description: '"Be ace do crime" flag.'
+  components:
+  - type: Sprite
+    state: ace_flag
+  - type: Construction
+    node: AceFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: AroFlag
+  name: aromantic flag
+  description: '"Be aro do crime" flag.'
+  components:
+  - type: Sprite
+    state: aro_flag
+  - type: Construction
+    node: AroFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: BiFlag
+  name: bisexual flag
+  description: '"Be bi do crime" flag.'
+  components:
+  - type: Sprite
+    state: bi_flag
+  - type: Construction
+    node: BiFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: EnbyFlag
+  name: nonbinary flag
+  description: '"Be non-binary do crime" flag.'
+  components:
+  - type: Sprite
+    state: enby_flag
+  - type: Construction
+    node: EnbyFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: GayFlag
+  name: gay flag
+  description: '"Be gay do crime" flag.'
+  components:
+  - type: Sprite
+    state: gay_flag
+  - type: Construction
+    node: GayFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: IntersexFlag
+  name: intersex flag
+  description: '"Be intersex do crime" flag.'
+  components:
+  - type: Sprite
+    state: intersex_flag
+  - type: Construction
+    node: IntersexFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: LesbianFlag
+  name: lesbian flag
+  description: '"Be lesbian do crime" flag.'
+  components:
+  - type: Sprite
+    state: les_flag
+  - type: Construction
+    node: LesFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: PanFlag
+  name: pansexual flag
+  description: '"Be pan do crime" flag.'
+  components:
+  - type: Sprite
+    state: pan_flag
+  - type: Construction
+    node: PanFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: TransFlag
+  name: transgender flag
+  description: '"Be trans do crime" flag.'
+  components:
+  - type: Sprite
+    state: trans_flag
+  - type: Construction
+    node: TransFlag
+
+- type: entity
+  parent: BasePrideFlagDV
+  id: TransRoyalShrimpFlag
+  name: trans royal shrimp flag
+  description: '"you are telling me that a shrimp transed this gender?" flag'
+  components:
+  - type: Sprite
+    state: trans_royal_shrimp_flag
+  - type: Construction
+    node: TransRoyalShrimpFlag

@@ -1,5 +1,7 @@
 - type: entity
-  parent: BaseSign
+  parent:
+  - BaseSign
+  - BaseFlagDV # DeltaV - destructible flags
   id: BaseFlag
   abstract: true
   components:
@@ -34,13 +36,17 @@
     state: syndie_flag
 
 - type: entity
-  parent: BaseFlag
+  parent:
+  - BaseFlag
+  - BasePrideFlagDV # DeltaV - craftable pride flags
   id: LGBTQFlag
   name: LGBTQ flag
   description: "\"Be gay do crime\" flag."
   components:
   - type: Sprite
     state: lgbtq_flag
+  - type: Construction
+    node: LGBTQFlag
 
 - type: entity
   parent: BaseFlag

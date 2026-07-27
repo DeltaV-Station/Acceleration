@@ -1,0 +1,109 @@
+- type: construction
+  id: LGBTQFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: LGBTQFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: TransFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: TransFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: LesbianFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: LesFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: GayFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: GayFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: BiFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: BiFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: EnbyFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: EnbyFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: AroFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: AroFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: IntersexFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: IntersexFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: PanFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: PanFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: AceFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: AceFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: TransRoyalShrimpFlag
+  graph: DVPrideFlags
+  startNode: start
+  targetNode: TransRoyalShrimpFlag
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: True
