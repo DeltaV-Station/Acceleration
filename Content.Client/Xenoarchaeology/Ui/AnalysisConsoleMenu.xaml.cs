@@ -22,7 +22,7 @@ namespace Content.Client.Xenoarchaeology.Ui;
 [GenerateTypedNameReferences]
 public sealed partial class AnalysisConsoleMenu : FancyWindow
 {
-    private static readonly TimeSpan ExtractInfoDisplayForDuration = TimeSpan.FromSeconds(3);
+    private static readonly TimeSpan ExtractInfoDisplayForDuration = TimeSpan.FromSeconds(5); // DeltaV
 
     [Dependency] private IEntityManager _ent = default!;
     [Dependency] private IResourceCache _resCache = default!;
