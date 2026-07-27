@@ -22,7 +22,7 @@
   id: LesbianFlag
   graph: DVPrideFlags
   startNode: start
-  targetNode: LesFlag
+  targetNode: LesbianFlag
   category: construction-category-flags
   objectType: Structure
   placementMode: SnapgridCenter
