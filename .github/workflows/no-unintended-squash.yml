@@ -1,0 +1,42 @@
+name: Prevent unintended squash merges in merge queue
+
+on:
+  merge_group:
+    types: [checks_requested]
+  # Necessary, otherwise PRs will have a "pending" check that will never resolve
+  pull_request:
+
+jobs:
+  no-unintended-squash:
+    name: Prevent unintended squash merges in merge queue
+    runs-on: ubuntu-latest
+    # Makes sure this check just gets cancelled while in a PR
+    if: github.event_name == 'merge_group'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Always has to be bigger than the maximum queue size
+          fetch-depth: 10
+
+      - name: Check commit titles
+        env:
+          BASE_SHA: ${{ github.event.merge_group.base_sha }}
+          HEAD_SHA: ${{ github.event.merge_group.head_sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Get commit title between master and queue head
+          COMMIT_TITLES=$(git log --format=%s $BASE_SHA..$HEAD_SHA)
+
+          for title in $COMMIT_TITLES; do
+            # Get PR number from commit title
+            if [[ $title =~ \(#([0-9]+)\)$ ]]; then
+              PR_NUMBER=${BASH_REMATCH[1]}
+
+              # Jq magic, checks if any label of the PR is equal to "DO NOT SQUASH" and outputs true if so, false otherwise
+              if [[ "$(gh pr view $PR_NUMBER --json labels --jq '.labels | map(.name == "DO NOT SQUASH") | any')" == "true" ]]; then
+                echo "::error title=Unintended squash merge detected::PR #${PR_NUMBER} has the label 'DO NOT SQUASH' and is part of the merge queue."
+                exit 1
+              fi
+            fi
+          done
