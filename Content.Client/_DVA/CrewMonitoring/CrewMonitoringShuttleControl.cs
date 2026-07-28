@@ -15,7 +15,7 @@ namespace Content.Client._DVA.CrewMonitoring;
 
 public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
 {
-    [Dependency] private IMapManager _mapManager = default!;
+    [Dependency] private SharedMapSystem _map = default!;
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
 
@@ -64,7 +64,7 @@ public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
         var viewAABB = viewBounds.CalcBoundingBox();
 
         _grids.Clear();
-        _mapManager.FindGridsIntersecting(xform.MapID, new Box2(mapPos.Position - MaxRadarRangeVector, mapPos.Position + MaxRadarRangeVector), ref _grids, approx: true, includeMap: false);
+        _map.FindGridsIntersecting(xform.MapID, new Box2(mapPos.Position - MaxRadarRangeVector, mapPos.Position + MaxRadarRangeVector), ref _grids, approx: true, includeMap: false);
 
         foreach (var grid in _grids)
         {
