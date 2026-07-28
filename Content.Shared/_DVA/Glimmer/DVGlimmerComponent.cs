@@ -9,26 +9,26 @@ namespace Content.Shared._DVA.Glimmer;
 /// Component tracking glimmer for a round. Usually on a singleton entity.
 /// </summary>
 /// <seealso cref="DVGlimmerSystem" />
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
+[RegisterComponent, NetworkedComponent]
 [Access(typeof(DVGlimmerSystem))]
 public sealed partial class DVGlimmerComponent : Component
 {
     /// <summary>
     /// The current level of glimmer.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public int Glimmer;
 
     /// <summary>
     /// The minimum level of glimmer.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public int MinGlimmer;
 
     /// <summary>
     /// The maximum level of glimmer.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public int MaxGlimmer = 1000;
 
     /// <summary>
@@ -44,17 +44,6 @@ public sealed partial class DVGlimmerComponent : Component
         { 500, GlimmerTier.Dangerous },
         { 900, GlimmerTier.Critical },
     };
-
-    /// <summary>
-    /// A networked datafield converting SortedDictionary <=> Dictionary for the benefit of NetSerializer.
-    /// Not pretty, but it works.
-    /// </summary>
-    [ViewVariables, AutoNetworkedField]
-    public Dictionary<int, GlimmerTier> NetworkedTiers
-    {
-        get => Tiers.ToDictionary();
-        set => Tiers = new SortedDictionary<int, GlimmerTier>(value);
-    }
 
     /// <summary>
     /// The current tier of glimmer per <see cref="Glimmer" /> and <see cref="Tiers" />
