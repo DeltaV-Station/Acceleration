@@ -1,12 +1,18 @@
+using System.Linq;
 using JetBrains.Annotations;
+using Robust.Shared.GameStates;
+using Robust.Shared.Network;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared._DVA.Glimmer;
 
 /// <summary>
 /// Oversees the glimmer entity associated with a round.
 /// </summary>
-public sealed class DVGlimmerSystem : EntitySystem
+public sealed partial class DVGlimmerSystem : EntitySystem
 {
+    [Dependency] private INetManager _net = default!;
+
     /// <summary>
     /// The current glimmer of the round.
     /// </summary>
@@ -76,11 +82,40 @@ public sealed class DVGlimmerSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<DVGlimmerComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
+        SubscribeLocalEvent<DVGlimmerComponent, ComponentGetState>(OnGetState);
+        SubscribeLocalEvent<DVGlimmerComponent, ComponentHandleState>(OnHandleState);
     }
 
-    private void OnAfterHandleState(Entity<DVGlimmerComponent> ent, ref AfterAutoHandleStateEvent args)
+    [Serializable, NetSerializable]
+    public sealed class DVGlimmerState : IComponentState
     {
+        public int Glimmer;
+        public int MinGlimmer;
+        public int MaxGlimmer;
+        public Dictionary<int, GlimmerTier> Tiers = default!;
+    }
+
+    private void OnGetState(Entity<DVGlimmerComponent> ent, ref ComponentGetState args)
+    {
+        args.State = new DVGlimmerState
+        {
+            Glimmer = ent.Comp.Glimmer,
+            MinGlimmer = ent.Comp.MinGlimmer,
+            MaxGlimmer = ent.Comp.MaxGlimmer,
+            Tiers = ent.Comp.Tiers.ToDictionary(),
+        };
+    }
+
+    private void OnHandleState(Entity<DVGlimmerComponent> ent, ref ComponentHandleState args)
+    {
+        if (args.Current is not DVGlimmerState state)
+            return;
+
+        ent.Comp.Glimmer = state.Glimmer;
+        ent.Comp.MinGlimmer = state.MinGlimmer;
+        ent.Comp.MaxGlimmer = state.MaxGlimmer;
+        ent.Comp.Tiers = new SortedDictionary<int, GlimmerTier>(state.Tiers);
+
         var passive = new GlimmerChangedPassiveEvent(ent);
         RaiseLocalEvent(ref passive);
     }
