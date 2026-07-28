@@ -15,7 +15,7 @@ namespace Content.Client._DVA.CrewMonitoring;
 
 public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
 {
-    [Dependency] private SharedMapSystem _map = default!;
+    private readonly SharedMapSystem _map;
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
 
@@ -26,6 +26,7 @@ public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
 
     public DVCrewMonitoringShuttleControl() : base(64f, 256f, 256f)
     {
+        _map = EntManager.System<SharedMapSystem>();
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _transform = EntManager.System<SharedTransformSystem>();
     }
