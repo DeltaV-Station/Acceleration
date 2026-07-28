@@ -115,7 +115,7 @@
   - type: Sprite
     state: les_flag
   - type: Construction
-    node: LesFlag
+    node: LesbianFlag
 
 - type: entity
   parent: BasePrideFlagDV
