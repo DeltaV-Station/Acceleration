@@ -2,17 +2,18 @@
 using Content.Shared._DVA.Research.Components;
 using Content.Shared._DVA.Glimmer;
 
-namespace Content.Shared.Research.Systems;
+namespace Content.Shared._DVA.Research.Systems;
 
 /// <summary>
 /// Handling for Glimmer changes due to research and artifacts.
 /// </summary>
-public abstract partial class SharedResearchSystem
+public sealed partial class SharedGlimmerResearchSystem : EntitySystem
 {
     [Dependency] private DVGlimmerSystem _glimmer = default!;
 
-    public void InitializeGlimmer()
+    public override void Initialize()
     {
+        base.Initialize();
         SubscribeLocalEvent<DVAnalysisConsoleGlimmerComponent, GetGlimmerModifiedResearchEvent>(OnGetGlimmerResearch);
     }
 

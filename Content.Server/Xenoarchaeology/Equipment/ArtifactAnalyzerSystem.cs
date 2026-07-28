@@ -1,5 +1,6 @@
 using Content.Server.Research.Systems;
 using Content.Server.Xenoarchaeology.Artifact;
+using Content.Shared._DVA.Research.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Research.Systems;
 using Content.Shared.Xenoarchaeology.Equipment;
