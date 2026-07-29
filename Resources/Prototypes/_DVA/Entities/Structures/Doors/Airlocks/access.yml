@@ -9,6 +9,35 @@
   - type: PriorityDock
     tag: DockShipyard
 
+# Escape Pod - specific to submarine
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleEscapeSub
+  suffix: External, Escape Sub, Glass, Docking
+  components:
+  - type: GridFill
+    path: /Maps/_DV/Shuttles/Misc/sub_escape_pod.yml
+
+# Escape Pod - Large one
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleEscapePodDV
+  suffix: External, DV, Escape 5x7, Glass, Docking
+  components:
+  - type: GridFill
+    path: /Maps/_DV/Shuttles/Misc/escape_pod_dv.yml
+
+# Solid Doors
+# Security
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockCorpsmanLocked
+  suffix: Corpsman, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCorpsman ]
+
 # Justice
 - type: entity
   parent: AirlockCommand
@@ -20,31 +49,13 @@
       board: [ DoorElectronicsChiefJustice ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockChiefJusticeGlassLocked
-  suffix: Chief Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsChiefJustice ]
-
-- type: entity
   parent: AirlockJustice
-  id: AirlockJusticeLocked
-  suffix: Justice, Locked
+  id: AirlockClerkLocked
+  suffix: Clerk, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsJustice ]
-
-- type: entity
-  parent: AirlockJusticeGlass
-  id: AirlockJusticeGlassLocked
-  suffix: Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsJustice ]
+      board: [ DoorElectronicsClerk ]
 
 - type: entity
   parent: AirlockJustice
@@ -56,96 +67,44 @@
       board: [ DoorElectronicsProsecutor ]
 
 - type: entity
-  parent: AirlockJusticeGlass
-  id: AirlockProsecutorGlassLocked
-  suffix: Prosecutor, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsProsecutor ]
-
-- type: entity
   parent: AirlockJustice
-  id: AirlockClerkLocked
-  suffix: Clerk, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsClerk ]
-
-- type: entity
-  parent: AirlockJusticeGlass
-  id: AirlockClerkGlassLocked
-  suffix: Clerk, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsClerk ]
-
-# Speci
-- type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintChiefJusticeLocked
-  suffix: ChiefJustice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsChiefJustice ]
-
-- type: entity
-  parent: AirlockMaint
-  id: AirlockMaintJusticeLocked
+  id: AirlockJusticeLocked
   suffix: Justice, Locked
   components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsJustice ]
+
+# Salvage / Logi
+- type: entity
+  parent: AirlockExternal
+  id: AirlockExternalSalvageLocked
+  suffix: External, Salvage, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSalvage ]
   - type: Wires
-    layoutId: AirlockJustice
+    layoutId: AirlockCargo
 
+# Epistemics
 - type: entity
-  parent: AirlockMaintJusticeLocked
-  id: AirlockMaintProsecutorLocked
-  suffix: Prosecutor, Locked
+  parent: AirlockScienceLocked
+  id: AirlockLibraryLocked
+  suffix: Library, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsProsecutor ]
+      board: [ DoorElectronicsLibrary ]
 
 - type: entity
-  parent: AirlockMaintJusticeLocked
-  id: AirlockMaintClerkLocked
-  suffix: Clerk, Locked
+  parent: AirlockScience
+  id: AirlockMantisLocked
+  suffix: Mantis, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsClerk ]
-
-- type: entity
-  parent: AirlockSecurity
-  id: AirlockCorpsmanLocked
-  suffix: Corpsman, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCorpsman ]
-
-- type: entity
-  parent: AirlockMedical
-  id: AirlockParamedicLocked
-  suffix: Paramedic, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsParamedic ]
-
-- type: entity
-  parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleEscapeSub
-  suffix: External, Escape Sub, Glass, Docking
-  components:
-    - type: GridFill
-      path: /Maps/_DV/Shuttles/Misc/sub_escape_pod.yml
+      board: [ DoorElectronicsMantis ]
 
 - type: entity
   parent: AirlockRobotics
@@ -157,12 +116,50 @@
       board: [ DoorElectronicsRobotics ]
 
 - type: entity
-  parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleEscapePodDV
-  suffix: External, DV, Escape 5x7, Glass, Docking
+  parent: AirlockMaintRnDLocked
+  id: AirlockMaintRnDSurgeryLocked
+  suffix: Surgery/Epistemics, Locked
   components:
-  - type: GridFill
-    path: /Maps/_DV/Shuttles/Misc/escape_pod_dv.yml
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSurgeryResearch ]
+
+# Medical
+- type: entity
+  parent: AirlockMedical
+  id: AirlockPsychologistLocked
+  suffix: Psychologist, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPsychologist ]
+
+- type: entity
+  parent: AirlockMedical
+  id: AirlockParamedicLocked
+  suffix: Paramedic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsParamedic ]
+
+- type: entity
+  parent: AirlockMedical
+  id: AirlockSurgeryLocked
+  suffix: Surgery, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSurgery ]
+
+- type: entity
+  parent: AirlockMaintMedLocked
+  id: AirlockMaintSurgeryLocked
+  suffix: Surgery, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSurgery ]
 
 # Service
 - type: entity
@@ -228,79 +225,7 @@
     containers:
       board: [ DoorElectronicsZookeeper ]
 
-# Epistemics
-- type: entity
-  parent: AirlockScienceLocked
-  id: AirlockLibraryLocked
-  suffix: Library, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsLibrary ]
-
-- type: entity
-  parent: AirlockScience
-  id: AirlockMantisLocked
-  suffix: Mantis, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsMantis ]
-
-- type: entity
-  parent: AirlockMaintRnDLocked
-  id: AirlockMaintRnDSurgeryLocked
-  suffix: Surgery/Epistemics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSurgeryResearch ]
-
-# Medical
-- type: entity
-  parent: AirlockMedical
-  id: AirlockPsychologistLocked
-  suffix: Psychologist, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsPsychologist ]
-
-- type: entity
-  parent: AirlockMedical
-  id: AirlockSurgeryLocked
-  suffix: Surgery, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSurgery ]
-
-- type: entity
-  parent: AirlockMaintMedLocked
-  id: AirlockMaintSurgeryLocked
-  suffix: Surgery, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSurgery ]
-
-# Salvage / Logi
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalSalvageLocked
-  suffix: External, Salvage, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSalvage ]
-  - type: Wires
-    layoutId: AirlockCargo
-
 # Glass Airlocks
-
-# Command
-
-
 # Security
 - type: entity
   parent: AirlockSecurityGlass
@@ -313,13 +238,121 @@
   - type: Wires
     layoutId: AirlockCommand
 
-
-
-
 # Justice
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockChiefJusticeGlassLocked
+  suffix: Chief Justice, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChiefJustice ]
+
+- type: entity
+  parent: AirlockJusticeGlass
+  id: AirlockClerkGlassLocked
+  suffix: Clerk, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsClerk ]
+
+- type: entity
+  parent: AirlockJusticeGlass
+  id: AirlockProsecutorGlassLocked
+  suffix: Prosecutor, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsProsecutor ]
+
+- type: entity
+  parent: AirlockJusticeGlass
+  id: AirlockJusticeGlassLocked
+  suffix: Justice, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJustice ]
+
+# Logistics
+- type: entity
+  parent: AirlockExternalGlass
+  id: AirlockExternalGlassSalvageLocked
+  suffix: External, Glass, Salvage, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSalvage ]
+  - type: Wires
+    layoutId: AirlockCargo
+
+# Epistemics
+- type: entity
+  parent: AirlockScienceGlass
+  id: AirlockMantisGlassLocked
+  suffix: Mantis, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMantis ]
+
+- type: entity
+  parent: AirlockScienceGlass
+  id: AirlockLibraryGlassLocked
+  suffix: Library, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsLibrary ]
+
+- type: entity
+  parent: AirlockRoboticsGlass
+  id: AirlockRoboticsGlassLocked
+  suffix: Robotics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsRobotics ]
+
+- type: entity
+  parent: AirlockScienceGlass
+  id: AirlockSurgeryScienceGlassLocked
+  suffix: Surgery/Epistemics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSurgeryResearch ]
+
+# Medical
+- type: entity
+  parent: AirlockMedicalGlass
+  id: AirlockParamedicGlassLocked
+  suffix: Paramedic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsParamedic ]
+
+- type: entity
+  parent: AirlockMedicalGlass
+  id: AirlockPsychologistGlassLocked
+  suffix: Psychologist, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPsychologist ]
+
+- type: entity
+  parent: AirlockMedicalGlass
+  id: AirlockSurgeryGlassLocked
+  suffix: Surgery, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSurgery ]
 
 # Service
-
 - type: entity
   parent: AirlockServiceGlassLocked
   id: AirlockBoxerGlassLocked
@@ -374,93 +407,8 @@
     containers:
       board: [ DoorElectronicsZookeeper ]
 
-# Epistemics
-- type: entity
-  parent: AirlockScienceGlass
-  id: AirlockMantisGlassLocked
-  suffix: Mantis, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsMantis ]
-
-- type: entity
-  parent: AirlockScienceGlass
-  id: AirlockSurgeryScienceGlassLocked
-  suffix: Surgery/Epistemics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSurgeryResearch ]
-
-- type: entity
-  parent: AirlockScienceGlass
-  id: AirlockLibraryGlassLocked
-  suffix: Library, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsLibrary ]
-
-- type: entity
-  parent: AirlockRoboticsGlass
-  id: AirlockRoboticsGlassLocked
-  suffix: Robotics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsRobotics ]
-
-# Medical
-- type: entity
-  parent: AirlockMedicalGlass
-  id: AirlockParamedicGlassLocked
-  suffix: Paramedic, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsParamedic ]
-
-- type: entity
-  parent: AirlockMedicalGlass
-  id: AirlockPsychologistGlassLocked
-  suffix: Psychologist, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsPsychologist ]
-
-- type: entity
-  parent: AirlockMedicalGlass
-  id: AirlockSurgeryGlassLocked
-  suffix: Surgery, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSurgery ]
-
-# Logistics
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassSalvageLocked
-  suffix: External, Glass, Salvage, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSalvage ]
-  - type: Wires
-    layoutId: AirlockCargo
-
 # Maintenance Hatches
-- type: entity
-  parent: AirlockMaintRnDLocked
-  id: AirlockMaintMantisLocked
-  suffix: Mantis, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsMantis ]
-
+# Security
 - type: entity
   parent: AirlockMaintSecLocked
   id: AirlockMaintCorpsmanLocked
@@ -471,6 +419,83 @@
       board: [ DoorElectronicsCorpsman ]
 
 - type: entity
+  parent: AirlockMaintSecLocked
+  id: AirlockMaintSecurityLawyerLocked
+  suffix: Security/Lawyer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurityLawyer ]
+
+# Justice
+- type: entity
+  parent: AirlockMaintCommandLocked
+  id: AirlockMaintChiefJusticeLocked
+  suffix: ChiefJustice, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChiefJustice ]
+
+- type: entity
+  parent: AirlockMaintJusticeLocked
+  id: AirlockMaintClerkLocked
+  suffix: Clerk, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsClerk ]
+
+- type: entity
+  parent: AirlockMaintJusticeLocked
+  id: AirlockMaintProsecutorLocked
+  suffix: Prosecutor, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsProsecutor ]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintJusticeLocked
+  suffix: Justice, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJustice ]
+  - type: Wires
+    layoutId: AirlockJustice
+
+# Epistemics
+- type: entity
+  parent: AirlockMaintRnDLocked
+  id: AirlockMaintMantisLocked
+  suffix: Mantis, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMantis ]
+
+- type: entity
+  parent: AirlockMaintServiceLocked
+  id: AirlockMaintLibraryLocked
+  suffix: Library, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsLibrary ]
+
+- type: entity
+  parent: AirlockMaintRnDLocked
+  id: AirlockMaintRoboticsLocked
+  suffix: Robotics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsRobotics ]
+
+# Medical
+- type: entity
   parent: AirlockMaintMedLocked
   id: AirlockMaintParamedicLocked
   suffix: Paramedic, Locked
@@ -479,6 +504,16 @@
     containers:
       board: [ DoorElectronicsParamedic ]
 
+- type: entity
+  parent: AirlockMaintMedLocked
+  id: AirlockMaintPsychologistLocked
+  suffix: Psychologist, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPsychologist ]
+
+# Service
 - type: entity
   parent: AirlockMaintServiceLocked
   id: AirlockMaintBoxerLocked
@@ -526,48 +561,12 @@
 
 - type: entity
   parent: AirlockMaintServiceLocked
-  id: AirlockMaintLibraryLocked
-  suffix: Library, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsLibrary ]
-
-- type: entity
-  parent: AirlockMaintServiceLocked
   id: AirlockMaintZookeeperLocked
   suffix: Zookeeper, Locked
   components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsZookeeper ]
-
-- type: entity
-  parent: AirlockMaintMedLocked
-  id: AirlockMaintPsychologistLocked
-  suffix: Psychologist, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsPsychologist ]
-
-- type: entity
-  parent: AirlockMaintSecLocked
-  id: AirlockMaintSecurityLawyerLocked
-  suffix: Security/Lawyer, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSecurityLawyer ]
-
-- type: entity
-  parent: AirlockMaintRnDLocked
-  id: AirlockMaintRoboticsLocked
-  suffix: Robotics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsRobotics ]
 
 # Security-locked External airlocks. These don't exist upstream for some reason.
 - type: entity
