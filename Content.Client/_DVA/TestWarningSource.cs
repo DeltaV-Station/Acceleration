@@ -1,4 +1,4 @@
-namespace Content.Client;
+namespace Content.Client._DVA;
 
 class Ourgh
 {
@@ -8,7 +8,7 @@ class Ourgh
 
    public static void Ourgh()
    {
-      TestL(25l);   // CS0078
+      Ourghn(25l);   // CS0078
       // try the following line instead
       // TestL(25L);
    }

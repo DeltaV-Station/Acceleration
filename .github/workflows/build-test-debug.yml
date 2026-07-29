@@ -43,6 +43,9 @@ jobs:
       with:
         dotnet-version: 10.0.x
 
+    - name: Override C# problem matcher
+      run: echo "::add-matcher::.github/csc.json"
+
     - name: Install dependencies
       run: dotnet restore
 
