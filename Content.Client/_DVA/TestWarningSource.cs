@@ -6,7 +6,7 @@ class Ourgh
    {
    }
 
-   public static void Ourgh()
+   public static void Ourghed()
    {
       Ourghn(25l);   // CS0078
       // try the following line instead
