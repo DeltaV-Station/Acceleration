@@ -5,6 +5,7 @@ using Content.Shared.NPC;
 using Content.Shared.SSDIndicator;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Configuration;
+using Content.Shared._DVA.Mind; // DeltaV
 
 namespace Content.Client.SSDIndicator;
 
@@ -15,6 +16,7 @@ public sealed partial class SSDIndicatorSystem : EntitySystem
 {
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private Shared.SSDIndicator.SSDIndicatorSystem _shared = default!; // DeltaV - SSD Recency, don't want to rename the upstream class
 
     public override void Initialize()
     {
@@ -31,7 +33,15 @@ public sealed partial class SSDIndicatorSystem : EntitySystem
             !HasComp<ActiveNPCComponent>(uid) &&
             HasComp<MindExaminableComponent>(uid))
         {
-            args.StatusIcons.Add(ProtoMan.Index(component.Icon));
+            // args.StatusIcons.Add(ProtoMan.Index(component.Icon)); // DeltaV - commented out. status icon now added below
+            // Begin DeltaV Additions
+            var ev = new ShowSSDIndicatorEvent();
+            RaiseLocalEvent(uid, ref ev);
+            if (ev.Hidden)
+                return;
+
+            args.StatusIcons.Add(ProtoMan.Index(icon));
+            // End DeltaV Additions
         }
     }
 }
