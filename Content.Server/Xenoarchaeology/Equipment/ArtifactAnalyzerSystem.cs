@@ -1,8 +1,8 @@
 using Content.Server.Research.Systems;
 using Content.Server.Xenoarchaeology.Artifact;
-using Content.Shared._DVA.Research.Systems;
+using Content.Shared._DVA.Research.Systems; // DeltaV - glimmer/artifact interaction
 using Content.Shared.Popups;
-using Content.Shared.Research.Systems;
+using Content.Shared.Research.Systems; // DeltaV - glimmer/artifact interaction
 using Content.Shared.Xenoarchaeology.Equipment;
 using Content.Shared.Xenoarchaeology.Equipment.Components;
 using Robust.Shared.Audio.Systems;

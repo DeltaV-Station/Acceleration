@@ -4,7 +4,7 @@ using Content.Client.Resources;
 using Content.Client.UserInterface.Controls;
 using Content.Client.Xenoarchaeology.Artifact;
 using Content.Client.Xenoarchaeology.Equipment;
-using Content.Shared._DVA.Research.Systems;
+using Content.Shared._DVA.Research.Systems; // DeltaV - Glimmer/Artifact interactions
 using Content.Shared.Research.Systems; // DeltaV - Glimmer/Artifact interactions
 using Content.Shared.Xenoarchaeology.Artifact.Components;
 using Content.Shared.Xenoarchaeology.Equipment.Components;
@@ -200,7 +200,7 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
 
         LockedValueLabel.SetMarkup(Loc.GetString("analysis-console-info-locked-value", ("state", lockedState)));
 
-        var percent = (float)node.Value.Comp.Durability / node.Value.Comp.MaxDurability;
+        var percent = (float) node.Value.Comp.Durability / node.Value.Comp.MaxDurability;
         var color = percent switch
         {
             >= 0.75f => Color.Lime,
