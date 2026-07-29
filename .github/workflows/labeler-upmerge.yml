@@ -1,0 +1,17 @@
+name: "Labels: Upmerge"
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  add_label:
+    if: contains(github.event.pull_request.title, 'upmerge')
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions-ecosystem/action-add-labels@v1
+      with:
+        labels: "DO NOT SQUASH"
