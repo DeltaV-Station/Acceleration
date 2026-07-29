@@ -40,6 +40,16 @@ public sealed partial class SSDIndicatorSystem : EntitySystem
             if (ev.Hidden)
                 return;
 
+            // SSD Recency Indicator
+            var stage = _shared.GetStage(new Entity<SSDIndicatorComponent>(uid, component));
+            var icon = stage switch
+            {
+                SsdStage.VeryRecent => component.VeryRecentIcon,
+                SsdStage.Recent => component.RecentIcon,
+                SsdStage.Cryoable => component.Icon,
+                _ => throw new InvalidOperationException($"{ToPrettyString(uid)} has an invalid SSD stage {stage}."),
+            };
+
             args.StatusIcons.Add(ProtoMan.Index(icon));
             // End DeltaV Additions
         }
