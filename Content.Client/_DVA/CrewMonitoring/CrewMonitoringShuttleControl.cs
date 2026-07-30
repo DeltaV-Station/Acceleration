@@ -22,7 +22,7 @@ public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
     public EntityUid? Owner;
     public NavMapControl? NavMap;
 
-    private List<Entity<MapGridComponent>> _grids = new();
+    private List<Entity<MapGridComponent>> _grids = [];
 
     public DVCrewMonitoringShuttleControl() : base(64f, 256f, 256f)
     {
