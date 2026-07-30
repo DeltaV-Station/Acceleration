@@ -4,6 +4,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Content.Shared._DVA.Mind; // DeltaV
 
 namespace Content.Shared.Mind;
 
@@ -33,6 +34,12 @@ public sealed partial class MindExamineSystem : EntitySystem
         if (!args.IsInDetailsRange)
             return;
 
+        // Begin DeltaV Addition
+        var ev = new ShowSSDIndicatorEvent();
+        RaiseLocalEvent(ent, ref ev);
+        if (ev.Hidden)
+            return;
+        // End DeltaV Addition
         var message = ent.Comp.State switch
         {
             MindState.Irrecoverable => $"[color=mediumpurple]{Loc.GetString("comp-mind-examined-dead-and-irrecoverable", ("ent", ent.Owner))}[/color]",
@@ -113,6 +120,11 @@ public sealed partial class MindExamineSystem : EntitySystem
             ent.Comp.State = MindState.SSD;
         else
             ent.Comp.State = MindState.None;
+
+        // DeltaV - SSD Recency START
+        var ev = new MindStateUpdatedEvent(ent.Comp.State);
+        RaiseLocalEvent(ent, ref ev);
+        // DeltaV END
 
         Dirty(ent);
     }

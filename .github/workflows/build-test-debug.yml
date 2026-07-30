@@ -39,15 +39,18 @@ jobs:
         git submodule update --init --recursive
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: 10.0.x
+
+    - name: Override C# problem matcher
+      run: echo "::add-matcher::.github/csc.json"
 
     - name: Install dependencies
       run: dotnet restore
 
     - name: Build Project
-      run: dotnet build --configuration DebugOpt --no-restore /m
+      run: dotnet build --configuration DebugOpt --no-restore /m /clp:NoSummary
 
     - name: Run Content.Tests
       shell: pwsh

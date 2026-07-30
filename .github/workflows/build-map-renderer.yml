@@ -42,6 +42,9 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
+      - name: Remove C# problem matcher
+        run: echo "::remove-matcher owner=csc::"
+
       - name: Install dependencies
         run: dotnet restore
 
