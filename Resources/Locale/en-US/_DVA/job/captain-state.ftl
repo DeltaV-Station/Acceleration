@@ -8,7 +8,5 @@ no-captain-aa-unlocked-announcement = Command access authority has been granted 
 spare-id-warops-no-captain = Due to the current circumstances, command has been granted to the Spare ID cabinet for use by the Acting Commanding Officer. Ensure the spare ID remains secure. Unauthorized possession of the spare captain ID is punishable under Grand Felony Offense [307]: Grand Larceny.
 spare-id-warops-captain = Due to the current circumstances, access has been granted to the Spare ID cabinet for use by the Captain. Ensure the spare ID remains secure. Unauthorized possession of the spare captain ID is punishable under Grand Felony Offense [307]: Grand Larceny.
 
-cmd-unlockspareid-desc = Force unlocks the spare ID cabinet, optionally making an announcement.
-cmd-unlockspareid-usage = unlockspareid <true|false>
-cmd-unlockspareid-arg-state = Announcement <true|false>
-cmd-unlockspareid-announcement = Command access authority has been manually granted to the Spare ID cabinet by Central Command. Unauthorized possession of the spare captain ID is punishable under Grand Felony Offense [307]: Grand Larceny.
+command-description-spareid-unlock = Force unlocks the spare ID cabinet, optionally making an announcement.
+command-spareid-unlock-announcement = Command access authority has been manually granted to the Spare ID cabinet by Central Command. Unauthorized possession of the spare captain ID is punishable under Grand Felony Offense [307]: Grand Larceny.

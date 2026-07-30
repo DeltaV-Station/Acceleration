@@ -219,16 +219,11 @@ public sealed partial class DVAutomaticSpareIdSystem : EntitySystem
     /// <summary>
     ///   Force unlocks the spare ID cabinets and optionally displays an announcement.
     /// </summary>
+    /// <param name="ent">The station entity that has the <see cref="DVAutomaticSpareIdComponent"/>.</param>
     /// <param name="newSpareIdAccess">The access to give to the spare ID cabinet. If not specified or null, will default to ent.Comp.GrantAccessToCommand</param>
     /// <param name="unlockMessageLocId">The message to display to the station upon unlocking the spare ID. If not specified or null, no announcement will be made</param>
-    public void ForceUnlock(ProtoId<AccessLevelPrototype>? newSpareIdAccess = null, LocId? unlockMessageLocId = null)
+    public void ForceUnlock(Entity<DVAutomaticSpareIdComponent> ent, ProtoId<AccessLevelPrototype>? newSpareIdAccess = null, LocId? unlockMessageLocId = null)
     {
-        var query = EntityQueryEnumerator<DVAutomaticSpareIdComponent>();
-        if (!query.MoveNext(out var uid, out var spareId))
-            return;
-
-        Entity<DVAutomaticSpareIdComponent> ent = (uid, spareId);
-
         UnlockCabinet(ent, newSpareIdAccess);
 
         // Make sure the state is set to the expected state given the current game state. Prevents errouneous announcements.
