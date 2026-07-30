@@ -1,0 +1,64 @@
+
+## If you add a new trait, make sure to add the corresponding component to the whitelist in \Resources\Prototypes\Entities\Mobs\Player\clone.yml so it gets copied to clones correctly!
+
+- type: dvTrait
+  id: Blindness
+  name: trait-blindness-name
+  description: trait-blindness-desc
+  category: Vision
+  conditions:
+  - !type:HasCompCondition
+    component: Blindable
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: PermanentBlindness
+  - !type:SpawnItemInHandEffect
+    item: WhiteCane
+
+- type: dvTrait
+  id: PoorVision
+  name: trait-poor-vision-name
+  description: trait-poor-vision-desc
+  category: Vision
+  conditions:
+  - !type:HasCompCondition
+    component: Blindable
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: PermanentBlindness
+      blindness: 4
+  - !type:SpawnItemInHandEffect
+    item: ClothingEyesGlasses
+
+- type: dvTrait
+  id: Monochromacy
+  name: trait-monochromacy-name
+  description: trait-monochromacy-desc
+  category: Vision
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: BlackAndWhiteOverlay
+
+# https://github.com/DeltaV-Station/Delta-v/pull/837 (MIT licensed, 2 days before AGPL happened lol)
+#- type: dvTrait
+#  id: Deuteranopia
+#  name: trait-vision-deuteranopia-name
+#  description: trait-vision-deuteranopia-desc
+#  category: Vision
+#  effects:
+#  - !type:AddCompsEffect
+#    components:
+#    - type: DVDeuteranopiaVision
+
+- type: dvTrait
+  id: UltravioletVision
+  name: trait-vision-ultraviolet-name
+  description: trait-vision-ultraviolet-desc
+  category: Vision
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: DVUltravioletVision

@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._DVA.Traits; // DeltaV - Traits rework
 using Content.Shared.CCVar;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.EntityEffects.Effects;
@@ -10,7 +11,7 @@ using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
 using Content.Shared.Speech.Components;
-using Content.Shared.Traits;
+// using Content.Shared.Traits; // DeltaV - Traits rework
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
@@ -59,7 +60,7 @@ namespace Content.Shared.Preferences
         /// Enabled traits.
         /// </summary>
         [DataField]
-        private HashSet<ProtoId<TraitPrototype>> _traitPreferences = new();
+        private HashSet<ProtoId<DVTraitPrototype>> _traitPreferences = new();
 
         /// <summary>
         /// <see cref="_loadouts"/>
@@ -121,7 +122,7 @@ namespace Content.Shared.Preferences
         /// <summary>
         /// <see cref="_traitPreferences"/>
         /// </summary>
-        public IReadOnlySet<ProtoId<TraitPrototype>> TraitPreferences => _traitPreferences;
+        public IReadOnlySet<ProtoId<DVTraitPrototype>> TraitPreferences => _traitPreferences;
 
         /// <summary>
         /// If we're unable to get one of our preferred jobs do we spawn as a fallback job or do we stay in lobby.
@@ -143,7 +144,7 @@ namespace Content.Shared.Preferences
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
-            HashSet<ProtoId<TraitPrototype>> traitPreferences,
+            HashSet<ProtoId<DVTraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
         {
             Name = name;
@@ -190,7 +191,7 @@ namespace Content.Shared.Preferences
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
-                new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
+                new HashSet<ProtoId<DVTraitPrototype>>(other.TraitPreferences),
                 new Dictionary<string, RoleLoadout>(other.Loadouts))
         {
         }
@@ -543,7 +544,7 @@ namespace Content.Shared.Preferences
             };
         }
 
-        public HumanoidCharacterProfile WithTraitPreference(ProtoId<TraitPrototype> traitId, IPrototypeManager protoManager)
+        public HumanoidCharacterProfile WithTraitPreference(ProtoId<DVTraitPrototype> traitId, IPrototypeManager protoManager)
         {
             // null category is assumed to be default.
             if (!protoManager.TryIndex(traitId, out var traitProto))
@@ -552,14 +553,14 @@ namespace Content.Shared.Preferences
             var category = traitProto.Category;
 
             // Category not found so dump it.
-            TraitCategoryPrototype? traitCategory = null;
+            DVTraitCategoryPrototype? traitCategory = null;
 
-            if (category != null && !protoManager.Resolve(category, out traitCategory))
+            if (!protoManager.Resolve(category, out traitCategory)) // DeltaV 13/01/26 - Traits: Category is no longer nullable
                 return new(this);
 
-            var list = new HashSet<ProtoId<TraitPrototype>>(_traitPreferences) { traitId };
+            var list = new HashSet<ProtoId<DVTraitPrototype>>(_traitPreferences) { traitId };
 
-            if (traitCategory == null || traitCategory.MaxTraitPoints < 0)
+            if (traitCategory.MaxPoints < 0) // DeltaV 13/01/26 - Traits: Changed to MaxPoints
             {
                 return new(this)
                 {
@@ -571,7 +572,7 @@ namespace Content.Shared.Preferences
             foreach (var trait in list)
             {
                 // If trait not found or another category don't count its points.
-                if (!protoManager.TryIndex<TraitPrototype>(trait, out var otherProto) ||
+                if (!protoManager.TryIndex<DVTraitPrototype>(trait, out var otherProto) ||
                     otherProto.Category != traitCategory)
                 {
                     continue;
@@ -580,7 +581,7 @@ namespace Content.Shared.Preferences
                 count += otherProto.Cost;
             }
 
-            if (count > traitCategory.MaxTraitPoints && traitProto.Cost != 0)
+            if (count > traitCategory.MaxPoints && traitProto.Cost != 0) // DeltaV 13/01/26 - Traits: Changed to MaxPoints
             {
                 return new(this);
             }
@@ -591,9 +592,9 @@ namespace Content.Shared.Preferences
             };
         }
 
-        public HumanoidCharacterProfile WithoutTraitPreference(ProtoId<TraitPrototype> traitId, IPrototypeManager protoManager)
+        public HumanoidCharacterProfile WithoutTraitPreference(ProtoId<DVTraitPrototype> traitId, IPrototypeManager protoManager)
         {
-            var list = new HashSet<ProtoId<TraitPrototype>>(_traitPreferences);
+            var list = new HashSet<ProtoId<DVTraitPrototype>>(_traitPreferences);
             list.Remove(traitId);
 
             return new(this)
@@ -806,11 +807,11 @@ namespace Content.Shared.Preferences
         /// <summary>
         /// Takes in an IEnumerable of traits and returns a List of the valid traits.
         /// </summary>
-        public List<ProtoId<TraitPrototype>> GetValidTraits(IEnumerable<ProtoId<TraitPrototype>> traits, IPrototypeManager protoManager)
+        public List<ProtoId<DVTraitPrototype>> GetValidTraits(IEnumerable<ProtoId<DVTraitPrototype>> traits, IPrototypeManager protoManager)
         {
             // Track points count for each group.
             var groups = new Dictionary<string, int>();
-            var result = new List<ProtoId<TraitPrototype>>();
+            var result = new List<ProtoId<DVTraitPrototype>>();
 
             foreach (var trait in traits)
             {
@@ -818,11 +819,11 @@ namespace Content.Shared.Preferences
                     continue;
 
                 // Always valid.
-                if (traitProto.Category == null)
-                {
-                    result.Add(trait);
-                    continue;
-                }
+                // if (traitProto.Category == null) // DeltaV 13/01/26 - Traits rework
+                // {
+                //     result.Add(trait);
+                //     continue;
+                // }
 
                 // No category so dump it.
                 if (!protoManager.Resolve(traitProto.Category, out var category))
@@ -832,7 +833,7 @@ namespace Content.Shared.Preferences
                 existing += traitProto.Cost;
 
                 // Too expensive.
-                if (existing > category.MaxTraitPoints)
+                if (existing > category.MaxPoints) // DeltaV 13/01/26 - Traits:  Was MaxTraitPoints
                     continue;
 
                 groups[category.ID] = existing;
