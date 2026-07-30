@@ -1,7 +1,6 @@
 using System.Linq;
 using JetBrains.Annotations;
 using Robust.Shared.GameStates;
-using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._DVA.Glimmer;
@@ -11,8 +10,6 @@ namespace Content.Shared._DVA.Glimmer;
 /// </summary>
 public sealed partial class DVGlimmerSystem : EntitySystem
 {
-    [Dependency] private INetManager _net = default!;
-
     /// <summary>
     /// The current glimmer of the round.
     /// </summary>
