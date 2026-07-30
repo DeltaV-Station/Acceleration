@@ -62,9 +62,15 @@ public abstract partial class SharedJetpackSystem
     private void RefreshAutomaticJetpack(Entity<JetpackComponent> jetpack, EntityUid user, bool jetpackEnabled)
     {
         if (jetpackEnabled)
+        {
             RemComp<DVAutomaticJetpackUserComponent>(user);
-        else if (jetpack.Comp.AutomaticMode) // DeltaV - Jetpacks automatically turn on when toggled.
-            EnsureComp<DVAutomaticJetpackUserComponent>(user).Jetpack = jetpack;
+        }
+        else if (jetpack.Comp.AutomaticMode)
+        {
+            var pack = EnsureComp<DVAutomaticJetpackUserComponent>(user);
+            pack.Jetpack = jetpack;
+            Dirty(user, pack);
+        }
 
     }
 }
