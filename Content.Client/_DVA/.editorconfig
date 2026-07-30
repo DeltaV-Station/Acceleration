@@ -4,3 +4,4 @@ root = false
 dotnet_analyzer_diagnostic.severity = error
 dotnet_diagnostic.CA1707.severity = none # Ignore: Remove underscores from namespace name
 dotnet_diagnostic.CA1051.severity = none # Ignore: Do not declare invisible instance fields
+dotnet_diagnostic.IDE0011.severity = none # Ignore: Add braces
