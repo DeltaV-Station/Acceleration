@@ -66,16 +66,16 @@
     components:
     - type: Muted
 
-- type: dvTrait
-  id: FrenchAccent
-  name: trait-french-accent-name
-  description: trait-french-accent-desc
-  category: Accents
-  cost: 0
-  effects:
-  - !type:AddCompsEffect
-    components:
-    - type: FrenchAccent
+# - type: dvTrait
+#   id: FrenchAccent
+#   name: trait-french-accent-name
+#   description: trait-french-accent-desc
+#   category: Accents
+#   cost: 0
+#   effects:
+#   - !type:AddCompsEffect
+#     components:
+#     - type: FrenchAccent
 
 # - type: dvTrait
 #   id: SpanishAccent
@@ -88,16 +88,16 @@
 #     components:
 #     - type: SpanishAccent
 
-- type: dvTrait
-  id: IrishAccent
-  name: trait-irish-accent-name
-  description: trait-irish-accent-desc
-  category: Accents
-  cost: 0
-  effects:
-  - !type:AddCompsEffect
-    components:
-    - type: IrishAccent
+# - type: dvTrait
+#   id: IrishAccent
+#   name: trait-irish-accent-name
+#   description: trait-irish-accent-desc
+#   category: Accents
+#   cost: 0
+#   effects:
+#   - !type:AddCompsEffect
+#     components:
+#     - type: IrishAccent
 
 # - type: dvTrait
 #   id: MobsterAccent
