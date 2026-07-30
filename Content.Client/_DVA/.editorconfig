@@ -1,0 +1,5 @@
+root = false
+
+[*.cs]
+dotnet_analyzer_diagnostic.severity = error
+dotnet_diagnostic.CA1707.severity = none # Ignore: Remove underscores from namespace name
