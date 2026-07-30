@@ -12,15 +12,17 @@
   - !type:SpawnItemInHandEffect
     item: OffsetCane
 
-- type: dvTrait
-  id: Dysgraphia
-  name: trait-dysgraphia-name
-  description: trait-dysgraphia-desc
-  category: Disabilities
-  effects:
-  - !type:AddCompsEffect
-    components:
-    - type: BlockWriting
+# TODO: Check Licensing on https://github.com/DeltaV-Station/Delta-v/pull/3170 
+# TODO: Check Licensing on https://github.com/DeltaV-Station/Delta-v/pull/3211
+#- type: dvTrait
+#  id: Dysgraphia
+#  name: trait-dysgraphia-name
+#  description: trait-dysgraphia-desc
+#  category: Disabilities
+#  effects:
+#  - !type:AddCompsEffect
+#    components:
+#    - type: BlockWriting
 
 - type: dvTrait
   id: PainNumbness

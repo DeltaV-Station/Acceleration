@@ -1,3 +1,5 @@
+# Lower priority means it shows up higher on the list.
+
 - type: dvTraitCategory
   id: Disabilities
   name: trait-category-disabilities

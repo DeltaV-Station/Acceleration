@@ -14,6 +14,8 @@
       maxDurationOfIncident: 30
       minDurationOfIncident: 10
 
+# TODO: Port Chronic Pain Meds (but make them not horrible)
+# TODO: Port https://github.com/DeltaV-Station/Delta-v/pull/5180
 #- type: dvTrait
 #  id: InPain
 #  name: trait-inpain-name
@@ -48,6 +50,8 @@
     - type: Unrevivable
       cloneable: true
 
+# TODO: https://github.com/DeltaV-Station/Delta-v/pull/5310
+# TODO: https://github.com/DeltaV-Station/Delta-v/pull/5330
 - type: dvTrait
   id: Uncloneable
   name: trait-uncloneable-name
@@ -59,6 +63,8 @@
     - type: Unrevivable
       cloneable: false
 
+# TODO: Look into licensing of https://github.com/DeltaV-Station/Delta-v/pull/2395
+# TODO: Potentially just port early impl of https://github.com/space-wizards/space-station-14/pull/41465
 #- type: dvTrait
 #  id: Unborgable
 #  name: trait-unborgable-name
@@ -69,6 +75,7 @@
 #    components:
 #    - type: Unborgable
 
+# TODO: https://github.com/DeltaV-Station/Delta-v/pull/4974
 #- type: dvTrait
 #  id: Redshirt
 #  name: trait-redshirt-name
@@ -86,6 +93,9 @@
 #        99.9: Critical
 #        100: Dead
 
+# TODO: https://github.com/DeltaV-Station/Delta-v/pull/3409
+#   TODO: https://github.com/cosmatic-drift-14/cosmatic-drift/pull/149
+#   TODO: https://github.com/cosmatic-drift-14/cosmatic-drift/pull/329
 #- type: dvTrait
 #  id: Synthetic
 #  name: trait-synth-name

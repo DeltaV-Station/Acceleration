@@ -42,15 +42,16 @@
     components:
     - type: BlackAndWhiteOverlay
 
-- type: dvTrait
-  id: Deuteranopia
-  name: trait-vision-deuteranopia-name
-  description: trait-vision-deuteranopia-desc
-  category: Vision
-  effects:
-  - !type:AddCompsEffect
-    components:
-    - type: DVDeuteranopiaVision
+# https://github.com/DeltaV-Station/Delta-v/pull/837 (MIT licensed, 2 days before AGPL happened lol)
+#- type: dvTrait
+#  id: Deuteranopia
+#  name: trait-vision-deuteranopia-name
+#  description: trait-vision-deuteranopia-desc
+#  category: Vision
+#  effects:
+#  - !type:AddCompsEffect
+#    components:
+#    - type: DVDeuteranopiaVision
 
 - type: dvTrait
   id: UltraVioletVision

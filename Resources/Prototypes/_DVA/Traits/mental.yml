@@ -15,25 +15,6 @@
       sounds:
         collection: Paracusia
 
-#- type: dvTrait
-#  id: Depression
-#  name: trait-depression-name
-#  description: trait-depression-desc
-#  category: Mental
-#  effects:
-#  - !type:SpawnItemInHandEffect
-#    item: PillCanisterNeurozenium
-
-#- type: dvTrait
-#  id: Addicted
-#  name: trait-addicted-name
-#  description: trait-addicted-desc
-#  category: Mental
-#  effects:
-#  - !type:AddCompsEffect
-#    components:
-#    - type: Addicted
-
 - type: dvTrait
   id: Liar
   name: trait-liar-name
