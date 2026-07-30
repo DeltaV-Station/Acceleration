@@ -77,7 +77,7 @@ public sealed partial class DVCrewMonitorAlertsSystem : EntitySystem
         monitor.Comp.LastAlert = _timing.CurTime;
     }
 
-    private bool IsCriticalOrDead(SuitSensorStatus status)
+    private static bool IsCriticalOrDead(SuitSensorStatus status)
     {
         return !status.IsAlive || status.DamagePercentage >= 1f;
     }
