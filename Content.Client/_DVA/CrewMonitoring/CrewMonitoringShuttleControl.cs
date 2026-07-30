@@ -57,7 +57,9 @@ public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
         var mapPos = _transform.ToMapCoordinates(coordinates);
         var ourEntRot = Angle.Zero;
         var ourEntMatrix = Matrix3Helpers.CreateTransform(_transform.GetWorldPosition(xform), ourEntRot);
-        Matrix3x2.Invert(ourEntMatrix, out var worldToShuttle);
+        if (!Matrix3x2.Invert(ourEntMatrix, out var worldToShuttle))
+            return;
+
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
         var worldToView = worldToShuttle * shuttleToView;
 
@@ -73,7 +75,8 @@ public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
                 continue;
 
             var body = bodyQuery.GetComponent(grid);
-            iffQuery.TryComp(grid, out var iff);
+            if (iffQuery.TryComp(grid, out var iff))
+                continue;
 
             if (!_shuttles.CanDraw(grid, body, iff))
                 continue;
@@ -138,10 +141,13 @@ public sealed partial class DVCrewMonitoringShuttleControl : BaseShuttleControl
 
         var ourEntRot = Angle.Zero;
         var ourEntMatrix = Matrix3Helpers.CreateTransform(_transform.GetWorldPosition(xform), ourEntRot);
-        Matrix3x2.Invert(ourEntMatrix, out var worldToShuttle);
+        if (!Matrix3x2.Invert(ourEntMatrix, out var worldToShuttle))
+            return;
+
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
         var worldToView = worldToShuttle * shuttleToView;
-        Matrix3x2.Invert(worldToView, out var viewToWorld);
+        if (!Matrix3x2.Invert(worldToView, out var viewToWorld))
+            return;
 
         if (args.Function == EngineKeyFunctions.UIClick)
         {
