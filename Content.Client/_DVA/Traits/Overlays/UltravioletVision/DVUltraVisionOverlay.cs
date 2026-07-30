@@ -5,7 +5,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Content.Shared._DVA.Traits.Components;
 
-namespace Content.Client._DVA.Traits.Overlays.UltraVioletVision;
+namespace Content.Client._DVA.Traits.Overlays.UltravioletVision;
 
 public sealed partial class DVUltraVisionOverlay : Overlay
 {
@@ -17,7 +17,7 @@ public sealed partial class DVUltraVisionOverlay : Overlay
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
     private readonly ShaderInstance _ultraVisionShader;
-    private static readonly ProtoId<ShaderPrototype> UltraVisionName = "UltraVioletVision";
+    private static readonly ProtoId<ShaderPrototype> UltraVisionName = "UltravioletVision";
 
     public DVUltraVisionOverlay()
     {
@@ -28,7 +28,7 @@ public sealed partial class DVUltraVisionOverlay : Overlay
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
         if (_playerManager.LocalEntity is not { Valid: true } player
-            || !_entityManager.HasComponent<DVUltraVioletVisionComponent>(player))
+            || !_entityManager.HasComponent<DVUltravioletVisionComponent>(player))
         {
             return false;
         }

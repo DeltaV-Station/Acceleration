@@ -54,11 +54,11 @@
 #    - type: DVDeuteranopiaVision
 
 - type: dvTrait
-  id: UltraVioletVision
+  id: UltravioletVision
   name: trait-vision-ultraviolet-name
   description: trait-vision-ultraviolet-desc
   category: Vision
   effects:
   - !type:AddCompsEffect
     components:
-    - type: DVUltraVioletVision
+    - type: DVUltravioletVision
