@@ -52,14 +52,14 @@
     - type: DogVision
 
 - type: dvTrait
-  id: UltraVision
-  name: trait-ultravision-name
-  description: trait-ultravision-desc
+  id: UltraVioletVision
+  name: trait-ultravioletvision-name
+  description: trait-ultravioletvision-desc
   category: Disabilities
   effects:
   - !type:AddCompsEffect
     components:
-    - type: UltraVision
+    - type: DVUltraVioletVisionComponent
 
 - type: dvTrait
   id: ImpairedMobility
