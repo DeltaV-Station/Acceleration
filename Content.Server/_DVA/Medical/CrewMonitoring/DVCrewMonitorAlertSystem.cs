@@ -49,7 +49,7 @@ public sealed partial class DVCrewMonitorAlertsSystem : EntitySystem
             .Intersect(ent.Comp.AlertedSensors); // Find "alerted" people that are healthy
 
         if (staleAlerts.Any())
-            ent.Comp.AlertedSensors.RemoveWhere(alert => staleAlerts.Contains(alert));
+            _ = ent.Comp.AlertedSensors.RemoveWhere(alert => staleAlerts.Contains(alert));
 
         // alert is still on cooldown, defer checking if we should alert
         if (ent.Comp.LastAlert + ent.Comp.AlertCooldown > _timing.CurTime)
@@ -73,7 +73,7 @@ public sealed partial class DVCrewMonitorAlertsSystem : EntitySystem
     private void Alert(Entity<DVCrewMonitorAlertsComponent> monitor)
     {
         var audioParams = AudioParams.Default.WithVolume(-2f).WithMaxDistance(4f);
-        _audio.PlayPvs(monitor.Comp.AlertSound, monitor.Owner, audioParams);
+        _ = _audio.PlayPvs(monitor.Comp.AlertSound, monitor.Owner, audioParams);
         monitor.Comp.LastAlert = _timing.CurTime;
     }
 
