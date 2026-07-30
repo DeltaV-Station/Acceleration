@@ -5,6 +5,12 @@
   accentColor: "#64748b"  # Slate / muted gray
 
 - type: dvTraitCategory
+  id: Vision
+  name: trait-category-vision
+  priority: 10
+  accentColor: "#11b62d"  # Green
+
+- type: dvTraitCategory
   id: Mental
   name: trait-category-mental
   priority: 20
