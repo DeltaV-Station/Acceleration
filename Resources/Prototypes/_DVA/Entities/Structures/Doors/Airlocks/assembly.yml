@@ -6,7 +6,7 @@
   suffix: Chemistry
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Standard/chemistry.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Standard/chemistry.rsi
     state: "assembly"
 
 - type: entity
@@ -15,7 +15,7 @@
   suffix: Chemistry, Glass
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Glass/chemistry.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Glass/chemistry.rsi
     state: "assembly"
 
 # Roboticist
@@ -25,7 +25,7 @@
   suffix: Robotics
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Standard/roboticist.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Standard/roboticist.rsi
     state: "assembly"
 
 - type: entity
@@ -34,5 +34,5 @@
   suffix: Robotics, Glass
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Glass/roboticist.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Glass/roboticist.rsi
     state: "assembly"

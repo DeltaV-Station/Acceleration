@@ -16,7 +16,7 @@
   suffix: External, Escape Sub, Glass, Docking
   components:
   - type: GridFill
-    path: /Maps/_DV/Shuttles/Misc/sub_escape_pod.yml
+    path: /Maps/_DVA/Shuttles/Misc/sub_escape_pod.yml
 
 # Escape Pod - Large one
 - type: entity
@@ -25,7 +25,7 @@
   suffix: External, DV, Escape 5x7, Glass, Docking
   components:
   - type: GridFill
-    path: /Maps/_DV/Shuttles/Misc/escape_pod_dv.yml
+    path: /Maps/_DVA/Shuttles/Misc/escape_pod_dv.yml
 
 # Solid Doors
 # Security

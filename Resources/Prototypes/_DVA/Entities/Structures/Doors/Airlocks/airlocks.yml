@@ -5,7 +5,7 @@
   suffix: Justice
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Standard/justice.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Standard/justice.rsi
   - type: Wires
     layoutId: AirlockJustice
 
@@ -15,7 +15,7 @@
   suffix: Robotics
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Standard/roboticist.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Standard/roboticist.rsi
 
 # Glass
 
@@ -25,7 +25,7 @@
   suffix: Justice
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Glass/justice.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Glass/justice.rsi
   - type: Wires
     layoutId: AirlockJustice
 
@@ -35,4 +35,4 @@
   suffix: Robotics
   components:
   - type: Sprite
-    sprite: _DV/Structures/Doors/Airlocks/Glass/roboticist.rsi
+    sprite: _DVA/Structures/Doors/Airlocks/Glass/roboticist.rsi
