@@ -1,7 +1,6 @@
 using System.Linq;
 using JetBrains.Annotations;
 using Robust.Shared.GameStates;
-using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._DVA.Glimmer;
@@ -11,8 +10,6 @@ namespace Content.Shared._DVA.Glimmer;
 /// </summary>
 public sealed partial class DVGlimmerSystem : EntitySystem
 {
-    [Dependency] private INetManager _net = default!;
-
     /// <summary>
     /// The current glimmer of the round.
     /// </summary>
@@ -33,10 +30,7 @@ public sealed partial class DVGlimmerSystem : EntitySystem
     /// The current glimmer tier of the round.
     /// </summary>
     [PublicAPI]
-    public GlimmerTier GlimmerTier
-    {
-        get => Entity?.Comp.Tier ?? GlimmerTier.Minimal;
-    }
+    public GlimmerTier GlimmerTier => Entity?.Comp.Tier ?? GlimmerTier.Minimal;
 
     /// <summary>
     /// Returns the current glimmer entity for the round, if any.
