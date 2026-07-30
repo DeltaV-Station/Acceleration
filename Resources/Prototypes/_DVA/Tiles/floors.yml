@@ -1,7 +1,7 @@
 - type: tile
   id: FloorSteelBurnt
   name: tiles-steel-floor
-  sprite: /Textures/Tiles/steel_burnt.png
+  sprite: /Textures/_DVA/Tiles/steel_burnt.png
   variants: 2
   placementVariants:
   - 1.0
