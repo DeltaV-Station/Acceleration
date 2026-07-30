@@ -30,10 +30,7 @@ public sealed partial class DVGlimmerSystem : EntitySystem
     /// The current glimmer tier of the round.
     /// </summary>
     [PublicAPI]
-    public GlimmerTier GlimmerTier
-    {
-        get => Entity?.Comp.Tier ?? GlimmerTier.Minimal;
-    }
+    public GlimmerTier GlimmerTier => Entity?.Comp.Tier ?? GlimmerTier.Minimal;
 
     /// <summary>
     /// Returns the current glimmer entity for the round, if any.
