@@ -26,6 +26,9 @@
     - BaseStationAllEventsEligible
     - BaseStationNanotrasen
     - BaseStationDeliveries
+    # Begin DeltaV - Station additions
+    - BaseStationAutomaticSpareId
+    # End DeltaV - Station additions
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform

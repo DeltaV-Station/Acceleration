@@ -14,6 +14,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Server._DVA.Station.Events; // DeltaV - AutomaticSpareIdSystem
 
 namespace Content.Server.Station.Systems;
 
@@ -111,6 +112,12 @@ public sealed partial class StationJobsSystem : EntitySystem
 
         stationJobs.PlayerJobs.TryAdd(netUserId, new());
         stationJobs.PlayerJobs[netUserId].Add(jobPrototypeId);
+
+        // DeltaV START - AutomaticSpareIdSystem: Raise an event when a player takes a job
+        var jobAddedEvent = new PlayerJobAddedEvent(netUserId, jobPrototypeId);
+        RaiseLocalEvent(station, ref jobAddedEvent, false);
+        // DeltaV END
+
         return true;
     }
 
@@ -207,7 +214,17 @@ public sealed partial class StationJobsSystem : EntitySystem
         if (!Resolve(station, ref jobsComponent, false))
             return false;
 
-        return jobsComponent.PlayerJobs.Remove(userId);
+        // DeltaV START - AutomaticSpareIdSystem: Raise an event when a player loses jobs
+        if (jobsComponent.PlayerJobs.Remove(userId, out var jobs))
+        {
+            var jobsRemovedEvent = new PlayerJobsRemovedEvent(userId, jobs);
+            RaiseLocalEvent(station, ref jobsRemovedEvent, false);
+            return true;
+        }
+        return false;
+
+        // return jobsComponent.PlayerJobs.Remove(userId);
+        // DeltaV END
     }
 
     /// <inheritdoc cref="TrySetJobSlot(Robust.Shared.GameObjects.EntityUid,string,int,bool,Content.Server.Station.Components.StationJobsComponent?)"/>
