@@ -42,38 +42,62 @@ public sealed partial class IdCardConsoleComponent : Component
     [DataField, AutoNetworkedField]
     public List<ProtoId<AccessLevelPrototype>> AccessLevels = new()
     {
+        // DeltaV note: make sure any additions to this list are also added to both:
+        //  1. AllAccess in  Resources\Prototypes\Access\misc.yml
+        //  2. ComputerIdAdmeme in  Resources\Prototypes\_DV\Entities\Structures\Machines\computers.yml
         "Armory",
         "Atmospherics",
         "Bar",
-        "Brig",
+        //"Brig" Delta V - Removed Brig Access
+        "Boxer",  // DeltaV - Add Boxer access
         "Detective",
         "Captain",
         "Cargo",
         "Chapel",
         "Chemistry",
         "ChiefEngineer",
+        "ChiefJustice",  // DeltaV - Add Chief Justice access
         "ChiefMedicalOfficer",
+        "Clerk", // Delta V - Add Clerk access
+        "Clown", // DeltaV - Add Clown access
+        "Corpsman", // DeltaV - Add Corpsman access
         "Command",
         "Cryogenics",
+        "EmergencyShuttleRepealAll", // DeltaV - fix mismatch with Access/misc.yml
         "Engineering",
         "External",
+        "Funding", // DeltaV - Add Funding access
         "GenpopEnter",
         "GenpopLeave",
         "HeadOfPersonnel",
         "HeadOfSecurity",
         "Hydroponics",
         "Janitor",
+        "Justice",  // DeltaV - Add Justice access
         "Kitchen",
         "Lawyer",
+        "Library",  // DeltaV - Add Library access
+        "Mail", // Nyanotrasen - Mail, see Resources/Prototypes/Nyanotrasen/Access/cargo.yml
         "Maintenance",
+        "Mantis", // DeltaV - Psionic Mantis, see Resources/Prototypes/_DV/Access/epistemics.yml
         "Medical",
+        "Mime", // DeltaV - Add Mime access
+        "Musician", // DeltaV - Add Musician access
+        "Orders", // DeltaV - Orders, see Resources/Prototypes/_DV/Access/cargo.yml
+        "Paramedic", // DeltaV - Add Paramedic access
+        "Prosecutor", // Delta V - Add Prosecutor access
+        "Psychologist", // DeltaV - Add Psychologist access
         "Quartermaster",
+        "Reporter", // DeltaV - Add Reporter access
         "Research",
         "ResearchDirector",
+        "Robotics", // DeltaV
         "Salvage",
         "Security",
         "Service",
+        "Surgery", // Delta V - Add Surgery access
         "Theatre",
+        "Zookeeper",  // DeltaV - Add Zookeeper access
     };
 
     [Serializable, NetSerializable]
