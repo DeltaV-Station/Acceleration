@@ -6,7 +6,7 @@
 
 * @DeltaV-Station/maintainers
 
-/Resources/Maps/_DV/ @DeltaV-Station/maptainers
+/Resources/Maps/_DVA/ @DeltaV-Station/maptainers
 /Resources/Maps/_DVA/ @DeltaV-Station/maptainers
 /Resources/Prototypes/Maps/ @DeltaV-Station/maptainers @DeltaV-Station/maintainers
 /Content.IntegrationTests/Tests/PostMapInitTest.cs @DeltaV-Station/maptainers @DeltaV-Station/maintainers
@@ -14,7 +14,7 @@
 /Resources/Audio/Lobby/ @DeltaV-Station/direction @DeltaV-Station/maintainers
 /Resources/Textures/LobbyScreens/ @DeltaV-Station/direction @DeltaV-Station/maintainers
 
-/Resources/ServerInfo/Guidebook/_DV/Rules/ @DeltaV-Station/head-administrators
+/Resources/ServerInfo/Guidebook/_DVA/Rules/ @DeltaV-Station/head-administrators
 /Resources/ServerInfo/Guidebook/_DVA/Rules/ @DeltaV-Station/head-administrators
 
 /.wiki/ @DeltaV-Station/direction
