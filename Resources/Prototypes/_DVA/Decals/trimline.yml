@@ -4,7 +4,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_box
 
 - type: decal
@@ -12,7 +12,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_e
 
 - type: decal
@@ -20,7 +20,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_n
 
 - type: decal
@@ -28,7 +28,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_s
 
 - type: decal
@@ -36,7 +36,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_w
 
 - type: decal
@@ -44,7 +44,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_ne
 
 - type: decal
@@ -52,7 +52,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_nw
 
 - type: decal
@@ -60,7 +60,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_se
 
 - type: decal
@@ -68,7 +68,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_corner_sw
 
 - type: decal
@@ -76,7 +76,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_inner_sw
 
 - type: decal
@@ -84,7 +84,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_inner_se
 
 - type: decal
@@ -92,7 +92,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_inner_nw
 
 - type: decal
@@ -100,7 +100,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_inner_ne
 
 - type: decal
@@ -108,7 +108,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_e
 
 - type: decal
@@ -116,7 +116,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_n
 
 - type: decal
@@ -124,7 +124,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_s
 
 - type: decal
@@ -132,7 +132,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_w
 
 # Straight-only Decals
@@ -141,7 +141,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_e_1
 
 - type: decal
@@ -149,7 +149,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_e_2
 
 - type: decal
@@ -157,7 +157,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_n_1
 
 - type: decal
@@ -165,7 +165,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_n_2
 
 - type: decal
@@ -173,7 +173,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_s_1
 
 - type: decal
@@ -181,7 +181,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_s_2
 
 - type: decal
@@ -189,7 +189,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_w_1
 
 - type: decal
@@ -197,7 +197,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thick_shrink_w_2
 
 # Thin Decals
@@ -206,7 +206,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_e
 
 - type: decal
@@ -214,7 +214,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_n
 
 - type: decal
@@ -222,7 +222,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_s
 
 - type: decal
@@ -230,7 +230,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_w
 
 - type: decal
@@ -238,7 +238,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_ne
 
 - type: decal
@@ -246,7 +246,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_nw
 
 - type: decal
@@ -254,7 +254,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_se
 
 - type: decal
@@ -262,7 +262,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_corner_sw
 
 - type: decal
@@ -270,7 +270,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_inner_sw
 
 - type: decal
@@ -278,7 +278,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_inner_se
 
 - type: decal
@@ -286,7 +286,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_inner_nw
 
 - type: decal
@@ -294,7 +294,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_inner_ne
 
 - type: decal
@@ -302,7 +302,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_e
 
 - type: decal
@@ -310,7 +310,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_n
 
 - type: decal
@@ -318,7 +318,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_s
 
 - type: decal
@@ -326,5 +326,5 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: _DV/Decals/trimline.rsi
+    sprite: _DVA/Decals/trimline.rsi
     state: thin_w

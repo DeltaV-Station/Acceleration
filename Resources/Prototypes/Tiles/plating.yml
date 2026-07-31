@@ -15,7 +15,7 @@
   id: Plating
   parent: BasePlating
   name: tiles-plating
-  sprite: /Textures/_DV/Tiles/plating.png # DeltaV - tile resprite
+  sprite: /Textures/_DVA/Tiles/plating.png # DeltaV - tile resprite
 
 - type: tile
   id: PlatingRCD
