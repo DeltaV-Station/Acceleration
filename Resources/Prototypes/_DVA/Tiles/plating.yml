@@ -1,7 +1,7 @@
 - type: tile
   id: PlatingBurnt
   name: tiles-plating
-  sprite: /Textures/Tiles/plating_burnt.png
+  sprite: /Textures/_DVA/Tiles/plating_burnt.png
   baseTurf: Lattice
   isSubfloor: true
   deconstructTools: [ Axing ]
