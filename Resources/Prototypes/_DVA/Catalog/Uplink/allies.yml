@@ -17,7 +17,7 @@
   name: uplink-reinforcement-radio-nukie-spider-name
   description: uplink-reinforcement-radio-nukie-spider-desc
   productEntity: ReinforcementRadioSyndicateNukieSpider
-  icon: { sprite: _DV/Mobs/Animals/nukiespider.rsi, state: syndicate-spider-egg }
+  icon: { sprite: _DVA/Mobs/Animals/nukiespider.rsi, state: syndicate-spider-egg }
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 6
@@ -31,7 +31,7 @@
   name: uplink-mobcat-C4-name
   description: uplink-mobcat-C4-desc
   productEntity: BoxSyndicateSydicatC4
-  icon: { sprite: _DV/Objects/Devices/communication.rsi, state: radio-syndicat}
+  icon: { sprite: _DVA/Objects/Devices/communication.rsi, state: radio-syndicat}
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 3
@@ -45,7 +45,7 @@
   name: uplink-reinforcement-radio-cyborg-saboteur-name
   description: uplink-reinforcement-radio-cyborg-saboteur-desc
   productEntity: ReinforcementRadioSyndicateCyborgSaboteur
-  icon: { sprite: _DV/Objects/Devices/communication.rsi, state: old-radio-borg-synd_engi }
+  icon: { sprite: _DVA/Objects/Devices/communication.rsi, state: old-radio-borg-synd_engi }
   discountCategory: usualDiscounts
   discountDownTo:
     Telecrystal: 7

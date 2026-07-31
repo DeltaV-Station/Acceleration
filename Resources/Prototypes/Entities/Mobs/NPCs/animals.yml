@@ -3382,14 +3382,17 @@
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
-  - type: AutoImplant
-    implants:
-    - MicroBombImplant
+  #- type: AutoImplant  # DeltaVA
+  #  implants:
+  #  - MicroBombImplant
   - type: ExplosionResistance
     damageCoefficient: 0.2
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: Inventory # DeltaVA
+    templateId: nfcat
+    speciesId: cat
   - type: Access
     tags:
     - NuclearOperative
