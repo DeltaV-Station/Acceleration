@@ -1,0 +1,56 @@
+- type: listing
+  id: UplinkDoorjack
+  name: uplink-doorjack-name
+  description: uplink-doorjack-desc
+  productEntity: Doorjack
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkDisruption
+
+- type: listing
+  id: UplinkDeadMansSignaller
+  name: uplink-dead-mans-signaller-name
+  description: uplink-dead-mans-signaller-desc
+  productEntity: DeadMansSignaler
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkDisruption
+
+- type: listing
+  id: UplinkPinpointerUniversal # by coryler
+  name: uplink-universal-pinpointer-name
+  description: uplink-universal-pinpointer-desc
+  productEntity: PinpointerUniversal
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkDisruption
+
+- type: listing
+  id: UplinkSyndicateCircuitBoard # by rebe83
+  name: uplink-syndicate-law-name
+  description: uplink-syndicate-law-desc
+  productEntity: SyndicateCircuitBoard
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 14
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+     blacklist:
+       tags:
+       - NukeOpsUplink
