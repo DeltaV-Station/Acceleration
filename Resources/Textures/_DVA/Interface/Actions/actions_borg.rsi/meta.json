@@ -1,0 +1,53 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Security and Syndicate modules created by Verybigman311. xenoborg-turret by @Stxcking (github).",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "bastion-module"
+        },
+        {
+            "name": "chase-module"
+        },
+        {
+            "name": "patrol-module"
+        },
+        {
+            "name": "deescalation-module"
+        },
+        {
+            "name": "escalation-module"
+        },
+        {
+            "name": "syndicate-cannon-module"
+        },
+        {
+            "name": "syndicate-buccaneer-module"
+        },
+        {
+            "name": "syndicate-chimp-module"
+        },
+        {
+            "name": "syndicate-chameleon-module"
+        },
+        {
+            "name": "syndicate-infiltrator-module"
+        },
+        {
+            "name": "syndicate-jammer-module"
+        },
+        {
+            "name": "syndicate-radio-module"
+        },
+        {
+            "name": "syndicate-sleeper-module"
+        },
+        {
+            "name": "xenoborg-turret"
+        }
+    ]
+}

@@ -593,8 +593,11 @@
         - PositronicBrain
       borg_module:
         - BorgModuleTool
+        - BorgModuleCable # DeltaV
+        - BorgModuleConstruction # DeltaV
         - BorgModuleOperative
         - BorgModuleSyndicateWeapon
+        - BorgModuleCloakDeviceSyndicate # DeltaV
   - type: ItemSlots
     slots:
       cell_slot:
