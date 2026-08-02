@@ -4,7 +4,7 @@
   sprite: /Textures/_DVA/Tiles/plating_burnt.png
   baseTurf: Lattice
   isSubfloor: true
-  deconstructTools: [ Axing ]
+  deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepPlating
   friction: 1.5
