@@ -1,4 +1,5 @@
 # Solid Airlocks
+# TODO: RE-ENABLE JUSTICE HERE
 #- type: entity
 #  parent: Airlock
 #  id: AirlockJustice
