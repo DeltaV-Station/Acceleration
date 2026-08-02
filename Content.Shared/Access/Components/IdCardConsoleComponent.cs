@@ -77,7 +77,8 @@ public sealed partial class IdCardConsoleComponent : Component
         "Kitchen",
         "Lawyer",
         "Library",  // DeltaV - Add Library access
-        "Mail", // Nyanotrasen - Mail, see Resources/Prototypes/Nyanotrasen/Access/cargo.yml
+        // TODO: RE-ENABLE MAIL
+        // "Mail", // DeltaV - Mail, see Resources/Prototypes/Nyanotrasen/Access/cargo.yml
         "Maintenance",
         "Mantis", // DeltaV - Psionic Mantis, see Resources/Prototypes/_DV/Access/epistemics.yml
         "Medical",

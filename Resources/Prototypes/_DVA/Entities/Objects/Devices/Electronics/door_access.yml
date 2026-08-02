@@ -50,13 +50,14 @@
     access: [["Justice"]]
 
 # Salvage/Logi
-- type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsMail
-  suffix: Mail, Locked
-  components:
-  - type: AccessReader
-    access: [["Mail"]]
+#- type: entity
+#  parent: DoorElectronics
+#  id: DoorElectronicsMail
+#  suffix: Mail, Locked
+#  components:
+#  - type: AccessReader
+#    access: [["Mail"]]
+# TODO: Add mail stuff, reenable Mail doors
 
 # Epistemics
 - type: entity

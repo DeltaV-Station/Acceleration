@@ -1,20 +1,21 @@
-- type: entity
-  parent: WindoorCargoLocked
-  id: WindoorMailLocked
-  suffix: Mail, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsMail ]
+# TODO: RE-ADD MAIL / RE-ADD JUSTICE
+#- type: entity
+#  parent: WindoorCargoLocked
+#  id: WindoorMailLocked
+#  suffix: Mail, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsMail ]
 
-- type: entity
-  parent: WindoorSecureCargoLocked
-  id: WindoorSecureMailLocked
-  suffix: Mail, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsMail ]
+#- type: entity
+#  parent: WindoorSecureCargoLocked
+#  id: WindoorSecureMailLocked
+#  suffix: Mail, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsMail ]
 
 - type: entity
   parent: WindoorSecureMedicalLocked
@@ -25,61 +26,61 @@
     containers:
       board: [ DoorElectronicsParamedic ]
 
-- type: entity
-  parent: Windoor
-  id: WindoorJusticeLocked
-  suffix: Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsJustice ]
-  - type: Wires
-    layoutId: AirlockJustice
+#- type: entity
+#  parent: Windoor
+#  id: WindoorJusticeLocked
+#  suffix: Justice, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsJustice ]
+#  - type: Wires
+#    layoutId: AirlockJustice
 
-- type: entity
-  parent: [ WindoorSecure, WindoorJusticeLocked ]
-  id: WindoorSecureJusticeLocked
-  suffix: Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsJustice ]
+#- type: entity
+#  parent: [ WindoorSecure, WindoorJusticeLocked ]
+#  id: WindoorSecureJusticeLocked
+#  suffix: Justice, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsJustice ]
 
-- type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureChiefJusticeLocked
-  suffix: Chief Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsChiefJustice ]
+#- type: entity
+#  parent: WindoorSecureCommandLocked
+#  id: WindoorSecureChiefJusticeLocked
+#  suffix: Chief Justice, Locked
+#  components:
+#  - type: ContainerFill
+#   containers:
+#      board: [ DoorElectronicsChiefJustice ]
 
-- type: entity
-  parent: WindoorSecureJusticeLocked
-  id: WindoorSecureProsecutorLocked
-  suffix: Prosecutor, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsProsecutor ]
+#- type: entity
+#  parent: WindoorSecureJusticeLocked
+#  id: WindoorSecureProsecutorLocked
+#  suffix: Prosecutor, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsProsecutor ]
 
-- type: entity
-  parent: WindoorSecureJusticeLocked
-  id: WindoorSecureClerkLocked
-  suffix: Clerk, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsClerk ]
+#- type: entity
+#  parent: WindoorSecureJusticeLocked
+#  id: WindoorSecureClerkLocked
+#  suffix: Clerk, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#     board: [ DoorElectronicsClerk ]
 
-- type: entity
-  parent: WindoorSecureJusticeLocked
-  id: WindoorSecureLawyerLocked
-  suffix: Lawyer, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsLawyer ]
+#- type: entity
+#  parent: WindoorSecureJusticeLocked
+#  id: WindoorSecureLawyerLocked
+#  suffix: Lawyer, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsLawyer ]
 
 - type: entity
   parent: WindoorSecureScienceLocked
