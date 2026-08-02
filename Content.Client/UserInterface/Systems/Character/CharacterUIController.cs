@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Client._DVA.CustomObjectiveSummary; // DeltaV
+using Content.Client._DVA.DVCustomObjectiveSummary; // DeltaV
 using Content.Client.CharacterInfo;
 using Content.Client.Gameplay;
 using Content.Client.Stylesheets;
@@ -32,7 +32,7 @@ public sealed partial class CharacterUIController : UIController, IOnStateEntere
     [Dependency] private readonly ILogManager _logMan = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly CustomObjectiveSummaryUIController _objective = default!; // DeltaV
+    [Dependency] private readonly DVCustomObjectiveSummaryUIController _objective = default!; // DeltaV
 
     [UISystemDependency] private readonly CharacterInfoSystem _characterInfo = default!;
     [UISystemDependency] private readonly SpriteSystem _sprite = default!;

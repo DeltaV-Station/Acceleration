@@ -1,29 +1,26 @@
 using Content.Server.Administration.Logs;
-using Content.Shared._DV.CustomObjectiveSummary;
-using Content.Shared._DV.FeedbackOverwatch;
+using Content.Shared._DVA.DVCustomObjectiveSummary;
 using Content.Shared.Database;
-using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Robust.Shared.Network;
 
-namespace Content.Server._DV.CustomObjectiveSummary;
+namespace Content.Server._DVA.DVCustomObjectiveSummary;
 
-public sealed class CustomObjectiveSummarySystem : EntitySystem
+public sealed class DVCustomObjectiveSummarySystem : EntitySystem
 {
     [Dependency] private readonly IServerNetManager _net = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
-    [Dependency] private readonly SharedFeedbackOverwatchSystem _feedback = default!;
 
     public override void Initialize()
     {
         SubscribeLocalEvent<EvacShuttleLeftEvent>(OnEvacShuttleLeft);
-        SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
 
-        _net.RegisterNetMessage<CustomObjectiveClientSetObjective>(OnCustomObjectiveFeedback);
+        _net.RegisterNetMessage<DVCustomObjectiveClientSetObjective>(OnDVCustomObjectiveFeedback);
     }
 
-    private void OnCustomObjectiveFeedback(CustomObjectiveClientSetObjective msg)
+    private void OnDVCustomObjectiveFeedback(DVCustomObjectiveClientSetObjective msg)
     {
         if (!_mind.TryGetMind(msg.MsgChannel.UserId, out var mind))
             return;
@@ -31,7 +28,7 @@ public sealed class CustomObjectiveSummarySystem : EntitySystem
         if (mind.Value.Comp.Objectives.Count == 0)
             return;
 
-        var comp = EnsureComp<CustomObjectiveSummaryComponent>(mind.Value);
+        var comp = EnsureComp<DVCustomObjectiveSummaryComponent>(mind.Value);
 
         comp.ObjectiveSummary = msg.Summary;
         Dirty(mind.Value.Owner, comp);
@@ -43,30 +40,16 @@ public sealed class CustomObjectiveSummarySystem : EntitySystem
     {
         var allMinds = _mind.GetAliveHumans();
 
-        // Assumes the assistant is still there at the end of the round.
         foreach (var mind in allMinds)
         {
             // Only send the popup to people with objectives.
             if (mind.Comp.Objectives.Count == 0)
                 continue;
 
-            if (!_mind.TryGetSession(mind, out var session))
+            if (!_player.TryGetSessionById(mind.Comp.UserId, out var session))
                 continue;
 
-            RaiseNetworkEvent(new CustomObjectiveSummaryOpenMessage(), session);
-        }
-    }
-
-    private void OnRoundEnd(RoundEndMessageEvent ev)
-    {
-        var allMinds = _mind.GetAliveHumans();
-
-        foreach (var mind in allMinds)
-        {
-            if (mind.Comp.Objectives.Count == 0)
-                continue;
-
-            _feedback.SendPopupMind(mind, "RemoveGreentextPopup");
+            RaiseNetworkEvent(new DVCustomObjectiveSummaryOpenMessage(), session);
         }
     }
 }

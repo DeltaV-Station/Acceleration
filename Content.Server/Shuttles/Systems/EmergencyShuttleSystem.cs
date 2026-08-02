@@ -16,7 +16,7 @@ using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
-using Content.Shared._DV.CustomObjectiveSummary; // DeltaV
+using Content.Shared._DVA.DVCustomObjectiveSummary; // DeltaV
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.Database;

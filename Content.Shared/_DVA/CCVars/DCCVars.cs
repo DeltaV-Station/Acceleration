@@ -23,4 +23,10 @@ public sealed partial class DCCVars
     /// </summary>
     public static readonly CVarDef<float> SsdIndicatorRecentAfterSeconds =
         CVarDef.Create("deltav.ssd.recent_after_seconds", 300f, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    ///    Maximum number of characters in objective summaries.
+    /// </summary>
+    public static readonly CVarDef<int> MaxObjectiveSummaryLength =
+        CVarDef.Create("game.max_objective_summary_length", 256, CVar.SERVER | CVar.REPLICATED);
 }

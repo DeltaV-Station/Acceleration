@@ -1,22 +1,22 @@
-using Content.Shared._DV.CustomObjectiveSummary;
+using Content.Shared._DVA.DVCustomObjectiveSummary;
 using Robust.Client.UserInterface.Controllers;
 using Robust.Shared.Network;
 
-namespace Content.Client._DV.CustomObjectiveSummary;
+namespace Content.Client._DVA.DVCustomObjectiveSummary;
 
-public sealed class CustomObjectiveSummaryUIController : UIController
+public sealed class DVCustomObjectiveSummaryUIController : UIController
 {
     [Dependency] private readonly IClientNetManager _net = default!;
 
-    private CustomObjectiveSummaryWindow? _window;
+    private DVCustomObjectiveSummaryWindow? _window;
 
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeNetworkEvent<CustomObjectiveSummaryOpenMessage>(OnCustomObjectiveSummaryOpen);
+        SubscribeNetworkEvent<DVCustomObjectiveSummaryOpenMessage>(OnDVCustomObjectiveSummaryOpen);
     }
 
-    private void OnCustomObjectiveSummaryOpen(CustomObjectiveSummaryOpenMessage msg, EntitySessionEventArgs args)
+    private void OnDVCustomObjectiveSummaryOpen(DVCustomObjectiveSummaryOpenMessage msg, EntitySessionEventArgs args)
     {
         OpenWindow();
     }
@@ -26,7 +26,7 @@ public sealed class CustomObjectiveSummaryUIController : UIController
         // If a window is already open, close it
         _window?.Close();
 
-        _window = new CustomObjectiveSummaryWindow();
+        _window = new DVCustomObjectiveSummaryWindow();
         _window.OpenCentered();
         _window.OnClose += () => _window = null;
         _window.OnSubmitted += OnFeedbackSubmitted;
@@ -34,7 +34,7 @@ public sealed class CustomObjectiveSummaryUIController : UIController
 
     private void OnFeedbackSubmitted(string args)
     {
-        var msg = new CustomObjectiveClientSetObjective
+        var msg = new DVCustomObjectiveClientSetObjective
         {
             Summary = args,
         };

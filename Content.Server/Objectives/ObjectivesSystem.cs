@@ -12,7 +12,8 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.Objectives.Commands;
-using Content.Shared._DVA.CustomObjectiveSummary; // DeltaV
+using Content.Shared._DVA.DCCVars; // DeltaV - Pinktext
+using Content.Shared._DVA.DVCustomObjectiveSummary; // DeltaV Pinktext
 using Content.Shared.CCVar;
 using Content.Shared.Prototypes;
 using Content.Shared.Roles.Jobs;
@@ -34,6 +35,8 @@ public sealed partial class ObjectivesSystem : SharedObjectivesSystem
 
     private bool _showGreentext;
 
+    private int _maxLengthSummaryLength; // DeltaV
+
     public override void Initialize()
     {
         base.Initialize();
@@ -41,6 +44,8 @@ public sealed partial class ObjectivesSystem : SharedObjectivesSystem
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
 
         Subs.CVar(_cfg, CCVars.GameShowGreentext, value => _showGreentext = value, true);
+
+        Subs.CVar(_cfg, DCCVars.MaxObjectiveSummaryLength, len => _maxLengthSummaryLength = len, true); // DeltaV
 
         ProtoMan.PrototypesReloaded += CreateCompletions;
     }
@@ -202,7 +207,8 @@ public sealed partial class ObjectivesSystem : SharedObjectivesSystem
 
             var successRate = totalObjectives > 0 ? (float) completedObjectives / totalObjectives : 0f;
             // Begin DeltaV Additions - custom objective response.
-            if (TryComp<CustomObjectiveSummaryComponent>(mindId, out var customComp))
+            if (TryComp<CustomObjectiveSummaryComponent>(mindId, out var customComp) &&
+                customComp.ObjectiveSummary.Length <= _maxLengthSummaryLength)
             {
                 // We have to spit it like this to make it readable. Yeah, it sucks but for some reason the entire thing
                 // is just one long string...
