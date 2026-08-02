@@ -1,13 +1,13 @@
 # Solid Airlocks
-- type: entity
-  parent: Airlock
-  id: AirlockJustice
-  suffix: Justice
-  components:
-  - type: Sprite
-    sprite: _DVA/Structures/Doors/Airlocks/Standard/justice.rsi
-  - type: Wires
-    layoutId: AirlockJustice
+#- type: entity
+#  parent: Airlock
+#  id: AirlockJustice
+#  suffix: Justice
+#  components:
+#  - type: Sprite
+#    sprite: _DVA/Structures/Doors/Airlocks/Standard/justice.rsi
+#  - type: Wires
+#    layoutId: AirlockJustice
 
 - type: entity
   parent: AirlockScience
@@ -19,15 +19,15 @@
 
 # Glass
 
-- type: entity
-  parent: AirlockGlass
-  id: AirlockJusticeGlass
-  suffix: Justice
-  components:
-  - type: Sprite
-    sprite: _DVA/Structures/Doors/Airlocks/Glass/justice.rsi
-  - type: Wires
-    layoutId: AirlockJustice
+#- type: entity
+#  parent: AirlockGlass
+#  id: AirlockJusticeGlass
+#  suffix: Justice
+#  components:
+#  - type: Sprite
+#    sprite: _DVA/Structures/Doors/Airlocks/Glass/justice.rsi
+#  - type: Wires
+#    layoutId: AirlockJustice
 
 - type: entity
   parent: AirlockScienceGlass
