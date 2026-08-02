@@ -391,6 +391,9 @@ public enum LogType
     /// Tiles related interactions.
     /// </summary>
     Tile = 86,
+    BagOfHolding = 420, // DeltaV - Summary: adds bag of holding.
+    Psionics = 421, // DeltaV - Summary: adds psionic as a log type.
+    ObjectiveSummary = 422, // DeltaV
 
     /// <summary>
     /// A client has sent too many chat messages recently and is temporarily blocked from sending more.
