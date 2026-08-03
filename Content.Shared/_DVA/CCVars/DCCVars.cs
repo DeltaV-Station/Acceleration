@@ -9,6 +9,14 @@ namespace Content.Shared._DVA.CCVars;
 // ReSharper disable once InconsistentNaming - Shush you
 public sealed partial class DCCVars
 {
+    /* OOC shuttle vote */
+
+    /// <summary>
+    /// How long players should have to vote on the round end shuttle being sent
+    /// </summary>
+    public static readonly CVarDef<TimeSpan> EmergencyShuttleVoteTime =
+        CVarDef.Create("shuttle.vote_time", TimeSpan.FromMinutes(1), CVar.SERVER);
+
     /// <summary>
     /// The total time a player has to be SSD to be considered cryoable (stage 3).
     /// Default is 20 minutes. Value should be bigger than <see cref="SsdIndicatorRecentAfterSeconds"/>.
