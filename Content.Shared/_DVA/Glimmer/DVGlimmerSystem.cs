@@ -30,6 +30,15 @@ public sealed partial class DVGlimmerSystem : EntitySystem
     }
 
     /// <summary>
+    /// The maximum glimmer possible.
+    /// </summary>
+    [PublicAPI]
+    public int MaxGlimmer
+    {
+        get => Entity?.Comp.MaxGlimmer ?? 0;
+    }
+
+    /// <summary>
     /// The current glimmer tier of the round.
     /// </summary>
     [PublicAPI]

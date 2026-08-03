@@ -533,6 +533,7 @@
       state: generic_panel_open
   - type: ResearchClient
   - type: AnalysisConsole
+  - type: DVAnalysisConsoleGlimmer # DeltaV - xenoarchaeology glimmer
   - type: DeviceList
   - type: DeviceNetwork
     deviceNetId: Wired
