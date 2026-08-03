@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseAction
+  id: ActionEyeZoom
+  name: Zoom
+  description: Look further away!
+  components:
+  - type: Action
+    icon:
+      sprite: /Textures/Objects/Tools/binoculars.rsi
+      state: icon
+    useDelay: 0.5
+  - type: InstantAction
+    event: !type:DVToggleInnateEyeOffsetEvent

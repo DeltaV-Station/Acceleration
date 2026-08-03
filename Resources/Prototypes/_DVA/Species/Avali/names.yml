@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: NamesAvaliFirst
+  values:
+    prefix: name-avali-
+    count: 78

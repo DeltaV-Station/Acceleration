@@ -16,4 +16,9 @@ public sealed partial class EyeCursorOffsetComponent : SharedEyeCursorOffsetComp
     /// The current positional offset being applied. Used to enable gradual panning.
     /// </summary>
     public Vector2 CurrentPosition = Vector2.Zero;
+
+    /// <summary>
+    /// DeltaV - whether the component is actively contributing to things
+    /// </summary>
+    public bool Active = true;
 }

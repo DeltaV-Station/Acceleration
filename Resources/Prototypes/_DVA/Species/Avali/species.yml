@@ -1,0 +1,19 @@
+- type: species
+  id: Avali
+  name: species-name-avali
+  roundStart: true
+  prototype: MobAvali
+  dollPrototype: AppearanceAvali
+  skinColoration: Hues
+  maleFirstNames: NamesAvaliFirst
+  femaleFirstNames: NamesAvaliFirst
+  naming: First
+  sexes:
+  - Unsexed
+  defaultSoundsBySex:
+  - MaleAvali
+  - FemaleAvali
+  - MaleAvali
+  voices:
+  - MaleAvali
+  - FemaleAvali

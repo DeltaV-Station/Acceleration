@@ -26,6 +26,11 @@ public sealed partial class EyeCursorOffsetSystem : EntitySystem
 
     private void OnGetEyeOffsetEvent(EntityUid uid, EyeCursorOffsetComponent component, ref GetEyeOffsetEvent args)
     {
+        // Begin DeltaV - toggling
+        if (!component.Active)
+            return;
+        // End DeltaV - toggling
+
         var offset = OffsetAfterMouse(uid, component);
         if (offset == null)
             return;
