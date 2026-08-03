@@ -82,7 +82,8 @@
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
-    laws: Crewsimov
+#    laws: Crewsimov
+    laws: Unspecialized # DeltaV - use unspecialized lawset as default
   - type: Inventory
     templateId: borg
   - type: Hands

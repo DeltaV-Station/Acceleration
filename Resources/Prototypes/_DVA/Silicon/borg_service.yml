@@ -1,0 +1,28 @@
+- type: siliconLaw
+  id: Service1
+  order: 1
+  lawString: law-ntservice-1
+
+- type: siliconLaw
+  id: Service2
+  order: 2
+  lawString: law-ntservice-2
+
+- type: siliconLaw
+  id: Service3
+  order: 3
+  lawString: law-ntservice-3
+
+- type: siliconLaw
+  id: Service4
+  order: 4
+  lawString: law-ntservice-4
+
+- type: siliconLawset
+  id: Service
+  laws:
+  - Service1
+  - Service2
+  - Service3
+  - Service4
+  obeysTo: laws-owner-crew
