@@ -151,4 +151,9 @@ public sealed partial class BorgTypePrototype : IPrototype
     /// </summary>
     [DataField]
     public SoundSpecifier FootstepCollection { get; set; } = new SoundCollectionSpecifier(DefaultFootsteps);
+
+    // Begin DeltaV - borg chassis type lawsets
+    [DataField]
+    public ProtoId<Laws.SiliconLawsetPrototype>? Lawset;
+    // End DeltaV
 }

@@ -1,0 +1,22 @@
+- type: siliconLaw
+  id: Unspecialized1
+  order: 1
+  lawString: law-ntunspecialized-1
+
+- type: siliconLaw
+  id: Unspecialized2
+  order: 2
+  lawString: law-ntunspecialized-2
+
+- type: siliconLaw
+  id: Unspecialized3
+  order: 3
+  lawString: law-ntunspecialized-3
+
+- type: siliconLawset
+  id: Unspecialized
+  laws:
+  - Unspecialized1
+  - Unspecialized2
+  - Unspecialized3
+  obeysTo: laws-owner-crew

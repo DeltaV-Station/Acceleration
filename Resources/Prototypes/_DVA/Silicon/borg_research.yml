@@ -1,0 +1,40 @@
+- type: siliconLaw
+  id: Research1
+  order: 1
+  lawString: law-ntresearch-1
+
+- type: siliconLaw
+  id: Research2
+  order: 2
+  lawString: law-ntresearch-2
+
+- type: siliconLaw
+  id: Research3
+  order: 3
+  lawString: law-ntresearch-3
+
+- type: siliconLaw
+  id: Research4
+  order: 4
+  lawString: law-ntresearch-4
+
+- type: siliconLaw
+  id: Research5
+  order: 5
+  lawString: law-ntresearch-5
+
+- type: siliconLaw
+  id: Research6
+  order: 6
+  lawString: law-ntresearch-6
+
+- type: siliconLawset
+  id: Research
+  laws:
+  - Research1
+  - Research2
+  - Research3
+  - Research4
+  - Research5
+  - Research6
+  obeysTo: laws-owner-crew
