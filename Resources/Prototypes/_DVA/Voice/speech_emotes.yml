@@ -15,3 +15,22 @@
   - yips
   - yipping
   - yipped
+
+- type: emote
+  id: Awoo 
+  name: delta-chat-emote-name-awoo
+  icon: _DVA/Interface/Emotes/awoo.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["delta-chat-emote-msg-awoo"]
+  chatTriggers:
+  - awoo
+  - awoos
+  - awooing
+  - awooed

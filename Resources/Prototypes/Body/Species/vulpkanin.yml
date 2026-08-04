@@ -160,7 +160,7 @@
   - type: Speech
     speechSounds: Vulpkanin
     speechVerb: Vulpkanin
-    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Yip' ] # DeltaV - yip emote
+    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Yip', 'Awoo' ] # DeltaV - yip and awoo emotes
   - type: TypingIndicator
     proto: vulpkanin
   - type: Vocal

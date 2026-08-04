@@ -533,6 +533,8 @@
       collection: MaleDeathGasp
     Yip: # DeltaV - add vulp yip
       collection: VulpkaninYips
+    Awoo: # DeltaV - add awoo emote
+      collection: VulpkaninHowls
 
 - type: emoteSounds
   id: FemaleVulpkanin
@@ -578,6 +580,8 @@
       collection: FemaleDeathGasp
     Yip: # DeltaV - add vulp yip
       collection: VulpkaninYips
+    Awoo: # DeltaV - add awoo emote
+      collection: VulpkaninHowls
 
 # body emotes
 - type: emoteSounds
