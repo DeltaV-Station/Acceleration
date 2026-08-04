@@ -531,6 +531,8 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+    Yip: # DeltaV - add vulp yip
+      collection: VulpkaninYips
 
 - type: emoteSounds
   id: FemaleVulpkanin
@@ -574,6 +576,8 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+    Yip: # DeltaV - add vulp yip
+      collection: VulpkaninYips
 
 # body emotes
 - type: emoteSounds
