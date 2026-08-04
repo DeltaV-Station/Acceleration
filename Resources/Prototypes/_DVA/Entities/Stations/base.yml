@@ -1,0 +1,5 @@
+- type: entity
+  id: BaseStationAutomaticSpareId
+  abstract: true
+  components:
+  - type: DVAutomaticSpareId

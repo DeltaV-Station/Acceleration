@@ -30,7 +30,7 @@
   id: LockerFillCaptainNoLaser
   table: !type:AllSelector
     children:
-    - id: CaptainIDCard
+    #- id: CaptainIDCard # DeltaV - Replaced by the spare ID system
     - id: CigarGoldCase
       prob: 0.25
     - id: ClothingBeltSheathFilled
