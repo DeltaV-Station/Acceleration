@@ -8,6 +8,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
   - type: OreSiloClient
   - type: EmagLatheRecipes
     emagStaticPacks:
