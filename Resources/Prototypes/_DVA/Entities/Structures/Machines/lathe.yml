@@ -129,6 +129,8 @@
     - LVCablesStatic
     - LightsStatic
     - ServiceStatic
+    - PaperworkStatic
+    - TowelsStatic
     dynamicPacks:
     - Janitor
     - Instruments
@@ -163,10 +165,15 @@
     - MaterialsStatic
     - BasicChemistryStatic
     - ChemistryStatic
+    - PowerCellsStatic
     dynamicPacks:
     - ScienceEquipment
     - ScienceClothing
     - ScienceWeapons
     - Chemistry
+    - ScienceExplosives
+    - PowerCells
+    - ScienceWeapons
+    - Equipment
   - type: Machine
     board: EpistemicsTechFabCircuitboard
