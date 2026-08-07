@@ -68,6 +68,8 @@
     - Equipment
   - type: Machine
     board: EngineeringTechFabCircuitboard
+  - type: LatheAnnouncing
+    channels: [Engineering]
 
 - type: entity
   parent: BaseTechFabDepartamental
@@ -100,6 +102,8 @@
     - SalvageSecurityWeapons
   - type: Machine
     board: LogisticsTechFabCircuitboard
+  - type: LatheAnnouncing
+    channels: [Supply]
 
 - type: entity
   parent: BaseTechFabDepartamental
@@ -130,6 +134,8 @@
     - Instruments
   - type: Machine
     board: ServiceTechFabCircuitboard
+  - type: LatheAnnouncing
+    channels: [Service]
 
 - type: entity
   parent: BaseTechFabDepartamental
