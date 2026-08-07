@@ -1,0 +1,29 @@
+- type: latheRecipe
+  id: GoldRing
+  result: GoldRing
+  completeTime: 10
+  materials:
+    Gold: 500
+
+- type: latheRecipe
+  id: SilverRing
+  result: SilverRing
+  completeTime: 10
+  materials:
+    Silver: 500
+
+- type: latheRecipe
+  id: GoldRingDiamond
+  result: GoldRingDiamond
+  completeTime: 15
+  materials:
+    Gold: 500
+    Diamond: 100
+
+- type: latheRecipe
+  id: SilverRingDiamond
+  result: SilverRingDiamond
+  completeTime: 15
+  materials:
+    Silver: 500
+    Diamond: 100
