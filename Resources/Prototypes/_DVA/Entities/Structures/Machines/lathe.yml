@@ -8,6 +8,28 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+  - type: OreSiloClient
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - SecurityAmmoStatic
+    - SyndicateAmmoStatic
+    emagDynamicPacks:
+    - SecurityAmmo
+    - SecurityExplosives
+    - SecurityEquipment
+    - SecurityWeapons
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - BlueprintAutolathe
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      blueprint: !type:Container
+  - type: EmptyOnMachineDeconstruct
+    containers:
+    - blueprint
 
 - type: entity
   parent: BaseTechFabDepartamental
