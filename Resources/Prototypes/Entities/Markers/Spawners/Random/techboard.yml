@@ -32,6 +32,6 @@
         - id: CommsComputerCircuitboard
         - id: ShuttleConsoleCircuitboard
         - id: ComputerMassMediaCircuitboard
-        - id: AutolatheMachineCircuitboard
-        - id: ProtolatheMachineCircuitboard
+#        - id: AutolatheMachineCircuitboard # DeltaV - department techfabs
+#        - id: ProtolatheMachineCircuitboard # DeltaV - department techfabs
         - id: SalvageMagnetMachineCircuitboard
