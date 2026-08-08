@@ -65,8 +65,8 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - AutolatheHyperConvectionMachineCircuitboard
-  - ProtolatheHyperConvectionMachineCircuitboard
+#  - AutolatheHyperConvectionMachineCircuitboard # DeltaV - departmental lathes
+#  - ProtolatheHyperConvectionMachineCircuitboard # DeltaV - departmental lathes
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - SheetifierMachineCircuitboard
 

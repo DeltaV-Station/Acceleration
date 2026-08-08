@@ -69,8 +69,8 @@
   id: ScienceBoards
   recipes:
   - TurboItemRechargerCircuitboard
-  - AutolatheHyperConvectionMachineCircuitboard
-  - ProtolatheHyperConvectionMachineCircuitboard
+#  - AutolatheHyperConvectionMachineCircuitboard # DeltaV - departmental lathes
+#  - ProtolatheHyperConvectionMachineCircuitboard # DeltaV - departmental lathes
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - TechDiskComputerCircuitboard
   - FlatpackerMachineCircuitboard
