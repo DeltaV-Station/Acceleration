@@ -9,6 +9,32 @@ namespace Content.Shared._DVA.CCVars;
 // ReSharper disable once InconsistentNaming - Shush you
 public sealed partial class DCCVars
 {
+    /*
+     * Auto ACO
+     */
+
+    /// <summary>
+    /// How long after the announcement before the spare ID is unlocked
+    /// </summary>
+    public static readonly CVarDef<TimeSpan> SpareIdUnlockDelay =
+        CVarDef.Create("game.spare_id.unlock_delay", TimeSpan.FromMinutes(5), CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// How long to wait before checking for a captain after roundstart
+    /// </summary>
+    public static readonly CVarDef<TimeSpan> SpareIdAlertDelay =
+        CVarDef.Create("game.spare_id.alert_delay", TimeSpan.FromMinutes(15), CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Determines if the automatic spare ID process should automatically unlock the cabinet
+    /// </summary>
+    public static readonly CVarDef<bool> SpareIdAutoUnlock =
+        CVarDef.Create("game.spare_id.auto_unlock", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /*
+     * Misc.
+     */
+
     /// <summary>
     /// The total time a player has to be SSD to be considered cryoable (stage 3).
     /// Default is 20 minutes. Value should be bigger than <see cref="SsdIndicatorRecentAfterSeconds"/>.

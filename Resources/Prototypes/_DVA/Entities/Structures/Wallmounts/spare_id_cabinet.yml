@@ -1,0 +1,41 @@
+- type: entity
+  parent: BaseWallmountCabinetGlass
+  id: SpareIdCabinet
+  name: spare id cabinet
+  description: There is a small label that reads "For authorized personnel only".
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _DVA/Structures/Wallmounts/idcard_cabinet.rsi
+    layers:
+    - state: cabinet
+    - state: card
+      map: ["enum.ItemCabinetVisuals.Layer"]
+      visible: true
+    - state: glass
+      map: ["enum.OpenableVisuals.Layer"]
+    - state: locked
+      shader: unshaded
+      map: ["enum.LockVisualLayers.Lock"]
+  - type: ItemSlots
+    slots:
+      ItemCabinet:
+        ejectOnInteract: true
+        whitelist:
+          components:
+          - IdCard
+  - type: Lock
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: DVSpareIDSafe
+
+- type: entity
+  parent: SpareIdCabinet
+  id: SpareIdCabinetFilled
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - CaptainIDCard
