@@ -468,7 +468,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_abdomen
+    state: gauze_abdomen # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpBlindfold
@@ -494,7 +494,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_boxerwrap_l
+    state: gauze_boxerwrap_l # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpBoxerwrapRight
@@ -507,7 +507,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_boxerwrap_r
+    state: gauze_boxerwrap_r # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpHead
@@ -533,7 +533,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_leftarm
+    state: gauze_leftarm # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpLefteyePatch
@@ -546,7 +546,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_lefteye_2
+    state: gauze_lefteye_2 # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpLowerArmRight
@@ -559,7 +559,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_lowerarm_r
+    state: gauze_lowerarm_r # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpLowerLegLeft
@@ -572,7 +572,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_lowerleg_l
+    state: gauze_lowerleg_l # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpLowerLegRight
@@ -585,7 +585,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_lowerleg_r
+    state: gauze_lowerleg_r # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpRighteyePatch
@@ -598,7 +598,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_righteye_2
+    state: gauze_righteye_2 # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpShoulder
@@ -611,7 +611,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_shoulder
+    state: gauze_shoulder # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpUpperLegLeft
@@ -624,7 +624,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_upperleg_l
+    state: gauze_upperleg_l # DeltaV - different vulp sprites
 
 - type: marking
   id: GauzeVulpUpperLegRight
@@ -637,4 +637,4 @@
         color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/gauze.rsi
-    state: gauze_vulp_upperleg_r
+    state: gauze_upperleg_r # DeltaV - different vulp sprites

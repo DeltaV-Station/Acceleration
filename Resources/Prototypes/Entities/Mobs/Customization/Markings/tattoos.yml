@@ -165,7 +165,7 @@
           negative: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
-    state: tattoo_eye_vulpkanin_r
+    state: tattoo_eye_r  # DeltaV - different vulp sprites
 
 - type: marking
   id: TattooEyeVulpkaninLeft
@@ -178,7 +178,7 @@
           negative: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
-    state: tattoo_eye_vulpkanin_l
+    state: tattoo_eye_l # DeltaV - different vulp sprites
 
 - type: marking
   id: TattooEyeshadowUpper
