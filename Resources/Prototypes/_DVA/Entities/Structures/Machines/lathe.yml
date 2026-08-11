@@ -4,6 +4,7 @@
   abstract: true
   components:
   - type: Sprite
+    snapCardinals: true
     sprite: Structures/Machines/techfab.rsi
   - type: Lathe
     idleState: icon
