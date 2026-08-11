@@ -1,18 +1,25 @@
-using System.Linq;
+/* DeltaV - Most of this file is moved to Shared */
+// using System.Linq; // DeltaV - Unused
 using Content.Server.Chat.Systems;
-using Content.Server.Interaction;
-using Content.Server.Popups;
-using Content.Server.Power.EntitySystems;
+// BEGIN DeltaV
+// using Content.Server.Interaction;
+// using Content.Server.Popups;
+// using Content.Server.Power.EntitySystems;
+// END DeltaV
 using Content.Shared.Chat;
-using Content.Shared.Examine;
-using Content.Shared.Interaction;
-using Content.Shared.Power;
+// BEGIN DeltaV
+// using Content.Shared.Examine;
+// using Content.Shared.Interaction;
+// using Content.Shared.Power;
+// END DeltaV
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Content.Shared.Speech;
-using Content.Shared.Speech.Components;
-using Robust.Shared.Prototypes;
+// BEGIN DeltaV
+// using Content.Shared.Speech.Components;
+// using Robust.Shared.Prototypes;
+// END DeltaV
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -21,11 +28,11 @@ namespace Content.Server.Radio.EntitySystems;
 /// </summary>
 public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
 {
-    [Dependency] private PopupSystem _popup = default!;
+    // [Dependency] private PopupSystem _popup = default!; // DeltaV - Unused
     [Dependency] private ChatSystem _chat = default!;
     [Dependency] private RadioSystem _radio = default!;
-    [Dependency] private InteractionSystem _interaction = default!;
-    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    // [Dependency] private InteractionSystem _interaction = default!; // DeltaV - Unused
+    // [Dependency] private SharedAppearanceSystem _appearance = default!; // DeltaV - Unused
 
     // Used to prevent a shitter from using a bunch of radios to spam chat.
     private HashSet<(string, EntityUid, RadioChannelPrototype)> _recentlySent = new();
@@ -33,22 +40,29 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<RadioMicrophoneComponent, ComponentInit>(OnMicrophoneInit);
-        SubscribeLocalEvent<RadioMicrophoneComponent, ExaminedEvent>(OnExamine);
-        SubscribeLocalEvent<RadioMicrophoneComponent, ActivateInWorldEvent>(OnActivateMicrophone);
+        // BEGIN DeltaV - Moved to Shared
+        // SubscribeLocalEvent<RadioMicrophoneComponent, ComponentInit>(OnMicrophoneInit);
+        // SubscribeLocalEvent<RadioMicrophoneComponent, ExaminedEvent>(OnExamineMicrophone);
+        // SubscribeLocalEvent<RadioMicrophoneComponent, ActivateInWorldEvent>(OnActivateMicrophone);
+        // END DeltaV
         SubscribeLocalEvent<RadioMicrophoneComponent, ListenEvent>(OnListen);
-        SubscribeLocalEvent<RadioMicrophoneComponent, ListenAttemptEvent>(OnAttemptListen);
-        SubscribeLocalEvent<RadioMicrophoneComponent, PowerChangedEvent>(OnPowerChanged);
-
-        SubscribeLocalEvent<RadioSpeakerComponent, ComponentInit>(OnSpeakerInit);
-        SubscribeLocalEvent<RadioSpeakerComponent, ActivateInWorldEvent>(OnActivateSpeaker);
+        // BEGIN DeltaV - Moved to Shared
+        // SubscribeLocalEvent<RadioMicrophoneComponent, ListenAttemptEvent>(OnAttemptListen);
+        // SubscribeLocalEvent<RadioMicrophoneComponent, PowerChangedEvent>(OnPowerChanged);
+        //
+        // SubscribeLocalEvent<RadioSpeakerComponent, ComponentInit>(OnSpeakerInit);
+        // SubscribeLocalEvent<RadioSpeakerComponent, ActivateInWorldEvent>(OnActivateSpeaker);
+        // END DeltaV
         SubscribeLocalEvent<RadioSpeakerComponent, RadioReceiveEvent>(OnReceiveRadio);
 
-        SubscribeLocalEvent<IntercomComponent, EncryptionChannelsChangedEvent>(OnIntercomEncryptionChannelsChanged);
-        SubscribeLocalEvent<IntercomComponent, ToggleIntercomMicMessage>(OnToggleIntercomMic);
-        SubscribeLocalEvent<IntercomComponent, ToggleIntercomSpeakerMessage>(OnToggleIntercomSpeaker);
-        SubscribeLocalEvent<IntercomComponent, SelectIntercomChannelMessage>(OnSelectIntercomChannel);
+        // BEGIN DeltaV - Moved to Shared
+        // SubscribeLocalEvent<IntercomComponent, EncryptionChannelsChangedEvent>(OnIntercomEncryptionChannelsChanged);
+        // SubscribeLocalEvent<IntercomComponent, ToggleIntercomMicMessage>(OnToggleIntercomMic);
+        // SubscribeLocalEvent<IntercomComponent, ToggleIntercomSpeakerMessage>(OnToggleIntercomSpeaker);
+        // SubscribeLocalEvent<IntercomComponent, SelectIntercomChannelMessage>(OnSelectIntercomChannel);
+        // END DeltaV
     }
+
 
     public override void Update(float frameTime)
     {
@@ -56,26 +70,28 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         _recentlySent.Clear();
     }
 
-
     #region Component Init
+    /* DeltaV - Moved to Shared
     private void OnMicrophoneInit(EntityUid uid, RadioMicrophoneComponent component, ComponentInit args)
     {
         if (component.Enabled)
             EnsureComp<ActiveListenerComponent>(uid).Range = component.ListenRange;
         else
             RemCompDeferred<ActiveListenerComponent>(uid);
-    }
+    } */
 
+    /* DeltaV - Moved to Shared
     private void OnSpeakerInit(EntityUid uid, RadioSpeakerComponent component, ComponentInit args)
     {
         if (component.Enabled)
             EnsureComp<ActiveRadioComponent>(uid).Channels.UnionWith(component.Channels);
         else
             RemCompDeferred<ActiveRadioComponent>(uid);
-    }
+    } */
     #endregion
 
     #region Toggling
+    /* DeltaV - Moved to Shared
     private void OnActivateMicrophone(EntityUid uid, RadioMicrophoneComponent component, ActivateInWorldEvent args)
     {
         if (!args.Complex)
@@ -86,8 +102,9 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
 
         ToggleRadioMicrophone(uid, args.User, args.Handled, component);
         args.Handled = true;
-    }
+    } */
 
+    /* DeltaV - Moved to Shared
     private void OnActivateSpeaker(EntityUid uid, RadioSpeakerComponent component, ActivateInWorldEvent args)
     {
         if (!args.Complex)
@@ -98,15 +115,16 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
 
         ToggleRadioSpeaker(uid, args.User, args.Handled, component);
         args.Handled = true;
-    }
+    } */
+    /* DeltaV - Moved to Shared
     private void OnPowerChanged(EntityUid uid, RadioMicrophoneComponent component, ref PowerChangedEvent args)
     {
         if (args.Powered)
             return;
         SetMicrophoneEnabled(uid, null, false, true, component);
-    }
+    } */
 
-
+    /* DeltaV - Moved to Shared
     public override void SetMicrophoneEnabled(EntityUid uid, EntityUid? user, bool enabled, bool quiet = false, RadioMicrophoneComponent? component = null)
     {
         if (!Resolve(uid, ref component, false))
@@ -129,10 +147,10 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
             EnsureComp<ActiveListenerComponent>(uid).Range = component.ListenRange;
         else
             RemCompDeferred<ActiveListenerComponent>(uid);
-    }
-
+    } */
     #endregion
 
+    /* DeltaV - Moved to Shared
     private void OnExamine(EntityUid uid, RadioMicrophoneComponent component, ExaminedEvent args)
     {
         if (!args.IsInDetailsRange)
@@ -146,7 +164,8 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
             args.PushMarkup(Loc.GetString("handheld-radio-component-chennel-examine",
                 ("channel", proto.LocalizedName)));
         }
-    }
+    } */
+
 
     private void OnListen(EntityUid uid, RadioMicrophoneComponent component, ListenEvent args)
     {
@@ -158,6 +177,7 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
             _radio.SendRadioMessage(args.Source, args.Message, channel, uid);
     }
 
+    /* DeltaV - Moved to Shared
     private void OnAttemptListen(EntityUid uid, RadioMicrophoneComponent component, ListenAttemptEvent args)
     {
         if (component.PowerRequired && !this.IsPowered(uid, EntityManager)
@@ -165,7 +185,7 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         {
             args.Cancel();
         }
-    }
+    } */
 
     private void OnReceiveRadio(EntityUid uid, RadioSpeakerComponent component, ref RadioReceiveEvent args)
     {
@@ -183,6 +203,7 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         _chat.TrySendInGameICMessage(uid, args.Message, InGameICChatType.Whisper, ChatTransmitRange.GhostRangeLimit, nameOverride: name, checkRadioPrefix: false);
     }
 
+    /* DeltaV - Moved to Shared
     private void OnIntercomEncryptionChannelsChanged(Entity<IntercomComponent> ent, ref EncryptionChannelsChangedEvent args)
     {
         ent.Comp.SupportedChannels = args.Component.Channels.Select(p => new ProtoId<RadioChannelPrototype>(p)).ToList();
@@ -192,8 +213,9 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
             channel = ent.Comp.CurrentChannel;
 
         SetIntercomChannel(ent, channel);
-    }
+    } */
 
+    /* DeltaV - Moved to Shared
     private void OnToggleIntercomMic(Entity<IntercomComponent> ent, ref ToggleIntercomMicMessage args)
     {
         if (ent.Comp.RequiresPower && !this.IsPowered(ent, EntityManager))
@@ -202,8 +224,9 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         SetMicrophoneEnabled(ent, args.Actor, args.Enabled, true);
         ent.Comp.MicrophoneEnabled = args.Enabled;
         Dirty(ent);
-    }
+    } */
 
+    /* DeltaV - Moved to Shared
     private void OnToggleIntercomSpeaker(Entity<IntercomComponent> ent, ref ToggleIntercomSpeakerMessage args)
     {
         if (ent.Comp.RequiresPower && !this.IsPowered(ent, EntityManager))
@@ -212,8 +235,9 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         SetSpeakerEnabled(ent, args.Actor, args.Enabled, true);
         ent.Comp.SpeakerEnabled = args.Enabled;
         Dirty(ent);
-    }
+    } */
 
+    /* DeltaV - Moved to Shared
     private void OnSelectIntercomChannel(Entity<IntercomComponent> ent, ref SelectIntercomChannelMessage args)
     {
         if (ent.Comp.RequiresPower && !this.IsPowered(ent, EntityManager))
@@ -223,8 +247,9 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
             return;
 
         SetIntercomChannel(ent, args.Channel);
-    }
+    } */
 
+    /* DeltaV - Moved to Shared
     private void SetIntercomChannel(Entity<IntercomComponent> ent, ProtoId<RadioChannelPrototype>? channel)
     {
         ent.Comp.CurrentChannel = channel;
@@ -244,5 +269,5 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         if (TryComp<RadioSpeakerComponent>(ent, out var speaker))
             speaker.Channels = new() { channel.Value };
         Dirty(ent);
-    }
+    } */
 }
