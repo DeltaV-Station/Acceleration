@@ -11,36 +11,36 @@ marking-VulpEarSharp = Vulpkanin Ears (Sharp)
 marking-VulpEarSharp-vulp = Base
 marking-VulpEarSharp-vulp-sharp = Tip
 
-marking-VulpEarCoyote = Vulpkanin Coyote Ears
+marking-VulpEarCoyote = Vulpkanin Ears Coyote
 marking-VulpEarCoyote-coyote = Base
 
-marking-VulpEarDalmatian = Vulpkanin Dalmatian Ears
+marking-VulpEarDalmatian = Vulpkanin Ears Dalmatian
 marking-VulpEarDalmatian-dalmatian = Base
 
-marking-VulpEarFennec = Vulpkanin Fennec Ears
+marking-VulpEarFennec = Vulpkanin Ears Fennec
 marking-VulpEarFennec-fennec = Base
 marking-VulpEarFennec-fennec-inner = Inner
 
-marking-VulpEarFox = Vulpkanin Fox Ears
+marking-VulpEarFox = Vulpkanin Ears Fox
 marking-VulpEarFox-fox = Base
 marking-VulpEarFox-fox-inner = Inner
 
-marking-VulpEarJackal = Vulpkanin Jackal Ears
+marking-VulpEarJackal = Vulpkanin Ears Jackal
 marking-VulpEarJackal-jackal = Base
 marking-VulpEarJackal-jackal-inner = Inner
 
-marking-VulpEarTajaran = Vulpkanin Tajaran Ears
+marking-VulpEarTajaran = Vulpkanin Ears Tajaran
 marking-VulpEarTajaran-msai = Base
 marking-VulpEarTajaran-msai-inner = Inner
 
-marking-VulpEarOtie = Vulpkanin Otie Ears
+marking-VulpEarOtie = Vulpkanin Ears Otie
 marking-VulpEarOtie-otie = Base
 marking-VulpEarOtie-otie-inner = Inner
 
-marking-VulpEarShock = Vulpkanin Shock Ears
+marking-VulpEarShock = Vulpkanin Ears Shock
 marking-VulpEarShock-shock = Base
 
-marking-VulpEarTerrier = Vulpkanin Terrier Ears
+marking-VulpEarTerrier = Vulpkanin Ears Terrier
 marking-VulpEarTerrier-terrier = Base
 marking-VulpEarTerrier-terrier-inner = Inner
 
@@ -62,45 +62,45 @@ marking-VulpTailAltTip = Vulpkanin Tail Curled (Sharp tip)
 marking-VulpTailAltTip-vulp_alt = Base
 marking-VulpTailAltTip-vulp_alt-tip = Tip
 
-marking-VulpTailBushy = Vulpkanin Bushy Tail
+marking-VulpTailBushy = Vulpkanin Tail Bushy
 marking-VulpTailBushy-bushfluff = Base
 
-marking-VulpTailCoyote = Vulpkanin Coyote Tail
+marking-VulpTailCoyote = Vulpkanin Tail Coyote
 marking-VulpTailCoyote-coyote = Base
 
-marking-VulpTailFennec = Vulpkanin Fennec Tail
+marking-VulpTailFennec = Vulpkanin Tail Fennec
 marking-VulpTailFennec-fennec = Base
 
-marking-VulpTailFluffy = Vulpkanin Fluffy Tail
+marking-VulpTailFluffy = Vulpkanin Tail Fluffy
 marking-VulpTailFluffy-fluffy = Base
 
-marking-VulpTailFox = Vulpkanin Fox Tail (Fade tip)
+marking-VulpTailFox = Vulpkanin Tail Fox (Fade tip)
 marking-VulpTailFox-fox = Base
 marking-VulpTailFox-fox-fade = Tip
 
-marking-VulpTailFoxTip = Vulpkanin Fox Tail (Sharp tip)
+marking-VulpTailFoxTip = Vulpkanin Tail Fox (Sharp tip)
 marking-VulpTailFoxTip-fox = Base
 marking-VulpTailFoxTip-fox-tip = Tip
 
-marking-VulpTailFox2 = Vulpkanin Fox Tail 2
+marking-VulpTailFox2 = Vulpkanin Tail Fox 2
 marking-VulpTailFox2-fox2 = Base
 
-marking-VulpTailFox3 = Vulpkanin Fox Tail 3
+marking-VulpTailFox3 = Vulpkanin Tail Fox 3
 marking-VulpTailFox3-fox3 = Base
 marking-VulpTailFox3-fox3-tip = Tip
 
-marking-VulpTailHusky = Vulpkanin Husky Tail
+marking-VulpTailHusky = Vulpkanin Tail Husky
 marking-VulpTailHusky-husky-outer = Outer
 marking-VulpTailHusky-husky-inner = Inner
 
-marking-VulpTailHuskyAlt = Vulpkanin Husky Tail Alt
+marking-VulpTailHuskyAlt = Vulpkanin Tail Husky Alt
 marking-VulpTailHuskyAlt-husky = Base
 
-marking-VulpTailLong = Vulpkanin Long Tail
+marking-VulpTailLong = Vulpkanin Tail Long
 marking-VulpTailLong-long = Base
 marking-VulpTailLong-long-tip = Tip
 
-marking-VulpTailOtie = Vulpkanin Otie Tail
+marking-VulpTailOtie = Vulpkanin Tail Otie
 marking-VulpTailOtie-otie = Base
 
 
@@ -145,6 +145,7 @@ marking-VulpHeadTiger-tiger_head = Stripes
 
 marking-VulpHeadTigerFace = Vulpkanin Tiger (Face)
 marking-VulpHeadTigerFace-tiger_face = Stripes
+
 
 # Chest markings
 marking-VulpBellyCrest = Vulpkanin Crest Belly
