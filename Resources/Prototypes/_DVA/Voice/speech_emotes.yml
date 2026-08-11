@@ -1,6 +1,7 @@
 - type: emote
   id: Yip
   name: delta-chat-emote-name-yip
+  icon: _DVA/Interface/Emotes/bark.png
   category: Vocal
   available: false
   whitelist:
