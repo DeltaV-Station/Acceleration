@@ -488,4 +488,8 @@ public enum LogType
     /// Silicon law changes.
     /// </summary>
     SiliconLaw = 105,
+
+    // DeltaV Start - DeltaV LogTypes. We start at 300 because I decided so.
+    Psionics = 300
+    // DeltaV End.
 }

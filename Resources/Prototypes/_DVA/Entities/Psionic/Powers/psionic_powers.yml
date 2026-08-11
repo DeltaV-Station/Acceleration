@@ -1,0 +1,26 @@
+﻿# Table
+- type: entityTable
+  id: PsionicPowerTable
+  table: !type:GroupSelector
+    children:
+    - id: DispelPower
+      weight: 1
+
+# Powers
+- type: entity
+  abstract: true
+  id: BasePsionicPower
+  components:
+  - type: DVPsionicPower
+    maxGlimmerChanged: 10
+    minGlimmerChanged: 5
+
+- type: entity
+  parent: BasePsionicPower
+  id: DispelPower
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: DVDispelPower
+  - type: DVPsionicPower
+    powerName: Dispel
+    actionProtoId: ActionDispel

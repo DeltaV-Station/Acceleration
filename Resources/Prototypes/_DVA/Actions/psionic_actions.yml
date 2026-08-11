@@ -1,0 +1,27 @@
+﻿- type: entity
+  abstract: true
+  parent: BaseAction
+  id: BasePsionicAction
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    startDelay: true
+
+- type: entity
+  parent: BasePsionicAction
+  id: ActionDispel
+  name: Dispel
+  description: Dispel summoned entities such as familiars or forcewalls.
+  components:
+  - type: Action
+    icon:
+      sprite: _DVA/Interface/Actions/psionic_actions.rsi
+      state: dispel
+    useDelay: 45
+    checkCanInteract: false
+  - type: TargetAction
+    range: 6
+    checkCanAccess: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    event: !type:DispelPowerActionEvent

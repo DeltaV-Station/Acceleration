@@ -1,0 +1,8 @@
+﻿- type: entity
+  parent: PlushieHampter
+  id: RandomPsionicPower
+  name: get random psionic power
+  description: This gets you a random psionic power.
+  suffix: DEBUG; DO NOT MAP
+  components:
+  - type: DVGiveRandomPsionicPowerOnUse

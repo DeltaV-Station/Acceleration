@@ -355,6 +355,16 @@
         type: Add
         time: 10
   # TODO: PROPER hallucinations
+      # DeltaV Start - Mindbreaker removes psionic powers.
+      - !type:AdjustReagent
+        reagent: LotophagoiOil # DeltaV: prevent rapid remove/reroll/remove/reroll psionic loop
+        amount: -100
+      - !type:RemovePsionicPowers
+        conditions:
+        - !type:ReagentCondition
+          reagent: MindbreakerToxin
+          min: 20
+      # DeltaV End.
 
 - type: reagent
   id: Histamine
