@@ -218,6 +218,7 @@
   components:
   - type: VisualOrganMarkings
     hideableLayers:
+    - enum.HumanoidVisualLayers.Hair # DeltaV - lizard hair
     - enum.HumanoidVisualLayers.Snout
     - enum.HumanoidVisualLayers.HeadTop
     - enum.HumanoidVisualLayers.HeadSide
