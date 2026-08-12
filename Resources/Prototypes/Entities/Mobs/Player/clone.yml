@@ -25,6 +25,12 @@
   - PermanentBlindness
   - Snoring
   - Unrevivable
+  # BEGIN DeltaV
+  - DVFireStackModifier
+  - DVEatTimeModifier
+  - DVSleepTimeModifier
+  - DVPettingChanceModifier
+  # END DeltaV
 
 - type: cloningSettings
   parent: [TraitsMental, TraitsPhysical]
