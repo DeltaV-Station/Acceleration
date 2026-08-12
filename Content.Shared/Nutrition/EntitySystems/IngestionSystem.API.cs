@@ -307,7 +307,7 @@ public sealed partial class IngestionSystem
 
         // TODO: Relay this event to solutions using solution relay
         var ev = new EdibleEvent(user);
-        RaiseLocalEvent(ingested, ref ev);
+        RaiseLocalEvent(ingested, ref ev, true); // DeltaV - Set broadcast to true for DVEatTimeModifier subscription
 
         solution = ev.Solution;
         time = ev.Time;

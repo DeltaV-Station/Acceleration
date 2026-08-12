@@ -1,3 +1,4 @@
+using Content.Shared._DVA.Atmos.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
 using Content.Server.Stunnable;
@@ -293,6 +294,11 @@ namespace Content.Server.Atmos.EntitySystems
         {
             if (!Resolve(uid, ref flammable))
                 return;
+
+            // BEGIN DeltaV - firestack modifier
+            if (TryComp<DVFireStackModifierComponent>(uid, out var fireStackModifier))
+                stacks *= fireStackModifier.Modifier;
+            // END DeltaV
 
             flammable.FireStacks = MathF.Min(MathF.Max(flammable.MinimumFireStacks, stacks), flammable.MaximumFireStacks);
 
