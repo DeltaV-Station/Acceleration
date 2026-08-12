@@ -105,7 +105,7 @@
 - type: marking
   id: TattooEyeRight
   bodyPart: Eyes
-  groupWhitelist: [Human, Slime, Reptilian]
+  groupWhitelist: [Human, Slime, Reptilian, Vulpkanin] # DeltaV - add vulpkanin to whitelist
   coloring:
     default:
       type:
@@ -118,7 +118,7 @@
 - type: marking
   id: TattooEyeLeft
   bodyPart: Eyes
-  groupWhitelist: [Human, Slime, Reptilian]
+  groupWhitelist: [Human, Slime, Reptilian, Vulpkanin] # DeltaV - add vulpkanin to whitelist
   coloring:
     default:
       type:
@@ -154,31 +154,33 @@
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_moth_l
 
-- type: marking
-  id: TattooEyeVulpkaninRight
-  bodyPart: Eyes
-  groupWhitelist: [Vulpkanin]
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-          negative: true
-  sprites:
-  - sprite: Mobs/Customization/tattoos.rsi
-    state: tattoo_eye_r  # DeltaV - different vulp sprites
-
-- type: marking
-  id: TattooEyeVulpkaninLeft
-  bodyPart: Eyes
-  groupWhitelist: [Vulpkanin]
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-          negative: true
-  sprites:
-  - sprite: Mobs/Customization/tattoos.rsi
-    state: tattoo_eye_l # DeltaV - different vulp sprites
+# Begin DeltaV - kill vulpkanin eye markings
+#- type: marking
+#  id: TattooEyeVulpkaninRight
+#  bodyPart: Eyes
+#  groupWhitelist: [Vulpkanin]
+#  coloring:
+#    default:
+#      type:
+#        !type:EyeColoring
+#          negative: true
+#  sprites:
+#  - sprite: Mobs/Customization/tattoos.rsi
+#    state: tattoo_eye_vulpkanin_r
+#
+#- type: marking
+#  id: TattooEyeVulpkaninLeft
+#  bodyPart: Eyes
+#  groupWhitelist: [Vulpkanin]
+#  coloring:
+#    default:
+#      type:
+#        !type:EyeColoring
+#          negative: true
+#  sprites:
+#  - sprite: Mobs/Customization/tattoos.rsi
+#    state: tattoo_eye_vulpkanin_l
+# End DeltaV - kill vulpkanin eye markings
 
 - type: marking
   id: TattooEyeshadowUpper
