@@ -13,7 +13,6 @@
   voices:
   - MaleOvinia
   - FemaleOvinia
-  - MaleOvinia
   # END DeltaV
   sexes:
   - Male
