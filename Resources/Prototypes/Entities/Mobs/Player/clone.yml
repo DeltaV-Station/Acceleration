@@ -26,10 +26,10 @@
   - Snoring
   - Unrevivable
   # BEGIN DeltaV
-  - DVFireStackModifier
-  - DVEatTimeModifier
-  - DVSleepTimeModifier
-  - DVPettingChanceModifier
+  - FireStackModifier
+  - EatTimeModifier
+  - SleepTimeModifier
+  - PettingChanceModifier
   # END DeltaV
 
 - type: cloningSettings
