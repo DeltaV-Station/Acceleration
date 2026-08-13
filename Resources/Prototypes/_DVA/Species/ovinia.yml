@@ -2,7 +2,6 @@
   id: Ovinia
   name: species-name-ovinia
   roundStart: true
-  randomViable: false
   prototype: MobOvinia
   defaultSkinTone: "#ffffff"
   dollPrototype: AppearanceOvinia
@@ -10,6 +9,10 @@
   maleFirstNames: NamesOviniaFirst
   femaleFirstNames: NamesOviniaFirst
   lastNames: NamesOviniaLast
+  voices:
+  - MaleOvinia
+  - FemaleOvinia
+  - MaleOvinia
   sexes:
   - Male
   - Female
