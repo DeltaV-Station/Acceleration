@@ -113,6 +113,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      toggleable-under-clothing: !type:ContainerSlot {} # DeltaV - Allow hats under toggleable clothing
       storagebase: !type:Container
         ents: []
 
@@ -152,6 +153,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      toggleable-under-clothing: !type:ContainerSlot {} # DeltaV - Allow hats under toggleable clothing
   - type: GroupExamine
   - type: Tag
     tags:
@@ -212,6 +214,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      toggleable-under-clothing: !type:ContainerSlot {} # DeltaV - Allow hats under toggleable clothing
 
 - type: entity
   parent: ClothingOuterBase
@@ -226,6 +229,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      toggleable-under-clothing: !type:ContainerSlot {} # DeltaV - Allow hats under toggleable clothing
       storagebase: !type:Container
         ents: []
 
