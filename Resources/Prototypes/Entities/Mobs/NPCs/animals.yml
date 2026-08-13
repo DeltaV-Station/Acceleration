@@ -189,7 +189,7 @@
   - type: NpcFactionMember
     factions:
     - SimpleHostile
-    - AnimalFriend # DeltaV
+    - AnimalFriend # MACRO
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -1547,7 +1547,7 @@
   - type: NpcFactionMember
     factions:
     - SimpleHostile
-    - AnimalFriend # DeltaV
+    - AnimalFriend # MACRO
 
 - type: entity
   name: genetic ancestor

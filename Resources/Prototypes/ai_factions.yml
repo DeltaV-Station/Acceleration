@@ -60,7 +60,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - AnimalFriend # DeltaV
+  - AnimalFriend # MACRO
 
 - type: npcFaction
   id: SimpleNeutral

@@ -1,4 +1,4 @@
-using Content.Shared._DVA.Bed.Sleep;
+using Content.Shared._MACRO.Bed.Sleep;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Buckle.Components;
@@ -288,9 +288,9 @@ public sealed partial class SleepingSystem : EntitySystem
 
     private void OnStatusEffectApplied(Entity<ForcedSleepingStatusEffectComponent> ent, ref StatusEffectAppliedEvent args)
     {
-        // BEGIN DeltaV - SleepTimeModifier to modify force sleep duration
+        // MACRO start: SleepTimeModifier to modify force sleep duration
         // IF YOU ARE HERE TO ADD MORE TRYCOMPS: dont. make a new event instead.
-        if (TryComp<DVSleepTimeModifierComponent>(args.Target, out var sleepTimeModifier) &&
+        if (TryComp<SleepTimeModifierComponent>(args.Target, out var sleepTimeModifier) &&
             _statusEffect.TryGetTime(args.Target, StatusEffectForcedSleeping, out var initTime))
         {
             var time = initTime.EndEffectTime - initTime.StartEffectTime;
@@ -299,7 +299,7 @@ public sealed partial class SleepingSystem : EntitySystem
                 StatusEffectForcedSleeping,
                 time * sleepTimeModifier.Modifier);
         }
-        // END DeltaV
+        // MACRO end
 
         // Applying state check needed so we don't add SleepingComp during
         // entity reset due to the status effect getting inserted

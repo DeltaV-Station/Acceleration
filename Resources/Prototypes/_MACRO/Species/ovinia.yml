@@ -1,0 +1,25 @@
+﻿- type: species
+  id: Ovinia
+  name: species-name-ovinia
+  roundStart: true # DeltaV - Enable roundstart
+  prototype: MobOvinia
+  defaultSkinTone: "#ffffff"
+  dollPrototype: AppearanceOvinia
+  skinColoration: Hues
+  maleFirstNames: NamesOviniaFirst
+  femaleFirstNames: NamesOviniaFirst
+  lastNames: NamesOviniaLast
+  # BEGIN DeltaV
+  voices:
+  - MaleOvinia
+  - FemaleOvinia
+  - MaleOvinia
+  # END DeltaV
+  sexes:
+  - Male
+  - Female
+  - Unsexed
+  defaultSoundsBySex:
+  - MaleOvinia
+  - FemaleOvinia
+  - MaleOvinia
