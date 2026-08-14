@@ -19,6 +19,7 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    - Ovinia # MACRO
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

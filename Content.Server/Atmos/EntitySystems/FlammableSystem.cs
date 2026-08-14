@@ -1,3 +1,4 @@
+using Content.Shared._MACRO.Atmos.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
 using Content.Server.Stunnable;
@@ -293,6 +294,11 @@ namespace Content.Server.Atmos.EntitySystems
         {
             if (!Resolve(uid, ref flammable))
                 return;
+
+            // MACRO start: firestack modifier
+            if (TryComp<FireStackModifierComponent>(uid, out var fireStackModifier))
+                stacks *= fireStackModifier.Modifier;
+            // MACRO end
 
             flammable.FireStacks = MathF.Min(MathF.Max(flammable.MinimumFireStacks, stacks), flammable.MaximumFireStacks);
 
