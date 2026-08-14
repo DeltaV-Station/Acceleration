@@ -1,6 +1,8 @@
 using Content.Server.Research.Systems;
 using Content.Server.Xenoarchaeology.Artifact;
+using Content.Shared._DVA.Research.Systems; // DeltaV - glimmer/artifact interaction
 using Content.Shared.Popups;
+using Content.Shared.Research.Systems; // DeltaV - glimmer/artifact interaction
 using Content.Shared.Xenoarchaeology.Equipment;
 using Content.Shared.Xenoarchaeology.Equipment.Components;
 using Robust.Shared.Audio.Systems;
@@ -42,6 +44,12 @@ public sealed partial class ArtifactAnalyzerSystem : SharedArtifactAnalyzerSyste
         // 4-16-25: It's a sad day when a scientist makes negative 5k research
         if (sumResearch <= 0)
             return;
+
+        // BEGIN DeltaV - Glimmer/Artifact interactions
+        var ev = new GetGlimmerModifiedResearchEvent(sumResearch, updateGlimmer: true);
+        RaiseLocalEvent(ent, ref ev);
+        sumResearch += ev.BonusResearch;
+        // END DeltaV - Glimmer/Artifact interactions
 
         _research.ModifyServerPoints(server.Value, sumResearch, serverComponent);
         _audio.PlayPvs(ent.Comp.ExtractSound, artifact.Value);
