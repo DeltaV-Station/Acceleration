@@ -286,6 +286,7 @@
     entries:
       Burger: Brain
       Taco: Brain
+  - type: DVCannotUsePsionics # DeltaV - Brains can't use psionic powers.
 
 - type: entity
   parent: OrganBase

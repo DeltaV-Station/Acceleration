@@ -13,6 +13,8 @@ public abstract partial class SharedMindSystem : EntitySystem
     {
         // for name modifiers that depend on certain mind roles
         SubscribeLocalEvent<MindContainerComponent, RefreshNameModifiersEvent>(RelayRefToMind);
+
+        InitializeDVRelay(); // DeltaV - DV-Relay system.
     }
 
     protected void RelayToMind<T>(EntityUid uid, MindContainerComponent component, T args) where T : class

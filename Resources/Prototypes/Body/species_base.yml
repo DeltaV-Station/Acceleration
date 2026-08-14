@@ -223,3 +223,6 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  # DeltaV Start.
+  - type: DVPotentialPsionic
+  # DeltaV End.
