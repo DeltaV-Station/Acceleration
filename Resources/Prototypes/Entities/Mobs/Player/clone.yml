@@ -25,6 +25,9 @@
   - PermanentBlindness
   - Snoring
   - Unrevivable
+  # BEGIN DeltaV
+  - DVUltravioletVision
+  # END DeltaV
 
 - type: cloningSettings
   parent: [TraitsMental, TraitsPhysical]

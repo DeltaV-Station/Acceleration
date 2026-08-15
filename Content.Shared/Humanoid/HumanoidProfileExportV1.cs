@@ -1,11 +1,12 @@
 using System.Numerics;
+using Content.Shared._DVA.Traits;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
-using Content.Shared.Traits;
+//using Content.Shared.Traits;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -48,7 +49,7 @@ public sealed partial class HumanoidCharacterProfileV1
     public HashSet<ProtoId<AntagPrototype>> AntagPreferences = new();
 
     [DataField("_traitPreferences")]
-    public HashSet<ProtoId<TraitPrototype>> TraitPreferences = new();
+    public HashSet<ProtoId<DVTraitPrototype>> TraitPreferences = new();
 
     [DataField("_loadouts")]
     public Dictionary<string, RoleLoadout> Loadouts = new();
