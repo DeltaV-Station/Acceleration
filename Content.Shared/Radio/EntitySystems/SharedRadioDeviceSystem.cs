@@ -3,6 +3,7 @@ using Content.Shared.Radio.Components;
 
 namespace Content.Shared.Radio.EntitySystems;
 
+// DeltaV - Added a part to this class in _DVA
 public abstract partial class SharedRadioDeviceSystem : EntitySystem
 {
     [Dependency] private SharedPopupSystem _popup = default!;
@@ -17,7 +18,8 @@ public abstract partial class SharedRadioDeviceSystem : EntitySystem
         SetMicrophoneEnabled(uid, user, !component.Enabled, quiet, component);
     }
 
-    public virtual void SetMicrophoneEnabled(EntityUid uid, EntityUid? user, bool enabled, bool quiet = false, RadioMicrophoneComponent? component = null) { }
+    // DeltaV - Implemented in the class part inside _DVA
+    // public virtual void SetMicrophoneEnabled(EntityUid uid, EntityUid? user, bool enabled, bool quiet = false, RadioMicrophoneComponent? component = null) { }
 
     public void ToggleRadioSpeaker(EntityUid uid, EntityUid user, bool quiet = false, RadioSpeakerComponent? component = null)
     {
@@ -37,8 +39,8 @@ public abstract partial class SharedRadioDeviceSystem : EntitySystem
 
         if (!quiet && user != null)
         {
-            var state = Loc.GetString(component.Enabled ? "handheld-radio-component-on-state" : "handheld-radio-component-off-state");
-            var message = Loc.GetString("handheld-radio-component-on-use", ("radioState", state));
+            var state = GetStatusText(uid, component); // DeltaV - Use method for getting state due to DRY
+            var message = Loc.GetString("radio-speaker-component-on-use", ("radioState", state)); // DeltaV - Use locid specific to speaker
             _popup.PopupEntity(message, user.Value, user.Value);
         }
 
@@ -50,4 +52,3 @@ public abstract partial class SharedRadioDeviceSystem : EntitySystem
     }
     #endregion
 }
-
