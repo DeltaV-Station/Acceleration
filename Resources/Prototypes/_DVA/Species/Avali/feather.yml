@@ -1,0 +1,54 @@
+- type: entity
+  parent: BaseItem
+  id: AvaliFeather
+  name: feather
+  description: Probably not ethically sourced.
+  components:
+  - type: Appearance
+  - type: DVGenericColorVisuals
+    visuals:
+      enum.DVFeatherVisuals.FeatherColor: [base]
+    clothingVisuals:
+      enum.DVFeatherVisuals.FeatherColor: [base]
+  - type: Sprite
+    sprite: _DVA/Mobs/Species/Avali/feather.rsi
+    layers:
+    - state: feather
+      map: [base]
+  - type: Item
+    size: Tiny
+  - type: Clothing
+    sprite: _DVA/Mobs/Species/Avali/feather.rsi
+    clothingVisuals:
+      ears:
+      - state: equipped-EARS
+        map: [base]
+      head:
+      - state: equipped-HELMET
+        map: [base]
+    slots:
+    - ears
+    - head
+  - type: Tag
+    tags:
+    - Write
+    - Pen
+    - Trash
+
+- type: entity
+  parent: AvaliFeather
+  id: AvaliFeatherBloodied
+  name: bloodied feather
+  description: DEFINITELY not ethically sourced.
+  components:
+  - type: DVGenericColorVisuals
+    visuals:
+      enum.DVFeatherVisuals.FeatherColor: [base]
+      enum.DVFeatherVisuals.BloodColor: [blood]
+  - type: Sprite
+    layers:
+    - state: feather
+      map: [base]
+    - state: featherblood
+      color: "#FFFFFF00"
+      map: [blood]

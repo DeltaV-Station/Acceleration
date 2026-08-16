@@ -1,0 +1,44 @@
+- type: emoteSounds
+  abstract: true
+  id: UnisexAvali
+  sounds:
+    Scream:
+      path: /Audio/_DVA/Species/Avali/avali_scream.ogg
+    Laugh:
+      path: /Audio/_DVA/Species/Avali/avali_laugh.ogg
+    Snore:
+      collection: Snores
+
+- type: emoteSounds
+  parent: [UnisexAvali, MaleHuman]
+  id: MaleAvali
+
+- type: emoteSounds
+  parent: [UnisexAvali, FemaleHuman]
+  id: FemaleAvali
+
+- type: speechSounds
+  id: MaleAvali
+  saySound:
+    path: /Audio/_DVA/Species/Avali/avali_1.ogg
+  askSound:
+    path: /Audio/_DVA/Species/Avali/avali_1_ask.ogg
+  exclaimSound:
+    path: /Audio/_DVA/Species/Avali/avali_1_exclaim.ogg
+
+- type: speechSounds
+  id: FemaleAvali
+  saySound:
+    path: /Audio/_DVA/Species/Avali/avali_2.ogg
+  askSound:
+    path: /Audio/_DVA/Species/Avali/avali_2_ask.ogg
+  exclaimSound:
+    path: /Audio/_DVA/Species/Avali/avali_2_exclaim.ogg
+
+- type: speechVerb
+  id: Avali
+  name: chat-speech-verb-name-avali
+  speechVerbStrings:
+  - chat-speech-verb-avali-1
+  - chat-speech-verb-avali-2
+  - chat-speech-verb-avali-3
