@@ -17,16 +17,16 @@
       required: true
       default: [ VulpEar ]
     enum.HumanoidVisualLayers.Snout:
-      limit: 1
-      required: true
-      default: [ VulpSnout ]
+      limit: 3 # DeltaV - increase marking limit to 3 (replaces SnoutCover)
+      required: false # DeltaV - no requirement
+#      default: [ VulpSnout ] # DeltaV - snout is attached to head sprite
     enum.HumanoidVisualLayers.SnoutCover:
       limit: 3
       required: false
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ VulpTailVulp ]
+      default: [ VulpTailAlt ] # DeltaV - rename to fit our sprites
     enum.HumanoidVisualLayers.LArm:
       limit: 2
       required: false
@@ -92,52 +92,53 @@
     species: Vulpkanin
   - type: Inventory
     speciesId: vulpkanin
-    displacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: jumpsuit
-      back:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: back
-      outerClothing:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: outerwear
-      gloves:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: hand
-      shoes:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: shoes
-      head:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: head
-      neck:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: neck
-      eyes:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: eyes
-      belt:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: belt
+#   DeltaV - no vulp body displacements
+#    displacements:
+#      jumpsuit:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: jumpsuit
+#      back:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: back
+#      outerClothing:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: outerwear
+#      gloves:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: hand
+#      shoes:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: shoes
+#      head:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: head
+#      neck:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: neck
+#      eyes:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: eyes
+#      belt:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: belt
 
 - type: entity
   parent:
@@ -146,19 +147,20 @@
   id: MobVulpkanin
   name: Urist McArfArf
   components:
-  - type: DamageVisuals
-    damageOverlayGroups:
-      Brute:
-        sprite: Mobs/Effects/brute_damage.rsi
-        color: "#ccac1f"
-      Burn:
-        sprite: Mobs/Effects/burn_damage.rsi
+# DeltaV - use default damage visuals
+#  - type: DamageVisuals
+#    damageOverlayGroups:
+#      Brute:
+#        sprite: Mobs/Effects/brute_damage.rsi
+#        color: "#ccac1f"
+#      Burn:
+#        sprite: Mobs/Effects/burn_damage.rsi
   - type: MessyDrinker
     spillChance: 0.33
   - type: Speech
     speechSounds: Vulpkanin
     speechVerb: Vulpkanin
-    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl' ]
+    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Yip', 'Awoo' ] # DeltaV - yip and awoo emotes
   - type: TypingIndicator
     proto: vulpkanin
   - type: Vocal
@@ -185,25 +187,26 @@
       types:
         Heat: 2.5 # Per second, scales with temperature & other constants
   - type: Wagging
-    action: ActionToggleWaggingVulpkanin
+    action: ActionToggleWagging # DeltaV - reuse lizard wagging action (no icon in DeltaV)
   - type: TemperatureProtection
     heatingCoefficient: 1.2
     coolingCoefficient: 0.3
-  - type: JumpAbility
-    action: ActionVulpkaninGravityJump
-    canCollide: true
-    jumpDistance: 3
-    jumpSound:
-      path: /Audio/Weapons/punchmiss.ogg
-      params:
-        pitch: 1.33
-        volume: -5
-        variation: 0.05
-  - type: Bloodstream
-    bloodReferenceSolution:
-      reagents:
-      - ReagentId: SulfurBlood
-        Quantity: 600
+# DeltaV - no vulp jump or sulfur blood
+#  - type: JumpAbility
+#    action: ActionVulpkaninGravityJump
+#    canCollide: true
+#    jumpDistance: 3
+#    jumpSound:
+#      path: /Audio/Weapons/punchmiss.ogg
+#      params:
+#        pitch: 1.33
+#        volume: -5
+#        variation: 0.05
+#  - type: Bloodstream
+#    bloodReferenceSolution:
+#      reagents:
+#      - ReagentId: SulfurBlood
+#        Quantity: 600
   - type: CreamPied
     sprite:
       sprite: Effects/creampie.rsi
@@ -228,7 +231,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Vulpkanin/organs.rsi
+    sprite: Mobs/Species/Human/organs.rsi # DeltaV - no sulfur organs
 
 - type: entity
   id: OrganVulpkaninVisual
@@ -236,7 +239,7 @@
   components:
   - type: VisualOrgan
     data:
-      sprite: Mobs/Species/Vulpkanin/parts.rsi
+      sprite: _DVA/Mobs/Species/Vulpkanin/parts.rsi # DeltaV - use our sprites
   - type: VisualOrganMarkings
     markingData:
       group: Vulpkanin
@@ -247,14 +250,14 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Vulpkanin/parts.rsi
+    sprite: _DVA/Mobs/Species/Vulpkanin/parts.rsi # DeltaV - use our sprites
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganVulpkaninExternal ]
   id: OrganVulpkaninTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganVulpkaninExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganVulpkaninExternal ] # DeltaV - sexed vulp head
   id: OrganVulpkaninHead
   components:
   - type: VisualOrganMarkings
@@ -267,12 +270,13 @@
     dependentHidingLayers:
       enum.HumanoidVisualLayers.Snout:
       - enum.HumanoidVisualLayers.SnoutCover
-    markingsDisplacement:
-      Hair:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: hair
+# DeltaV - no vulp displacements
+#    markingsDisplacement:
+#      Hair:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: hair
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganVulpkaninExternal ]
@@ -313,6 +317,12 @@
 - type: entity
   parent: [ OrganVulpkaninVisual, OrganBaseEyes, OrganVulpkaninInternal ]
   id: OrganVulpkaninEyes
+# Begin DeltaV - use default eye sprite
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+# End DeltaV
 
 - type: entity
   parent: [ OrganBaseTongue, OrganVulpkaninInternal ]

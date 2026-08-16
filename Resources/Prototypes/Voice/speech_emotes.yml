@@ -202,6 +202,7 @@
 - type: emote
   id: Bark
   name: chat-emote-name-bark
+  icon: _DVA/Interface/Emotes/bark.png # DeltaV - add icon
   category: Vocal
   available: false
   whitelist:
@@ -220,6 +221,7 @@
 - type: emote
   id: Snarl
   name: chat-emote-name-snarl
+  icon: _DVA/Interface/Emotes/snarl.png # DeltaV - add icon
   category: Vocal
   available: false
   whitelist:
@@ -238,6 +240,7 @@
 - type: emote
   id: Whine
   name: chat-emote-name-whine
+  icon: _DVA/Interface/Emotes/whine.png # DeltaV - add icon
   category: Vocal
   available: false
   whitelist:
@@ -256,6 +259,7 @@
 - type: emote
   id: Howl
   name: chat-emote-name-howl
+  icon: _DVA/Interface/Emotes/howl.png # DeltaV - add icon
   category: Vocal
   available: false
   whitelist:
@@ -274,6 +278,7 @@
 - type: emote
   id: Growl
   name: chat-emote-name-growl
+  icon: _DVA/Interface/Emotes/snarl.png # DeltaV - add icon
   category: Vocal
   available: false
   whitelist:
