@@ -1,0 +1,10 @@
+- type: listing
+  id: UplinkMobCat # by stxcking
+  name: uplink-mobcat-microbomb-name
+  description: uplink-mobcat-descc
+  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-syndicat }
+  productEntity: ReinforcementRadioSyndicateSyndiCatDV
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkPointless

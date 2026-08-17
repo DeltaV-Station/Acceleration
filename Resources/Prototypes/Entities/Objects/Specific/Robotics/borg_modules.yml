@@ -252,23 +252,34 @@
   - type: Tag
     tags:
     - BorgModuleSyndicate
+    - BorgModuleGeneric # DeltaV - Allows any borg to have an evil module if found
+  - type: Sprite # Delta-V: Updated parent
+    sprite: _DVA/Objects/Specific/Robotics/borgmodule.rsi
   - type: Item
-    inhandVisuals:
+    inhandVisuals: # Delta-V: Fixed inhands
       left:
-      - state: base-icon-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-icon-inhand-left
         color: "#FF0000"
-      - state: base-module-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-module-inhand-left
         color: "#891417"
-      - state: base-part-inhand-left
-      - state: base-stripes-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-part-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-stripes-inhand-left
         color: "#7B0F12"
       right:
-      - state: base-icon-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-icon-inhand-right
         color: "#FF0000"
-      - state: base-module-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-module-inhand-right
         color: "#891417"
-      - state: base-part-inhand-right
-      - state: base-stripes-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-part-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-stripes-inhand-right
         color: "#7B0F12"
 
 
@@ -283,23 +294,34 @@
   - type: Tag
     tags:
     - BorgModuleSyndicateAssault
+    - BorgModuleGeneric # DeltaV - Allows any borg to have an evil module
+  - type: Sprite # Delta-V: Updated parent
+    sprite: _DVA/Objects/Specific/Robotics/borgmodule.rsi
   - type: Item
-    inhandVisuals:
+    inhandVisuals: # Delta-V: Fixed inhands
       left:
-      - state: base-icon-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-icon-inhand-left
         color: "#FF0000"
-      - state: base-module-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-module-inhand-left
         color: "#891417"
-      - state: base-part-inhand-left
-      - state: base-stripes-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-part-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-stripes-inhand-left
         color: "#7B0F12"
       right:
-      - state: base-icon-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-icon-inhand-right
         color: "#FF0000"
-      - state: base-module-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-module-inhand-right
         color: "#891417"
-      - state: base-part-inhand-right
-      - state: base-stripes-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-part-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-stripes-inhand-right
         color: "#7B0F12"
 
 - type: entity
@@ -1241,40 +1263,41 @@
 
 #syndicate modules
 - type: entity
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ] # Delta-V: Updated parent to Syndicate
   id: BorgModuleSyndicateWeapon
   name: weapon cyborg module
   components:
   - type: Sprite
     layers:
     - state: syndicate
-    - state: icon-syndicate
+    - state: icon-weapon # Delta-V
   - type: ItemBorgModule
     hands:
     - item: WeaponPistolEchis
     - item: EnergyDaggerLoud
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: base-icon-inhand-left
-        color: "#FF0000"
-      - state: base-module-inhand-left
-        color: "#891417"
-      - state: base-part-inhand-left
-      - state: base-stripes-inhand-left
-        color: "#7B0F12"
-      right:
-      - state: base-icon-inhand-right
-        color: "#FF0000"
-      - state: base-module-inhand-right
-        color: "#891417"
-      - state: base-part-inhand-right
-      - state: base-stripes-inhand-right
-        color: "#7B0F12"
-  - type: StaticPrice
-    price: 2500
+#   Delta-V: Removed due to new parent
+#  - type: Item
+#    inhandVisuals:
+#      left:
+#      - state: base-icon-inhand-left
+#        color: "#FF0000"
+#      - state: base-module-inhand-left
+#        color: "#891417"
+#      - state: base-part-inhand-left
+#      - state: base-stripes-inhand-left
+#        color: "#7B0F12"
+#      right:
+#      - state: base-icon-inhand-right
+#        color: "#FF0000"
+#      - state: base-module-inhand-right
+#        color: "#891417"
+#      - state: base-part-inhand-right
+#      - state: base-stripes-inhand-right
+#        color: "#7B0F12"
+#  - type: StaticPrice
+#    price: 2500
 
 - type: entity
   parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
@@ -1282,18 +1305,19 @@
   name: operative cyborg module
   description: A module that comes with a crowbar, an Emag, an Access Breaker and a syndicate pinpointer.
   components:
-    - type: Sprite
-      layers:
-      - state: syndicate
-      - state: icon-syndicate
-    - type: ItemBorgModule
-      hands:
-      - item: Crowbar
-      - item: Emag
-      - item: AccessBreaker
-      - item: PinpointerSyndicateNuclear
-    - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-operative # Delta-V
+  - type: ItemBorgModule
+    hands:
+    - item: Crowbar
+    - item: Emag
+    #- item: AccessBreaker # DeltaV
+    - item: Doorjack # DeltaV - replaces AccessBreaker
+    - item: PinpointerSyndicateNuclear
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
 
 - type: entity
   parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
@@ -1304,7 +1328,7 @@
   - type: Sprite
     layers:
     - state: syndicate
-    - state: icon-syndicate
+    - state: icon-esword # Delta-V
   - type: ItemBorgModule
     hands:
     - item: CyborgEnergySword
@@ -1321,7 +1345,7 @@
   - type: Sprite
     layers:
     - state: syndicate
-    - state: icon-syndicate
+    - state: icon-desword # Delta-V
   - type: ItemBorgModule
     hands:
     - item: CyborgEnergySwordDouble
@@ -1338,7 +1362,7 @@
   - type: Sprite
     layers:
     - state: syndicate
-    - state: icon-syndicate
+    - state: icon-l6c # Delta-V
   - type: ItemBorgModule
     hands:
     - item: WeaponLightMachineGunL6C
@@ -1355,7 +1379,7 @@
   - type: Sprite
     layers:
     - state: syndicate
-    - state: icon-syndicate
+    - state: icon-c20r # Delta-V
   - type: ItemBorgModule
     hands:
     - item: WeaponSubMachineGunC20rROW
@@ -1502,7 +1526,9 @@
     - state: icon-xenoborg-access-breaker
   - type: ItemBorgModule
     hands:
-    - item: AccessBreaker
+    #- item: AccessBreaker # DeltaV
+    - item: Doorjack # DeltaV - replaces AccessBreaker
+    - item: Emag # DeltaV - for lockers/etc
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-access-breaker-module }
 

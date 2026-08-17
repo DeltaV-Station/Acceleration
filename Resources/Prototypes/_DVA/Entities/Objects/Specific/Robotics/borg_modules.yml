@@ -1,0 +1,27 @@
+
+- type: entity
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  id: BorgModuleCloakDeviceSyndicate
+  name: syndicate cloaking device cyborg module
+  description: A module with a device that allows the borg to become cloaked for a short amount of time.
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Objects/Specific/Robotics/borgmodule.rsi
+      state: syndicate
+    - sprite: Objects/Specific/Robotics/borgmodule.rsi
+      state: icon-syndicate
+  - type: ItemBorgModule
+    hands:
+    - item: CloakingDeviceSyndicateBorg
+  - type: BorgModuleIcon
+    icon: { sprite: _DVA/Interface/Actions/actions_borg.rsi, state: syndicate-infiltrator-module }
+
+- type: entity
+  parent: CloakingDevice
+  id: CloakingDeviceSyndicateBorg
+  description: A device that allows the borg to become cloaked for a short amount of time. Will recharge after 30 seconds of non-use.
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/access_breaker.rsi # Finally using this awesome icon
+    state: icon

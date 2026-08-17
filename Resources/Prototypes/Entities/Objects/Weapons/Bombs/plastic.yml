@@ -93,6 +93,7 @@
     quickEquip: false
     equipDelay: 3
     unequipDelay: 6
+  - type: CatWearable # DeltaVA
   - type: HolidayVisuals
     holidays:
       festive:

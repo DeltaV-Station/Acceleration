@@ -1,0 +1,32 @@
+- type: listing
+  id: UplinkSpeedLoaderMagnum
+  name: uplink-speedloader-magnum-regular-name
+  description: uplink-speedloader-magnum-regular-desc
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  productEntity: SpeedLoaderMagnum
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkPistolMagazineCaselessTranquilizer # by rebe83
+  name: uplink-caseless-pistol-tranq-name
+  description: uplink-caseless-pistol-tranq-desc
+  icon: { sprite: _DV/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: tranq }
+  productEntity: MagazinePistolCaselessRifleTranquilizer
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkPistolMagazineCaselessPoison # by rebe83
+  name: uplink-caseless-pistol-poison-name
+  description: uplink-caseless-pistol-poison-desc
+  icon: { sprite: _DV/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: poison }
+  productEntity: MagazinePistolCaselessRiflePoison
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkAmmo
