@@ -381,7 +381,8 @@ namespace Content.Server.RoundEnd
             {
                 if (!_shuttle.EmergencyShuttleArrived && ExpectedCountdownEnd is null)
                 {
-                    RequestRoundEnd(checkCooldown: false, text: "round-end-system-shuttle-auto-called-announcement");
+                    CallEvacuationVote(); // DeltaV - call OOC vote for ending round
+                    // RequestRoundEnd(checkCooldown: false, text: "round-end-system-shuttle-auto-called-announcement");
                     _autoCalledBefore = true;
                 }
 
