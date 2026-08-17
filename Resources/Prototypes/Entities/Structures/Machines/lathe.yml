@@ -99,6 +99,7 @@
   parent: BaseLatheLube
   name: autolathe
   description: It produces basic items using metal and glass. Has the ability to process blueprints to print new recipes.
+  suffix: DO NOT MAP # DeltaV - departmental lathes
   components:
   - type: Sprite
     sprite: Structures/Machines/autolathe.rsi
@@ -164,6 +165,7 @@
   parent: [Autolathe, BaseHyperlathe]
   name: hyper convection autolathe
   description: A highly-experimental autolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
+  suffix: DO NOT MAP # DeltaV - departmental lathes
   components:
   - type: Sprite
     sprite: Structures/Machines/autolathe_hypercon.rsi
@@ -175,6 +177,7 @@
   parent: BaseLatheLube
   name: protolathe
   description: Converts raw materials into advanced items.
+  suffix: DO NOT MAP # DeltaV - departmental lathes
   components:
   - type: Sprite
     sprite: Structures/Machines/protolathe.rsi
@@ -228,6 +231,7 @@
   parent: [Protolathe, BaseHyperlathe]
   name: hyper convection protolathe
   description: A highly-experimental protolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
+  suffix: DO NOT MAP # DeltaV - departmental lathes
   components:
   - type: Sprite
     sprite: Structures/Machines/protolathe_hypercon.rsi
@@ -373,7 +377,8 @@
   description: Prints equipment for use by security crew.
   components:
   - type: Sprite
-    sprite: Structures/Machines/techfab.rsi
+    snapCardinals: true # DeltaV - techfabs follow camera rotation
+    sprite: _DVA/Structures/Machines/techfab.rsi # DeltaV - bluesec techfab
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
@@ -422,7 +427,8 @@
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
     - type: Sprite
-      sprite: Structures/Machines/techfab.rsi
+      sprite: _DVA/Structures/Machines/techfab.rsi # DeltaV - bluesec techfab
+      snapCardinals: true # DeltaV - techfabs follow camera rotation
       layers:
         - state: icon
           map: ["enum.LatheVisualLayers.IsRunning"]
@@ -457,6 +463,7 @@
   description: Prints equipment for use by the medbay.
   components:
   - type: Sprite
+    snapCardinals: true # DeltaV - techfabs follow camera rotation
     sprite: Structures/Machines/techfab.rsi
     layers:
     - state: icon
