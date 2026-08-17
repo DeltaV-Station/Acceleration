@@ -29,7 +29,7 @@
   id: FloorSteel
   parent: BaseStationTile
   name: tiles-steel-floor
-  sprite: /Textures/Tiles/steel.png
+  sprite: /Textures/_DVA/Tiles/steel.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteel
 
@@ -37,7 +37,7 @@
   id: FloorSteelCheckerLight
   parent: BaseStationTile
   name: tiles-steel-floor-checker-light
-  sprite: /Textures/Tiles/cafeteria.png
+  sprite: /Textures/_DVA/Tiles/cafeteria.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelCheckerLight
 
@@ -45,7 +45,7 @@
   id: FloorSteelCheckerDark
   parent: BaseStationTile
   name: tiles-steel-floor-checker-dark
-  sprite: /Textures/Tiles/checker_dark.png
+  sprite: /Textures/_DVA/Tiles/checker_dark.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelCheckerDark
 
@@ -53,7 +53,7 @@
   id: FloorSteelMini
   parent: BaseStationTile
   name: tiles-steel-floor-mini
-  sprite: /Textures/Tiles/steel_mini.png
+  sprite: /Textures/_DVA/Tiles/steel_mini.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelMini
 
@@ -61,7 +61,7 @@
   id: FloorSteelPavement
   parent: BaseStationTile
   name: tiles-steel-floor-pavement
-  sprite: /Textures/Tiles/steel_pavement.png
+  sprite: /Textures/_DVA/Tiles/steel_pavement.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelPavement
 
@@ -69,7 +69,7 @@
   id: FloorSteelDiagonal
   parent: BaseStationTile
   name: tiles-steel-floor-diagonal
-  sprite: /Textures/Tiles/steel_diagonal.png
+  sprite: /Textures/_DVA/Tiles/steel_diagonal.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelDiagonal
 
@@ -77,14 +77,14 @@
   id: FloorSteelOffset
   parent: BaseStationTile
   name: tiles-steel-floor-offset
-  sprite: /Textures/Tiles/steel_offset.png
+  sprite: /Textures/_DVA/Tiles/steel_offset.png # Delta V - tile resprite
   itemDrop: FloorTileItemSteelOffset
 
 - type: tile
   id: FloorSteelMono
   parent: BaseStationTile
   name: tiles-steel-floor-mono
-  sprite: /Textures/Tiles/steel_mono.png
+  sprite: /Textures/_DVA/Tiles/steel_mono.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelMono
 
@@ -92,7 +92,7 @@
   id: FloorSteelPavementVertical
   parent: BaseStationTile
   name: tiles-steel-floor-pavement-vertical
-  sprite: /Textures/Tiles/steel_pavement_vertical.png
+  sprite: /Textures/_DVA/Tiles/steel_pavement_vertical.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelPavementVertical
 
@@ -100,7 +100,7 @@
   id: FloorSteelHerringbone
   parent: BaseStationTile
   name: tiles-steel-floor-herringbone
-  sprite: /Textures/Tiles/steel_herringbone.png
+  sprite: /Textures/_DVA/Tiles/steel_herringbone.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelHerringbone
 
@@ -108,7 +108,7 @@
   id: FloorSteelDiagonalMini
   parent: BaseStationTile
   name: tiles-steel-floor-diagonal-mini
-  sprite: /Textures/Tiles/steel_diagonal_mini.png
+  sprite: /Textures/_DVA/Tiles/steel_diagonal_mini.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteelDiagonalMini
 
@@ -159,7 +159,7 @@
   id: FloorPlastic
   parent: BaseStationTile
   name: tiles-plastic-floor
-  sprite: /Textures/Tiles/plastic.png
+  sprite: /Textures/_DVA/Tiles/plastic.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemSteel
 
@@ -167,7 +167,7 @@
   id: FloorWood
   parent: BaseStationTile
   name: tiles-wood
-  sprite: /Textures/Tiles/wood.png
+  sprite: /Textures/_DVA/Tiles/wood.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepWood
@@ -179,7 +179,7 @@
   id: FloorWhite
   parent: BaseStationTile
   name: tiles-white-floor
-  sprite: /Textures/Tiles/white.png
+  sprite: /Textures/_DVA/Tiles/white.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -189,7 +189,7 @@
   id: FloorWhiteMini
   parent: BaseStationTile
   name: tiles-white-floor-mini
-  sprite: /Textures/Tiles/white_mini.png
+  sprite: /Textures/_DVA/Tiles/white_mini.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -224,7 +224,7 @@
   id: FloorWhitePavement
   parent: BaseStationTile
   name: tiles-white-floor-pavement
-  sprite: /Textures/Tiles/white_pavement.png
+  sprite: /Textures/_DVA/Tiles/white_pavement.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -234,7 +234,7 @@
   id: FloorWhiteDiagonal
   parent: BaseStationTile
   name: tiles-white-floor-diagonal
-  sprite: /Textures/Tiles/white_diagonal.png
+  sprite: /Textures/_DVA/Tiles/white_diagonal.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -244,7 +244,7 @@
   id: FloorWhiteOffset
   parent: BaseStationTile
   name: tiles-white-floor-offset
-  sprite: /Textures/Tiles/white_offset.png
+  sprite: /Textures/_DVA/Tiles/white_offset.png # DeltaV - tile resprite
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteOffset
@@ -253,7 +253,7 @@
   id: FloorWhiteMono
   parent: BaseStationTile
   name: tiles-white-floor-mono
-  sprite: /Textures/Tiles/white_mono.png
+  sprite: /Textures/_DVA/Tiles/white_mono.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -263,7 +263,7 @@
   id: FloorWhitePavementVertical
   parent: BaseStationTile
   name: tiles-white-floor-pavement-vertical
-  sprite: /Textures/Tiles/white_pavement_vertical.png
+  sprite: /Textures/_DVA/Tiles/white_pavement_vertical.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -273,7 +273,7 @@
   id: FloorWhiteHerringbone
   parent: BaseStationTile
   name: tiles-white-floor-herringbone
-  sprite: /Textures/Tiles/white_herringbone.png
+  sprite: /Textures/_DVA/Tiles/white_herringbone.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -283,7 +283,7 @@
   id: FloorWhiteDiagonalMini
   parent: BaseStationTile
   name: tiles-white-floor-diagonal-mini
-  sprite: /Textures/Tiles/white_diagonal_mini.png
+  sprite: /Textures/_DVA/Tiles/white_diagonal_mini.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -293,7 +293,7 @@
   id: FloorWhitePlastic
   parent: BaseStationTile
   name: tiles-plastic-white-floor
-  sprite: /Textures/Tiles/white_plastic.png
+  sprite: /Textures/_DVA/Tiles/white_plastic.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -303,7 +303,7 @@
   id: FloorDark
   parent: BaseStationTile
   name: tiles-dark-floor
-  sprite: /Textures/Tiles/dark.png
+  sprite: /Textures/_DVA/Tiles/dark.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -313,7 +313,7 @@
   id: FloorDarkMini
   parent: BaseStationTile
   name: tiles-dark-floor-mini
-  sprite: /Textures/Tiles/dark_mini.png
+  sprite: /Textures/_DVA/Tiles/dark_mini.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -348,7 +348,7 @@
   id: FloorDarkPavement
   parent: BaseStationTile
   name: tiles-dark-floor-pavement
-  sprite: /Textures/Tiles/dark_pavement.png
+  sprite: /Textures/_DVA/Tiles/dark_pavement.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -358,7 +358,7 @@
   id: FloorDarkDiagonal
   parent: BaseStationTile
   name: tiles-dark-floor-diagonal
-  sprite: /Textures/Tiles/dark_diagonal.png
+  sprite: /Textures/_DVA/Tiles/dark_diagonal.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -368,7 +368,7 @@
   id: FloorDarkOffset
   parent: BaseStationTile
   name: tiles-dark-floor-offset
-  sprite: /Textures/Tiles/dark_offset.png
+  sprite: /Textures/_DVA/Tiles/dark_offset.png # DeltaV - tile resprite
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkOffset
@@ -377,7 +377,7 @@
   id: FloorDarkMono
   parent: BaseStationTile
   name: tiles-dark-floor-mono
-  sprite: /Textures/Tiles/dark_mono.png
+  sprite: /Textures/_DVA/Tiles/dark_mono.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -387,7 +387,7 @@
   id: FloorDarkPavementVertical
   parent: BaseStationTile
   name: tiles-dark-floor-pavement-vertical
-  sprite: /Textures/Tiles/dark_pavement_vertical.png
+  sprite: /Textures/_DVA/Tiles/dark_pavement_vertical.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -397,7 +397,7 @@
   id: FloorDarkHerringbone
   parent: BaseStationTile
   name: tiles-dark-floor-herringbone
-  sprite: /Textures/Tiles/dark_herringbone.png
+  sprite: /Textures/_DVA/Tiles/dark_herringbone.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -407,7 +407,7 @@
   id: FloorDarkDiagonalMini
   parent: BaseStationTile
   name: tiles-dark-floor-diagonal-mini
-  sprite: /Textures/Tiles/dark_diagonal_mini.png
+  sprite: /Textures/_DVA/Tiles/dark_diagonal_mini.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -417,7 +417,7 @@
   id: FloorDarkPlastic
   parent: BaseStationTile
   name: tiles-plastic-dark-floor
-  sprite: /Textures/Tiles/dark_plastic.png
+  sprite: /Textures/_DVA/Tiles/dark_plastic.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -472,8 +472,8 @@
   id: FloorSteelDirty
   parent: BaseStationTile
   name: tiles-dirty-steel-floor
-  sprite: /Textures/Tiles/steel_dirty.png
-  variants: 4
+  sprite: /Textures/_DVA/Tiles/steel_dirty.png # DeltaV - tile resprite
+  #variants: 4 # DeltaV - no variants resprited
   footstepSounds:
     collection: FootstepPlating
   itemDrop: FloorTileItemDirty
@@ -509,7 +509,7 @@
   id: FloorBlue
   parent: BaseStationTile
   name: tiles-blue-tile
-  sprite: /Textures/Tiles/blue.png
+  sprite: /Textures/_DVA/Tiles/blue.png # DeltaV - tile resprite
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemBlue
@@ -518,7 +518,7 @@
   id: FloorSteelLime
   parent: BaseStationTile
   name: tiles-lime-floor
-  sprite: /Textures/Tiles/lime.png
+  sprite: /Textures/_DVA/Tiles/lime.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemLime
 
@@ -554,7 +554,7 @@
   id: FloorFreezer
   parent: BaseStationTile
   name: tiles-freezer
-  sprite: /Textures/Tiles/freezer.png
+  sprite: /Textures/_DVA/Tiles/freezer.png # DeltaV - tile resprite
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemFreezer
@@ -563,21 +563,21 @@
   id: FloorShowroom
   parent: BaseStationTile
   name: tiles-showroom-floor
-  sprite: /Textures/Tiles/showroom.png
+  sprite: /Textures/_DVA/Tiles/showroom.png # DeltaV - tile resprite
   itemDrop: FloorTileItemShowroom
 
 - type: tile
   id: FloorHydro
   parent: BaseStationTile
   name: tiles-hydro-floor
-  sprite: /Textures/Tiles/hydro.png
+  sprite: /Textures/_DVA/Tiles/hydro.png # DeltaV - tile resprite
   itemDrop: FloorTileItemHydro
 
 - type: tile
   id: FloorBar
   parent: BaseStationTile
   name: tiles-bar-floor
-  sprite: /Textures/Tiles/bar.png
+  sprite: /Textures/_DVA/Tiles/bar.png # DeltaV - tile resprite
   variants: 4
   itemDrop: FloorTileItemBar
 
@@ -585,21 +585,21 @@
   id: FloorClown
   parent: BaseStationTile
   name: tiles-clown-floor
-  sprite: /Textures/Tiles/clown.png
+  sprite: /Textures/_DVA/Tiles/clown.png # DeltaV - tile resprite
   itemDrop: FloorTileItemClown
 
 - type: tile
   id: FloorMime
   parent: BaseStationTile
   name: tiles-mime-floor
-  sprite: /Textures/Tiles/mime.png
+  sprite: /Textures/_DVA/Tiles/mime.png # DeltaV - tile resprite
   itemDrop: FloorTileItemMime
 
 - type: tile
   id: FloorKitchen
   parent: BaseStationTile
   name: tiles-kitchen-floor
-  sprite: /Textures/Tiles/kitchen.png
+  sprite: /Textures/_DVA/Tiles/kitchen.png # DeltaV - tile resprite
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemKitchen
@@ -608,7 +608,7 @@
   id: FloorLaundry
   parent: BaseStationTile
   name: tiles-laundry-floor
-  sprite: /Textures/Tiles/laundry.png
+  sprite: /Textures/_DVA/Tiles/laundry.png # DeltaV - tile resprite
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemLaundry
@@ -884,7 +884,7 @@
   id: FloorGlass
   parent: BaseStationTile
   name: tiles-glass-floor
-  sprite: /Textures/Tiles/glass.png
+  sprite: /Textures/_DVA/Tiles/glass.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -894,7 +894,7 @@
   id: FloorRGlass
   parent: BaseStationTile
   name: tiles-reinforced-glass-floor
-  sprite: /Textures/Tiles/rglass.png
+  sprite: /Textures/_DVA/Tiles/rglass.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepTile
@@ -1268,7 +1268,7 @@
   id: FloorWoodTile
   parent: BaseStationTile
   name: tiles-wood2
-  sprite: /Textures/Tiles/wood_tile.png
+  sprite: /Textures/_DVA/Tiles/wood_tile.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepWood
@@ -1280,7 +1280,7 @@
   id: FloorBrokenWood
   parent: BaseStationTile
   name: tiles-wood3
-  sprite: /Textures/Tiles/wood_broken.png
+  sprite: /Textures/_DVA/Tiles/wood_broken.png # DeltaV - tile resprite
   variants: 7
   footstepSounds:
     collection: FootstepWood
@@ -1459,7 +1459,7 @@
   id: FloorWoodLarge
   parent: BaseStationTile
   name: tiles-wood-large
-  sprite: /Textures/Tiles/wood_large.png
+  sprite: /Textures/_DVA/Tiles/wood_large.png # DeltaV - tile resprite
   variants: 4
   footstepSounds:
     collection: FootstepWood
