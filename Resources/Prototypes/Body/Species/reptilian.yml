@@ -4,7 +4,8 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
-      limit: 0
+      limit: 1 # DeltaV - lizard hair
+      onlyGroupWhitelisted: false # DeltaV - lizard hair
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 0
@@ -217,6 +218,7 @@
   components:
   - type: VisualOrganMarkings
     hideableLayers:
+    - enum.HumanoidVisualLayers.Hair # DeltaV - lizard hair
     - enum.HumanoidVisualLayers.Snout
     - enum.HumanoidVisualLayers.HeadTop
     - enum.HumanoidVisualLayers.HeadSide
