@@ -15,6 +15,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
 {
     [Dependency] private BorgSystem _borgSystem = default!;
     [Dependency] private ServerInventorySystem _inventorySystem = default!;
+    [Dependency] private Laws.SiliconLawSystem _siliconLaw = default!; // DeltaV - borg chassis laws
 
     protected override void SelectBorgModule(Entity<BorgSwitchableTypeComponent> ent, ProtoId<BorgTypePrototype> borgType)
     {
@@ -76,6 +77,13 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         {
             _inventorySystem.SetTemplateId((ent.Owner, inventory), prototype.InventoryTemplateId);
         }
+
+        // Begin DeltaV - change borg laws to chassis-specific laws
+        if (prototype.Lawset is { } lawset)
+        {
+            _siliconLaw.SetLaws(_siliconLaw.GetLawset(lawset).Laws, ent);
+        }
+        // End DeltaV
 
         base.SelectBorgModule(ent, borgType);
     }

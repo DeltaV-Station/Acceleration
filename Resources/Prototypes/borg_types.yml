@@ -1,6 +1,7 @@
 # Generic borg
 - type: borgType
   id: generic
+  lawset: Research # DeltaV - chassis laws
 
   # Description
   dummyPrototype: BorgChassisGeneric
@@ -36,6 +37,7 @@
 # Engineering borg
 - type: borgType
   id: engineering
+  lawset: Engineer # DeltaV - chassis laws
 
   # Description
   dummyPrototype: BorgChassisEngineer
@@ -73,6 +75,7 @@
 # Salvage borg
 - type: borgType
   id: mining
+  lawset: Salvage # DeltaV - chassis laws
 
   # Description
   dummyPrototype: BorgChassisMining
@@ -111,6 +114,7 @@
 # Janitor borg
 - type: borgType
   id: janitor
+  lawset: Janitor # DeltaV - chassis laws
 
   # Description
   dummyPrototype: BorgChassisJanitor
@@ -147,6 +151,7 @@
 # Medical borg
 - type: borgType
   id: medical
+  lawset: Medical # DeltaV - chassis laws
 
   # Description
   dummyPrototype: BorgChassisMedical
@@ -197,6 +202,7 @@
 # Service borg
 - type: borgType
   id: service
+  lawset: Service # DeltaV - chassis laws
 
   # Description
   dummyPrototype: BorgChassisService
