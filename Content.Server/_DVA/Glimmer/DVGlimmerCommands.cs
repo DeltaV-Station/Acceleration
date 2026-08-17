@@ -58,7 +58,7 @@ public sealed class DVGlimmerCommands : ToolshedCommand
 
 public record struct GlimmerMissingError : IConError
 {
-    public FormattedMessage DescribeInner()
+    public readonly FormattedMessage DescribeInner()
     {
         return FormattedMessage.FromMarkupOrThrow("This command doesn't function if there's no glimmer. Is the round started?");
     }
